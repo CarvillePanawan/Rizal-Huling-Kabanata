@@ -1,0 +1,31 @@
+@font-face {
+	font-family: "Montserrat-Regular";
+	src: url(fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Montserrat-Bold";
+	src: url(fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+	font-family: "Josefin-Sans-Regular";
+	src: url(fonts/Josefin-Sans/Josefin-Sans-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Josefin-Sans-Bold";
+	src: url(fonts/Josefin-Sans/Josefin-Sans-Bold.ttf);
+}
+
+.nav-a {
+	font-family: "Montserrat-Regular", "Century Gothic", sans-serif;
+}
+
+input {
+	font-family: "Josefin-Sans-Regular", "Century Gothic", sans-serif;
+}
+
+.footer {
+	font-family: "Josefin-Sans-Regular", "Century Gothic", sans-serif;
+}

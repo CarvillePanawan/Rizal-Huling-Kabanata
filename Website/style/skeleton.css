@@ -6,6 +6,9 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-flow: row;
+	z-index: 999;
 }
 
 .header #header-img {
@@ -18,13 +21,13 @@
 	opacity: 1;
 }
 
-.nav {
+.nav-a {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.nav li {
+.nav-a li {
 	color: #fff;
 	display: flex;
 	justify-content: center;
@@ -34,9 +37,14 @@
 	padding: 0 1em 0 1em;
 }
 
-.nav li:hover {
+.nav-a li:hover {
 	cursor: pointer;
 	background-color: rgba(255,255,255, 0.2);
+}
+
+.custom-a {
+	text-decoration: none;
+	color: #fff;
 }
 
 .header-left {
@@ -49,6 +57,8 @@
 	position: relative;
 	height: 30px;
 	margin-left: 15px;
+	padding-right: 10px;
+	width: auto;
 }
 
 #search-btn {
@@ -65,8 +75,7 @@
 }
 
 .body {
-	padding: 10px;
-	padding-bottom: 50px;
+	padding: 50px 10px 50px 10px;
 }
 
 .footer {
@@ -81,7 +90,7 @@
 	color: #fff;
 }
 
-.container {
+.container-a {
 	min-height: 100%;
 	position: relative;
 }
