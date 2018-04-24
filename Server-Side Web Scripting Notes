@@ -1,0 +1,29 @@
+Java Servlets
+  - handles client requests by generating a response message
+  - Java Servlets is hosted in a "servlet container" which is part of a web server that communicates with the servlet so that it will
+    let Java to dynamically generate a web page from the server side. Servlet container also controls the servlet lifecycle
+*Servlet lifecycle
+1. initialization
+  - The init() method will be called upon the creation of servlet and it is only called once.
+2. request handling
+  - Request handling is handled by the method service() which is basically the main method that handles the tasks of each request
+    it uses multi-threading to do the tasks.
+   - The service() method is called multiple times depending on the number of requests of the user.
+3. destruction
+- The destruction is handled by the method destroy() which is invoked the website? is done using the object method. 
+
+HTTP Servlet
+- used to handle HTTP requests and generate HTTP responses
+- the service() method call is connected to a doXXX call (e.g. doGet(), doPost(), doPut(), doDelete())
+- the doXXX() methods passes 2 arguements which are HTTPServletRequest and HTTPServletResponse
+
+HTTPServletRequest
+- used to access information from the request message
+
+HTTPServletResponse 
+- used to access information from the response message
+
+* The web container also facilitates the conversion from HTTP response to HTTPServletResponse or from HTTP request to HTTPServletRequest.
+
+References:
+Program Creek.(n.d).What is Servlet Container? Retrieved from https://www.programcreek.com/2013/04/what-is-servlet-container/
