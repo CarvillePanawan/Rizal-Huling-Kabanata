@@ -1,10 +1,21 @@
 .custom-col {
 	transition: box-shadow 0.2s ease;
+	height: 150px;
+	background-color: #fff;
+	border: 5px solid rgba(0, 0, 0, 0.03);
+}
+
+@media screen and (max-width: 900px) {
+	.custom-col {
+		width: 100% !important; 
+	}
 }
 
 .custom-col:hover {
 	cursor: pointer;
 	box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+	z-index: 998;
+	border: none;
 }
 
 .equal {
@@ -15,4 +26,9 @@
 
 .container {
 	padding: 50px 0 50px 0;
+}
+
+h3 {
+	border-bottom: 1px solid #000;
+	padding-bottom: 2px;
 }
