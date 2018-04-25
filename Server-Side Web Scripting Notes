@@ -1,3 +1,7 @@
+Servlet
+  - A servelet is a Java class that is utilized to extend the capabilities of request-response programming model servers that host 
+    applications. Servlets can interact or respond to any type of request, Servlets are maily used for extending applications hosted 
+    by web servers.
 Java Servlets
   - handles client requests by generating a response message
   - Java Servlets is hosted in a "servlet container" which is part of a web server that communicates with the servlet so that it will
@@ -27,3 +31,5 @@ HTTPServletResponse
 
 References:
 Program Creek.(n.d).What is Servlet Container? Retrieved from https://www.programcreek.com/2013/04/what-is-servlet-container/
+
+https://docs.oracle.com/javaee/6/tutorial/doc/docinfo.html
