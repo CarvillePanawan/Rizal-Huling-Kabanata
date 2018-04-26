@@ -1,26 +1,25 @@
 (Fill in the missing words)
-1. get____________________() -  Returns an Enumeration containing the names of the attributes available to this request.
-2. get_________________() - Returns an Enumeration of String objects containing the names of the parameters contained in this request.
-3. get_______() -  Returns a PrintWriter object that can send character text to the client.
-4. _____________()- Clears the content of the underlying buffer in the response without clearing headers or status code.
-5. ______________()- Returns a boolean indicating whether this request was made using a secure channel, such as HTTPS.
-6. _______________()- Forces any content in the buffer to be written to the client.
-7. _______________() - Returns the name of the scheme used to make this request, for example, http, https, or ftp.
-8. set_________________(int len) - Sets the length of the content body in the response In HTTP servlets, this method sets the HTTP Content-Length header.
-9. is_____________()- Returns a boolean indicating if the response has been committed.
-10. _________() - Clears any data that exists in the buffer as well as the status code and headers.
+1. get____________________() -  Returns an Enumeration containing the names of the attributes available to this request. - getAttributeNames()
+2. get_________________() - Returns an Enumeration of String objects containing the names of the parameters contained in this request.  - getParameterNames()
+3. get_______() -  Returns a PrintWriter object that can send character text to the client. -  getWriter()
+4. _____________()- Clears the content of the underlying buffer in the response without clearing headers or status code.  - resetBuffer()
+5. ______________()- Returns a boolean indicating whether this request was made using a secure channel, such as HTTPS.  - isSecure()
+6. _______________()- Forces any content in the buffer to be written to the client.  - flushBuffer()
+7. _______________() - Returns the name of the scheme used to make this request, for example, http, https, or ftp.  - getScheme()
+8. set_________________(int len) - Sets the length of the content body in the response In HTTP servlets, this method sets the HTTP Content-Length header.  - setContentLength(int len)
+9. is_____________()- Returns a boolean indicating if the response has been committed.  - isCommitted()
+10. _________() - Clears any data that exists in the buffer as well as the status code and headers.  - reset()
 
 1. Who created the first version of java sevlet also know as Servlet1?
-
+ - Pavni Diwanji
 2. What is the latest version of Servlet?
-
+ - Servlet 4.0
 3. State the 3 stages of a Servlet lifecycle.
 - initialization, request handling, destruction
-
 4. Servlet is a Java ___________.
-
+- class
 5. The programming model server suited for Servlets.
-/**//
+/**// - request-response programming model
 6.  A part of a web server that communicates with the servlet so that it will let Java to dynamically generate a web page from the server side.
 - 
 
