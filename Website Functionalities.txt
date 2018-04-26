@@ -2,6 +2,6 @@ List of the initial website functionalities:
 
 Signup and Login(?)
 Search Function
-Quiz and Point System(?)
-Form data fill up
+Quiz and Point System(?)//Para saan yung point system? may accounts ba?
+Form data fill up//Para saan din to?
 Email Message
