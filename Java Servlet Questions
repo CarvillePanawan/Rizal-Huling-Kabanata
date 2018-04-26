@@ -14,19 +14,28 @@
 
 2. What is the latest version of Servlet?
 
-3. State the 3 stages of a Sevlet lifecycle.
-
-
+3. State the 3 stages of a Servlet lifecycle.
+- initialization, request handling, destruction
 
 4. Servlet is a Java ___________.
 
 5. The programming model server suited for Servlets.
 /**//
 6.  A part of a web server that communicates with the servlet so that it will let Java to dynamically generate a web page from the server side.
+- 
 
 7.  Can be called multiple times depending on the number of requests of the user.
+- service()
 
 8.  Called only once and is called upon creation.
+- init()
+
+9. What are the methods used in each stages of the Servlet lifecycle?.
+- init(), service(), destroy
+
+10. State 3 methods related to doXXX() method.
+- doGet(), doPost(), doPut(), doDelete()
+
 
 
 fill the missing words in the table
