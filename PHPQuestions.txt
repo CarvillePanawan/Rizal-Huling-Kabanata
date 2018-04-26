@@ -1,0 +1,21 @@
+Initial PHP Quiz Questions
+
+IDENTIFICATION
+
+Who was the creator of PHP?
+
+What does PHP originally stand for?
+
+Is PHP a client-side programming language or server-side programming language?
+
+Where do PHP script run?
+
+These are special variables that is built into PHP and available throughout an entire script.
+
+TRUE OR FALSE
+
+All PHP scripts outputs HTML code.
+
+You don't need a web server to run PHP scripts.
+
+It is legal to put both PHP and HTML code in the same file.

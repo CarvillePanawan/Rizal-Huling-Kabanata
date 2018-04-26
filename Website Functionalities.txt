@@ -1,0 +1,7 @@
+List of the initial website functionalities:
+
+Signup and Login(?)
+Search Function
+Quiz and Point System(?)
+Form data fill up
+Email Message
