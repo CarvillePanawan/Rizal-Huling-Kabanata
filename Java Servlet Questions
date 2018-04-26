@@ -14,10 +14,38 @@
 
 2. What is the latest version of Servlet?
 
-3. State the 3 stages of a Sevlet lifcycle.
+3. State the 3 stages of a Sevlet lifecycle.
 
 
 
 4. Servlet is a Java ___________.
 
 5. The programming model server suited for Servlets.
+/**//
+6.  A part of a web server that communicates with the servlet so that it will let Java to dynamically generate a web page from the server side.
+
+7.  Can be called multiple times depending on the number of requests of the user.
+
+8.  Called only once and is called upon creation.
+
+
+fill the missing words in the table
+
+Servlet Lifecycle Events
+
+Object            Event                                        Listener Interface And Event Class
+Web context       Initialization and destruction               javax.servlet._____________ and _____________
+
+Web context       Attribute added, removed, or replaced        javax.servlet._____________ and _____________
+
+Session           Creation, invalidation, activation,          javax.servlet._____.__________  , java.servlet.______.______ and java.servlet.___________
+                  passivation, and timeout
+
+Session           Attribute added, removed, or replaced        javax.servlet._____.__________ and java.servlet._____________
+
+Request           A servlet request has started being          javax.servlet.____________ and _____________
+                  processed by the web components
+
+Request           Attribute added, removed, or replaced        javax.servlet.____________ and ______________
+
+
