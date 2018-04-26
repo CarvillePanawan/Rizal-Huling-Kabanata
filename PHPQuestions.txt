@@ -3,19 +3,27 @@ Initial PHP Quiz Questions
 IDENTIFICATION
 
 Who was the creator of PHP?
+Rasmus Lerdorf
 
 What does PHP originally stand for?
+Personal Home Pages
 
 Is PHP a client-side programming language or server-side programming language?
+Server-side
 
 Where do PHP script run?
+Web Servers
 
 These are special variables that is built into PHP and available throughout an entire script.
+Superglobals
 
 TRUE OR FALSE
 
 All PHP scripts outputs HTML code.
+True
 
 You don't need a web server to run PHP scripts.
+False
 
 It is legal to put both PHP and HTML code in the same file.
+True
