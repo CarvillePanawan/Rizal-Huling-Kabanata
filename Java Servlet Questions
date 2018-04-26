@@ -19,9 +19,10 @@
 4. Servlet is a Java ___________.
 - class
 5. The programming model server suited for Servlets.
-/**// - request-response programming model
+ - request-response programming model
+ /**//
 6.  A part of a web server that communicates with the servlet so that it will let Java to dynamically generate a web page from the server side.
-- 
+- servlet container
 
 7.  Can be called multiple times depending on the number of requests of the user.
 - service()
@@ -42,18 +43,18 @@ fill the missing words in the table
 Servlet Lifecycle Events
 
 Object            Event                                        Listener Interface And Event Class
-Web context       Initialization and destruction               javax.servlet._____________ and _____________
+Web context       Initialization and destruction               javax.servlet._____________ and _____________ (ServletContextListener,ServletContextEvent)
 
-Web context       Attribute added, removed, or replaced        javax.servlet._____________ and _____________
+Web context       Attribute added, removed, or replaced        javax.servlet._____________ and _____________ (ServletContextAttributeListener,ServletContextAttributeEvent)
 
-Session           Creation, invalidation, activation,          javax.servlet._____.__________  , java.servlet.______.______ and java.servlet.___________
+Session           Creation, invalidation, activation,          javax.servlet._______________  , java.servlet.____________ and java.servlet.___________(http.HttpSessionListener, http.HttpSessionActivationListener, HTttpSessionEvent)
                   passivation, and timeout
 
-Session           Attribute added, removed, or replaced        javax.servlet._____.__________ and java.servlet._____________
+Session           Attribute added, removed, or replaced        javax.servlet._______________ and java.servlet._____________ (http.HttpSessionAttributeListener, HttpSessionBindingEvent)
 
-Request           A servlet request has started being          javax.servlet.____________ and _____________
+Request           A servlet request has started being          javax.servlet.____________ and _____________ (ServletRequestListener,ServletRequestEvent)
                   processed by the web components
 
-Request           Attribute added, removed, or replaced        javax.servlet.____________ and ______________
+Request           Attribute added, removed, or replaced        javax.servlet.____________ and ______________ (ServletRequestAttributeListener, ServletRequestAttributeEvent)
 
 
