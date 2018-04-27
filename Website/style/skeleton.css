@@ -82,7 +82,7 @@
 
 .body {
 	padding: 50px 10px 50px 10px;
-	background-color: rgba(0, 0, 0, 0.03);
+	background-color: rgba(0, 0, 0, 0.08);
 }
 
 .footer {
@@ -102,8 +102,25 @@
 	position: relative;
 }
 
+.container-1 {
+	width: 100% !important;
+	padding: 5% !important;
+}
+
+.nav-custom {
+	height: 50px;
+	width: 100%;
+	background-color: #313131;
+}
+
+.breaker {
+	height: 2px;
+	background-color: #313131;
+	margin-bottom: 50px;
+}
+
 body,
 html {
-	margin: 0;
-	padding: 0;
+	margin: 0 !important;
+	padding: 0 !important;
 }
