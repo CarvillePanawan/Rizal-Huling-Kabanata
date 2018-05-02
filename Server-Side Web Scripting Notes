@@ -175,3 +175,7 @@ https://docs.oracle.com/javaee/6/tutorial/doc/docinfo.html
 https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletRequest.html
 
 https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletResponse.html
+
+https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html
+
+https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html
