@@ -1,4 +1,4 @@
-(Fill in the missing words)
+(Fill in the missing string)
 1. get____________________() -  Returns an Enumeration containing the names of the attributes available to this request. - getAttributeNames()
 2. get_________________() - Returns an Enumeration of String objects containing the names of the parameters contained in this request.  - getParameterNames()
 3. get_______() -  Returns a PrintWriter object that can send character text to the client. -  getWriter()
@@ -10,51 +10,40 @@
 9. is_____________()- Returns a boolean indicating if the response has been committed.  - isCommitted()
 10. _________() - Clears any data that exists in the buffer as well as the status code and headers.  - reset()
 
-1. Who created the first version of java sevlet also know as Servlet1?
+(Provide the right answer)
+11. Who created the first version of java sevlet also know as Servlet1?
  - Pavni Diwanji
-2. What is the latest version of Servlet?
+12. What is the latest version of Servlet?
  - Servlet 4.0
-3. State the 3 stages of a Servlet lifecycle.
+13. State the 3 stages of a Servlet lifecycle.
 - initialization, request handling, destruction
-4. Servlet is a Java ___________.
+14. Servlet is a Java ___________.
 - class
-5. The programming model server suited for Servlets.
+15. The programming model server suited for Servlets.
  - request-response programming model
  /**//
-6.  A part of a web server that communicates with the servlet so that it will let Java to dynamically generate a web page from the server side.
+16.  A part of a web server that communicates with the servlet so that it will let Java to dynamically generate a web page from the server side.
 - servlet container
-
-7.  Can be called multiple times depending on the number of requests of the user.
+17.  Can be called multiple times depending on the number of requests of the user.
 - service()
-
-8.  Called only once and is called upon creation.
+18.  Called only once and is called upon creation.
 - init()
-
-9. What are the methods used in each stages of the Servlet lifecycle?.
+19. What are the methods used in each stages of the Servlet lifecycle?.
 - init(), service(), destroy
-
-10. State 3 methods related to doXXX() method.
+20. State 3 methods related to doXXX() method.
 - doGet(), doPost(), doPut(), doDelete()
 
-
-
-fill the missing words in the table
-
+(Fill the missing words in the table)
 Servlet Lifecycle Events
 
-Object            Event                                        Listener Interface And Event Class
-Web context       Initialization and destruction               javax.servlet._____________ and _____________ (ServletContextListener,ServletContextEvent)
-
-Web context       Attribute added, removed, or replaced        javax.servlet._____________ and _____________ (ServletContextAttributeListener,ServletContextAttributeEvent)
-
-Session           Creation, invalidation, activation,          javax.servlet._______________  , java.servlet.____________ and java.servlet.___________(http.HttpSessionListener, http.HttpSessionActivationListener, HTttpSessionEvent)
-                  passivation, and timeout
-
-Session           Attribute added, removed, or replaced        javax.servlet._______________ and java.servlet._____________ (http.HttpSessionAttributeListener, HttpSessionBindingEvent)
-
-Request           A servlet request has started being          javax.servlet.____________ and _____________ (ServletRequestListener,ServletRequestEvent)
-                  processed by the web components
-
-Request           Attribute added, removed, or replaced        javax.servlet.____________ and ______________ (ServletRequestAttributeListener, ServletRequestAttributeEvent)
+    Object                Event                                        Listener Interface And Event Class
+21. Web context       Initialization and destruction               javax.servlet._____________ and _____________ (ServletContextListener,ServletContextEvent)
+22. Web context       Attribute added, removed, or replaced        javax.servlet._____________ and _____________ (ServletContextAttributeListener,ServletContextAttributeEvent)
+23. Session           Creation, invalidation, activation,          javax.servlet._______________  , java.servlet.____________ and java.servlet.___________(http.HttpSessionListener, http.HttpSessionActivationListener, HTttpSessionEvent)
+                      passivation, and timeout
+24. Session           Attribute added, removed, or replaced        javax.servlet._______________ and java.servlet._____________ (http.HttpSessionAttributeListener, HttpSessionBindingEvent)
+25. Request           A servlet request has started being          javax.servlet.____________ and _____________ (ServletRequestListener,ServletRequestEvent)
+                      processed by the web components
+26. Request           Attribute added, removed, or replaced        javax.servlet.____________ and ______________ (ServletRequestAttributeListener, ServletRequestAttributeEvent)
 
 
