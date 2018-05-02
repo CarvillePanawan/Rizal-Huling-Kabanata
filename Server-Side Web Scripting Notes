@@ -44,6 +44,109 @@ HTTPServletResponse
 (Needs to be put in a table)
  Method Summary
  https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletResponse.html
+ 
+ HttpServletResponse Methods
+1. addCookie (Cookie cookie)
+Parameters
+cookie - the cookie that will be returned to the client
+Returns
+2. containsHeader(headerName)
+Parameters
+headerName - name of the header
+Returns
+true if the headerName has been set else false
+3. encodeURL(url)
+Parameters
+url - the url that needs to be encoded
+Returns
+the url that needs to be encoded else the unchange url
+4. encodeRedirectURL(url)
+Parameters
+url - the url that needs to be encoded
+Returns
+the url that needs to be encoded else the unchange url
+5. encodeRedirectUrl(url)
+Parameters
+url - the url that needs to be encoded
+Returns
+the url that needs to be encoded else the unchange url
+6. sendError(statusCode,message)
+Parameters
+statusCode - status code of the error
+message - the message that will be passed allong with the statusCode
+Throws
+IOException - if exceptions for input or output occurs 
+IllegalStateException - if the response has been committed
+7. sendError(statusCode)
+Parameters
+statusCode - status code of the error
+Throws
+IOException - if exceptions for input or output occurs 
+IllegalStateException - if before calling this method, the response has been committed
+8. sendRedirect(location)
+Parameters
+location - the url that will be used for redirection
+Throws
+IOException - if exceptions for input or output occurs 
+IllegalStateException - if the given url is cannot be transformed into a valid url or the response has been committed
+9. setDateHeader(headerName,date)
+Parameters
+headerName - the header name to be set
+date - the date value to be assigned
+Returns
+10. addDateHeader(headerName,date)
+Parameters
+headerName - the header name to be set
+date - the date value to be added
+Returns
+11. setHeader(headerName,value)
+Parameters
+headerName - the header name
+value - the value of the header, it should be encoded if it contains octed string
+Returns
+12. addHeader(headerName,value)
+Parameters
+headerName - the header name 
+value - the value of the header to be added, it should be encoded if it contains octed string
+Returns
+13. setIntHeader(headerName,value)
+Parameters
+headerName - the header name 
+value - the integer value to be assigned
+Returns
+14. addIntHeader(headerName,value)
+Parameters
+headerName - the header name 
+value - the integer value to be assigned
+Returns
+15. setStatus(statusCode)
+Parameters
+statusCode - status code with ranges of 2XX,3XX,4XX,and 5XX
+Returns
+16. setStatus(statusCode, message)
+Parameters
+statusCode - status code 
+message - message passed with the statusCode
+Returns
+17. getStatus()
+Parameters
+Returns
+the response current status code
+18. getHeader(headerName)
+Parameters
+headerName - the response header name that will return its values
+Returns
+the value of the response header name else null if there is no header name ,on the response, that has been set
+19. getHeaders(headerName)
+Parameters
+headerName - the response header name that will return its values
+Returns
+collection of values of the resonse header. it can be null or empty collection
+20. getHeaderNames()
+Parameters
+Returns
+collection of values of the resonse header. it can be null or empty collection
+
 
 * The web container also facilitates the conversion from HTTP response to HTTPServletResponse or from HTTP request to HTTPServletRequest.
 
