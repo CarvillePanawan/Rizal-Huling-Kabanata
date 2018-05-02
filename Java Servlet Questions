@@ -1,9 +1,9 @@
 (Fill in the missing string)
-1. get____________________() -  Returns an Enumeration containing the names of the attributes available to this request. - getAttributeNames()
-2. get_________________() - Returns an Enumeration of String objects containing the names of the parameters contained in this request.  - getParameterNames()
-3. get_______() -  Returns a PrintWriter object that can send character text to the client. -  getWriter()
+1. ____________________() -  Returns an Enumeration containing the names of the attributes available to this request. - getAttributeNames()
+2. _________________() - Returns an Enumeration of String objects containing the names of the parameters contained in this request.  - getParameterNames()
+3. _______() -  Returns a PrintWriter object that can send character text to the client. -  getWriter()
 4. _____________()- Clears the content of the underlying buffer in the response without clearing headers or status code.  - resetBuffer()
-5. ______________()- Returns a boolean indicating whether this request was made using a secure channel, such as HTTPS.  - isSecure()
+ 5. ______________()- Returns a boolean indicating whether this request was made using a secure channel, such as HTTPS.  - isSecure()
 6. _______________()- Forces any content in the buffer to be written to the client.  - flushBuffer()
 7. _______________() - Returns the name of the scheme used to make this request, for example, http, https, or ftp.  - getScheme()
 8. set_________________(int len) - Sets the length of the content body in the response In HTTP servlets, this method sets the HTTP Content-Length header.  - setContentLength(int len)
@@ -29,7 +29,7 @@
 18.  Called only once and is called upon creation.
 - init()
 19. What are the methods used in each stages of the Servlet lifecycle?.
-- init(), service(), destroy
+- init(), service(), destroy()
 20. State 3 methods related to doXXX() method.
 - doGet(), doPost(), doPut(), doDelete()
 
