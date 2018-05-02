@@ -50,3 +50,7 @@ References:
 Program Creek.(n.d).What is Servlet Container? Retrieved from https://www.programcreek.com/2013/04/what-is-servlet-container/
 
 https://docs.oracle.com/javaee/6/tutorial/doc/docinfo.html
+
+https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletRequest.html
+
+https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletResponse.html
