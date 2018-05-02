@@ -23,9 +23,15 @@ HTTP Servlet
 
 HTTPServletRequest
 - used to access information from the request message
+  (Needs to be put in a table)
+  Method Summary
+  https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletRequest.html
 
 HTTPServletResponse 
 - used to access information from the response message
+(Needs to be put in a table)
+ Method Summary
+ https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletResponse.html
 
 * The web container also facilitates the conversion from HTTP response to HTTPServletResponse or from HTTP request to HTTPServletRequest.
 
