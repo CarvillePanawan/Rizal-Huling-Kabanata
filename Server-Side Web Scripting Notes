@@ -29,7 +29,7 @@ HTTPServletResponse
 
 * The web container also facilitates the conversion from HTTP response to HTTPServletResponse or from HTTP request to HTTPServletRequest.
 
-SessionHandling
+HTTPSessionHandling
 - Cookie-Based
   - Non-Persistent Cookie
   - "The shit"-Sir Montes
