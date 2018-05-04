@@ -1,0 +1,22 @@
+IDENTIFICATION
+
+1.
+Blacklist
+
+2.
+Spam
+3.
+Data Exfiltration
+4.
+Phishing
+5.
+Brute Force
+6.
+
+7.
+
+8.
+
+9.
+
+10.

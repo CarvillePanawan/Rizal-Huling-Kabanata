@@ -303,6 +303,115 @@ llegalStateException  - if the body of the request is larger than maxRequestSize
 
 
 PHP
+History
+PHP originally stands for "Personal Home Page Tools". PHP was created in 1994 by Rasmus Lerdof. Later that year, he dropped the name PHP and changed it to FI, an abbreviation for Forms Interpreter. It was originally intended for forms in HTML. Though in the October of 1995, Rasmus released a rewritten code bringing back the name PHP but with the meaning "Personal Home Page Construction Kit". From this, it went through a lot of development process and these are the versions and there release date:
+PHP 1.0 - June 8 1995
+PHP 2.0 - November 1 1997
+PHP 3.0 - June 6 1998
+PHP 4.0 - May 22 2000
+PHP 4.1 - December 10 2001
+PHP 4.2 - April 22 2002
+PHP 4.3 - December 27 2002
+PHP 4.4 - July 11 2005
+PHP 5.0 - July 13 2004
+PHP 5.1 - November 24 2005
+PHP 5.2 - November 2 2006
+PHP 5.3 - June 30 2009
+PHP 5.4 - March 1 2012
+PHP 5.5 - June 20 2013
+PHP 5.6 - August 28 2014
+PHP 6.x - N/A
+PHP 7.0 - December 3 2018
+PHP 7.1 - December 1 2016
+PHP 7.2 - November 30 2017
+
+Introduction
+In the following lessons, it is expected that you know HTML, CSS, JavaScript and setting up a web server.
+PHP today means "PHP: Hypertext Preprocessor" and is known as a scripting language for server-side web development. It is used mainly for making webpages dynamic and interactive. PHP is server-side programming language that runs on web servers. This means that when it is executed, it is executed in the server and nowhere else. PHP scripts must run on web servers or it will not work.
+
+Syntax
+PHP scripts can be placed anywhere in an HTML or you can make a separate file with .php as the file extension.
+PHP scripts start with <?php and ends with ?>.
+Example:
+<?php
+	echo "Hello World!";
+?> 
+Note: PHP statements end with a semicolon(;).
+
+Case Sensitivity
+All PHP keywords, functions, classes, and user defined functions are NOT case-sensitive.
+Example:
+echo "Hello"; is the same as
+EcHo "Hello";
+
+Comments
+To put single line comments, we use (//) or (#) followed by a word or a sentence.
+To put multi-line comments, we use /* and */.
+Example:
+// Single line
+# Single line
+/*
+ Multiline
+ Multiline
+*/
+
+Variables
+There are rules to follow when finding for the perfect variable name. These rules are:
+ - The first character must be a dollar sign ($).
+ - A variable name must be at least one character in length.
+ - The character after the dollar sign ($) must either be a letter or an underscore (_) and following characters can be a letter, underscore or a number.
+ - Spaces or special characters other than _ and $ are not allowed in any part of the variable name.
+ Examples of legal variable names in PHP:
+ 	$_var
+	$var
+	$var_one
+ Examples of illegal variable name in PHP:
+	var
+	$var one
+	$var-one
+
+Data Types
+PHP has 8 data types mainly String, Integer, Float, Boolean, Array, Object, NULL, and Resource
+A String is just a sequence of characters enclosed by either the single quotes or the double quotes.
+Example:
+$string = "Hello There";
+$string_two = 'Hi there';
+
+An Integer is a data type that is non-decimal.
+Example:
+$x = 219;
+$y = 2;
+
+A float is a number with a decimal point or exponential form.
+Example:
+$z = 12.345;
+
+A boolean data type represents two possible values: either a TRUE or a FALSE.
+Example:
+$a = TRUE;
+$b = FALSE;
+
+An array is a special data type that can store multiple informations in one single variable.
+Example:
+$school = array("SCIS",1,"SABM",2);
+
+An object is a data type which stores data and information and how those informations can be used.
+Example:
+class School {
+	 function School() {
+	   this->dept = "CS";
+	 }
+}
+
+$sc = new School();
+echo $sc->dept;
+
+A NULL value is a special data type which can only have a value NULL. A variable with a null value is a variable with non value assigned to it.
+Example:
+$x = 3;
+$x = null;
+
+A Resource type is actually not a data type. It stores the reference to functions in external resources. One good example for this is a database call.
 
 Java
 

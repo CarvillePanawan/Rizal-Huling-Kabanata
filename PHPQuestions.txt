@@ -1,37 +1,67 @@
  IDENTIFICATION
  	 
- Who was the creator of PHP?	 Who was the creator of PHP?
-+Rasmus Lerdorf
+ 1. Who was the creator of PHP?	 Who was the creator of PHP?
+ Rasmus Lerdorf
  	 
- What does PHP originally stand for?	 What does PHP originally stand for?
-+Personal Home Pages
+ 2. What does PHP originally stand for?	 What does PHP originally stand for?
+ Personal Home Pages Tools
  	 
- Is PHP a client-side programming language or server-side programming language?	 Is PHP a client-side programming language or server-side programming language?
-+Server-side
+ 3. Is PHP a client-side programming language or server-side programming language?
+ Server-side
  	 
- Where do PHP script run?	 Where do PHP script run?
-+Web Servers
+ 4. Where do PHP script run?
+ Web Servers
  	 
- These are special variables that is built into PHP and available throughout an entire script.	 These are special variables that is built into PHP and available throughout an entire script.
-+Superglobals
- 	 
- TRUE OR FALSE	 TRUE OR FALSE
- 	 
- All PHP scripts outputs HTML code.	 All PHP scripts outputs HTML code.
-+True
- 	 
- You don't need a web server to run PHP scripts.	 You don't need a web server to run PHP scripts.
-+False
- 	 
--It is legal to put both PHP and HTML code in the same file.	+It is legal to put both PHP and HTML code in the same file.
-+True
+ 5. These are special variables that is built into PHP and available throughout an entire script. 
+ Superglobals
 
+ 6. It is a container that you can store data in.
+ Variable
+ 
+ 7. This involves sticking more than one string together to form a new string.
+ Concatenation
 
+ 8. It is use to identify users and web browsers which is done by the web server.
+ Cookie
 
+ 9. It is an application for delivering web pages that serves as the server-side of web applications. 
+ Web Server
 
+ 10. A type of PHP data storage that allow you to store in multiple pieces of information.
+ Array
 
+ TRUE OR FALSE
+ 	 
+ 1. All PHP scripts outputs HTML code.
+ True
+ 	 
+ 2. You don't need a web server to run PHP scripts.
+ False
+ 	 
+ 3. It is legal to put both PHP and HTML code in the same file.
+ True
 
-/**/
+ 4. The $_POST is considered to be a superglobal.
+ True
+
+ 5. PHP variables can store any kinds of data.
+ True
+ 
+ 6. Escape Characters in PHP starts with (/).
+ False
+
+ 7. To start a session in PHP, use the statement session_start();.
+ True
+
+ 8. echo is a PHP command that outputs content as pure text only.
+ False
+
+ 9. You can use <? instead of <?php.
+ True
+
+ 10. There are 7 primitive data types in PHP.
+ False
+ 
 
 
 This code is for sorting a given array, identify the missing parts[*n].
