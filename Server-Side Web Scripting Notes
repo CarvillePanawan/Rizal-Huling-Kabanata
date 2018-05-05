@@ -6,6 +6,18 @@ Java Servlets
   - handles client requests by generating a response message
   - Java Servlets is hosted in a "servlet container" which is part of a web server that communicates with the servlet so that it will
     let Java to dynamically generate a web page from the server side. Servlet container also controls the servlet lifecycle
+  - Pavni Diwanji created the Servlet1 while working at Sun Microsystems, with version 1.0 finalized in June 1997. As of now, 
+    Servlet has 10 versions, from Servlet 1.0 to Servlet 4.0.
+    Servlet 4.0 	Sep 2017 	       Java EE 8 	
+    Servlet 3.1 	May 2013 	       Java EE 7 	
+    Servlet 3.0 	December 2009 	 Java EE 6, Java SE 6 	
+    Servlet 2.5 	September 2005 	 Java EE 5, Java SE 5 	
+    Servlet 2.4 	November 2003 	 J2EE 1.4, J2SE 1.3 	
+    Servlet 2.3 	August 2001 	 	 J2EE 1.3, J2SE 1.2 	
+    Servlet 2.2 	August 1999 	 	 J2EE 1.2, J2SE 1.2 	
+    Servlet 2.1 	November 1998  	 Unspecified 	
+    Servlet 2.0 		 	             JDK 1.1 	
+    Servlet 1.0 	June 1997 			
 *Servlet lifecycle
 1. initialization
   - The init() method will be called upon the creation of servlet and it is only called once.
@@ -23,13 +35,383 @@ HTTP Servlet
 
 HTTPServletRequest
 - used to access information from the request message
+  (Needs to be put in a table)
+  Method Summary
+  https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletRequest.html
 
 HTTPServletResponse 
 - used to access information from the response message
+(Needs to be put in a table)
+ Method Summary
+ https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletResponse.html
+ 
+
 
 * The web container also facilitates the conversion from HTTP response to HTTPServletResponse or from HTTP request to HTTPServletRequest.
 
+HTTPSessionHandling
+- Cookie-Based
+  - Non-Persistent Cookie
+  - "The shit"-Sir Montes
+
+HTTPSessionObject
+- getsession
+- getattribute
+- 
+HttpServletResponse Methods
+1. addCookie (Cookie cookie)
+Parameters
+cookie - the cookie that will be returned to the client
+the specified cookie
+2. containsHeader(String headerName)
+Parameters
+headerName - name of the header
+Returns
+true - if the headerName has been set else false
+3. encodeURL(String url)
+Parameters
+url - the url that needs to be encoded
+Returns
+encoded url - the url that needs to be encoded else the unchanged url
+4. encodeRedirectURL(String url)
+Parameters
+url - the url that needs to be encoded
+Returns
+encoded url - the url that needs to be encoded else the unchanged url
+5. encodeRedirectUrl(String url)
+Parameters
+url - the url that needs to be encoded
+Returns
+encoded url - the url that needs to be encoded else the unchanged url
+6. sendError(int statusCode,String message)
+Parameters
+statusCode - status code of the error
+message - the message that will be passed along with the statusCode
+Throws
+IOException - if exceptions for input or output occurs 
+IllegalStateException - if the response has been committed
+Sends a response to an error determined by the specified status
+7. sendError(int statusCode)
+Parameters
+statusCode - status code of the error
+Throws
+IOException - if exceptions for input or output occurs 
+IllegalStateException - if before calling this method, the response has been committed
+Sends a response to an error determined by the specified status and clearing the buffer
+8. sendRedirect(String location)
+Parameters
+location - the url that will be used for redirection
+Throws
+IOException - if exceptions for input or output occurs 
+IllegalStateException - if the given url is cannot be transformed into a valid url or the response has been committed
+Sends a redirect response to the client with the specified redirection URL location
+9. setDateHeader(headerName,date)
+Parameters
+headerName - the header name to be set
+date - the date value to be assigned
+
+sets a response header with the given name and date
+10. addDateHeader(String headerName,long date)
+Parameters
+headerName - the header name to be set
+date - the date value to be added
+
+adds response header containing the given name and date
+11. setHeader(String headerName,String value)
+Parameters
+headerName - the header name
+value - the value of the header, it should be encoded if it contains octed string
+
+sets a response header with the given name and value
+12. addHeader(String headerName,String value)
+Parameters
+headerName - the header name 
+value - the value of the header to be added, it should be encoded if it contains octed string
+
+adds response header containing the given name and value
+13. setIntHeader(String headerName,int value)
+Parameters
+headerName - the header name 
+value - the integer value to be assigned
+
+sets a response header with the given name and the integer value
+14. addIntHeader(String headerName,int value)
+Parameters
+headerName - the header name 
+value - the integer value to be assigned
+
+adds a response header with the given name and the integer value
+15. setStatus(int statusCode)
+Parameters
+statusCode - status code with ranges of 2XX,3XX,4XX,and 5XX
+
+16. setStatus(int statusCode,String message)
+Parameters
+statusCode - status code 
+message - message passed with the statusCode
+
+sets the status code for the response
+17. getStatus()
+Returns
+the response current status code
+18. getHeader(String headerName)
+headerName - the response header name that will return its values
+Returns
+the value of the response header name else null if there is no header name ,on the response, that has been set
+19. getHeaders(String headerName)
+Parameters
+headerName - the response header name that will return its values
+Returns
+collection of values of the resonse header. it can be null or empty collection
+20. getHeaderNames()
+Parameters
+Returns
+collection of values of the resonse header. it can be null or empty collection
+
+HttpServletRequest Method
+1.getAuthType()
+Returns:
+one of static members (BASIC_AUTH, FORM_AUTH, CLIENT_CERT_AUTH, DIGEST_AUTH)
+2. getCookies()
+Returns 
+array - cookies whithin this request. null if there is no cookies
+3.getDateHeader(String headerName)
+Parameters:
+headerName - name of the header
+Returns 
+long - value of date in the header
+Throws:
+IllegalArgumentException - if the value of the header can not be converted to date value
+4.getDateHeader(String headerName)
+Parameters:
+headerName - name of the header
+Returns 
+String - value of the header request. 
+null - if the request does not contain the header name
+5.getHeaders(String headerName)
+Parameters:
+headerName - name of the header
+Returns 
+Enumeration - value of the header request. 
+empty enumeration - if the request does not contain the header name.
+null - if the header information can not be allowed to access by the container
+6.getIntHeader(String headerName)
+Parameters
+headerName - name of the header
+Returns
+integer - value that represents the request header value. 
+-1 - if the if the request does not contain the header name
+Thorws
+NumberFormatException - if the value of the header can not be converted to integer
+7.getMethod()
+Returns
+String - the method name of the request made
+8.PathInfo()
+Returns String
+String the extra path information decoded by the web container after the servlet path and before the request url of the query string . 
+null - if there is no extra path information
+9.getPathTranslated()
+Returns
+String - the real path. 
+10.getContextPath()
+Returns
+String - portion of the URL that is requested that specifies the request context
+11.getQueryString
+Returns
+String - the query string
+null - if the url does not have a query string
+12.getRemoteUser()
+Returns
+String - the user login that is producing this request 
+null - if the login of the user is unknown
+13.isUserInRole(String role)
+Parameter
+role - role name
+Returns
+true- when the user that is producing this request has been authenticated
+false - when the user that is producing this request is unauthenticated
+14.getUserPrincipal()
+Returns
+Principal - user name that is producing this request
+null - if the user name is unauthenticateda
+15.getRequestedSessionId()
+Returns
+String - session ID
+null - if the session is not specified in the request
+16.getRequestURI()
+Returns
+Stirng - part of the url 
+17.getRequestURL()
+Returns
+StringBuffer - reconstructed url
+18.getServletPath()
+Returns
+String - decoded servlet name or servlet path that is being called that is specified in the request URL 
+null - if patern "/*" is used when the servlet processed the request
+19.getSession(boolean create)
+Parameters
+create(true) - to make a new session for this request
+create(false) - no current session
+Returns
+HttpSession related with this request 
+null - no valid session in the request and create is false
+20.getSession()
+Returns
+HttpSession related with this request 
+21.isRequestedSessionIdValid()
+Returns
+true - the id is valid for the current session context
+false - the id is not valid for the current session context
+22.isRequestedSessionIdFromCookie()
+Returns
+true - the id of the session arrived as a cookie
+false - the id of the session didnt arrived as a cookie
+23.isRequestedSessionIdFromURL()
+Returns
+true - if the id of the session arrived as a part of a url
+false - if the id of the session didnt arrived as a part of a url
+24. boolean authenticate(HttpServletResponse response)
+Parameters
+response -the HttpServletResponse related with this HttpServletResponse 
+Returns
+true - 
+25.login(String username, String password)
+Parameters
+username - identifier of the user when logged in
+password - the password of the user when logged in
+Throws
+ServletException - if the login function does no support username and password authentication or if the username and password provided fails
+26.logout()
+ServletException - if the logout fails
+27.getParts()
+Returns
+Collection - part components of the request made
+Throws
+IOException  - 
+ServletException 
+llegalStateException  - if the body of the request is larger than maxRequestSize
+28.getPart(String partName)
+Parameter
+partName- name of the Part requested
+Returns
+Part with given name
+null - if the request made is not type multipart/form-data but the requested Part is not contained
+Throws
+IOException  - 
+ServletException 
+llegalStateException  - if the body of the request is larger than maxRequestSize
+
+
 PHP
+History
+PHP originally stands for "Personal Home Page Tools". PHP was created in 1994 by Rasmus Lerdof. Later that year, he dropped the name PHP and changed it to FI, an abbreviation for Forms Interpreter. It was originally intended for forms in HTML. Though in the October of 1995, Rasmus released a rewritten code bringing back the name PHP but with the meaning "Personal Home Page Construction Kit". From this, it went through a lot of development process and these are the versions and there release date:
+PHP 1.0 - June 8 1995
+PHP 2.0 - November 1 1997
+PHP 3.0 - June 6 1998
+PHP 4.0 - May 22 2000
+PHP 4.1 - December 10 2001
+PHP 4.2 - April 22 2002
+PHP 4.3 - December 27 2002
+PHP 4.4 - July 11 2005
+PHP 5.0 - July 13 2004
+PHP 5.1 - November 24 2005
+PHP 5.2 - November 2 2006
+PHP 5.3 - June 30 2009
+PHP 5.4 - March 1 2012
+PHP 5.5 - June 20 2013
+PHP 5.6 - August 28 2014
+PHP 6.x - N/A
+PHP 7.0 - December 3 2018
+PHP 7.1 - December 1 2016
+PHP 7.2 - November 30 2017
+
+Introduction
+In the following lessons, it is expected that you know HTML, CSS, JavaScript and setting up a web server.
+PHP today means "PHP: Hypertext Preprocessor" and is known as a scripting language for server-side web development. It is used mainly for making webpages dynamic and interactive. PHP is server-side programming language that runs on web servers. This means that when it is executed, it is executed in the server and nowhere else. PHP scripts must run on web servers or it will not work.
+
+Syntax
+PHP scripts can be placed anywhere in an HTML or you can make a separate file with .php as the file extension.
+PHP scripts start with <?php and ends with ?>.
+Example:
+<?php
+	echo "Hello World!";
+?> 
+Note: PHP statements end with a semicolon(;).
+
+Case Sensitivity
+All PHP keywords, functions, classes, and user defined functions are NOT case-sensitive.
+Example:
+echo "Hello"; is the same as
+EcHo "Hello";
+
+Comments
+To put single line comments, we use (//) or (#) followed by a word or a sentence.
+To put multi-line comments, we use /* and */.
+Example:
+// Single line
+# Single line
+/*
+ Multiline
+ Multiline
+*/
+
+Variables
+There are rules to follow when finding for the perfect variable name. These rules are:
+ - The first character must be a dollar sign ($).
+ - A variable name must be at least one character in length.
+ - The character after the dollar sign ($) must either be a letter or an underscore (_) and following characters can be a letter, underscore or a number.
+ - Spaces or special characters other than _ and $ are not allowed in any part of the variable name.
+ Examples of legal variable names in PHP:
+ 	$_var
+	$var
+	$var_one
+ Examples of illegal variable name in PHP:
+	var
+	$var one
+	$var-one
+
+Data Types
+PHP has 8 data types mainly String, Integer, Float, Boolean, Array, Object, NULL, and Resource
+A String is just a sequence of characters enclosed by either the single quotes or the double quotes.
+Example:
+$string = "Hello There";
+$string_two = 'Hi there';
+
+An Integer is a data type that is non-decimal.
+Example:
+$x = 219;
+$y = 2;
+
+A float is a number with a decimal point or exponential form.
+Example:
+$z = 12.345;
+
+A boolean data type represents two possible values: either a TRUE or a FALSE.
+Example:
+$a = TRUE;
+$b = FALSE;
+
+An array is a special data type that can store multiple informations in one single variable.
+Example:
+$school = array("SCIS",1,"SABM",2);
+
+An object is a data type which stores data and information and how those informations can be used.
+Example:
+class School {
+	 function School() {
+	   this->dept = "CS";
+	 }
+}
+
+$sc = new School();
+echo $sc->dept;
+
+A NULL value is a special data type which can only have a value NULL. A variable with a null value is a variable with non value assigned to it.
+Example:
+$x = 3;
+$x = null;
+
+A Resource type is actually not a data type. It stores the reference to functions in external resources. One good example for this is a database call.
 
 Java
 
@@ -40,3 +422,11 @@ References:
 Program Creek.(n.d).What is Servlet Container? Retrieved from https://www.programcreek.com/2013/04/what-is-servlet-container/
 
 https://docs.oracle.com/javaee/6/tutorial/doc/docinfo.html
+
+https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletRequest.html
+
+https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletResponse.html
+
+https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html
+
+https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html
