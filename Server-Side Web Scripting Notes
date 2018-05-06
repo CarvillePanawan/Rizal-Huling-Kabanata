@@ -603,6 +603,8 @@ Promise Object
     If the state is rejected, onRejected() will be called (e.g. reject())
 If the state is pending, it is notyet fulfilled or rejected
 
+JSP
+JSP(JavaServer Pages) provides a quick way to alter or create dynamic web content.
 
 References:
 Program Creek.(n.d).What is Servlet Container? Retrieved from https://www.programcreek.com/2013/04/what-is-servlet-container/
@@ -620,5 +622,7 @@ https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html
 https://www.umass.edu/microbio/chime/chimehow/whatisjs.htm
 
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript
+
+http://www.oracle.com/technetwork/java/javaee/jsp/index.html
 
 
