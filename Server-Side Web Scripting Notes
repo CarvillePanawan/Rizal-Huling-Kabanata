@@ -413,6 +413,7 @@ $x = null;
 
 A Resource type is actually not a data type. It stores the reference to functions in external resources. One good example for this is a database call.
 
+
 Java
 
 JS
