@@ -5,9 +5,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Webtech Finals</title>
-	<link rel="stylesheet" type="text/css" href="lesson_template.css">
+	<link rel="stylesheet" type="text/css" href="css/topics.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
-	<link rel="stylesheet" type="text/css" href="quiz.css">
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="js/selection.js" async></script>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -76,13 +78,13 @@
 			
 			<div class="nav-custom">
 				<ul class="nav-a">
-					<li><a class="custom-a">Overview</a></li>
+					<li><a class="custom-a tablinks" onclick="openTab(event, 't0')">Overview</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle cus-dropdown" data-toggle="dropdown" href="#">Topics</a>
 						<ul class="dropdown-menu cus-dropdown-menu">
-							<li><a href="#">Page 1</a></li>
-							<li><a href="#">Page 2</a></li>
-							<li><a href="#">Page 3</a></li>
+							<li><a class="tablinks" onclick="openTab(event, 't1')">Page 1</a></li>
+							<li><a class="tablinks" onclick="openTab(event, 't2')">Page 2</a></li>
+							<li><a class="tablinks" onclick="openTab(event, 't3')">Page 3</a></li>
 						</ul>
 				  </li>
 				</ul>
@@ -93,16 +95,21 @@
 			
 			<div class="container container-1">
 				<div class="t-container">
-					<div class="quiz-container">
-						<div id="quiz"></div>
+					<div id="t0" class="tabcontent">
+						Overview
 					</div>
-					<label class="q-label"><input type="text"></label>
-
-					<button class="q-btn" id="previous">Previous Question</button>
-					<button class="q-btn" id="next">Next Question</button>
-					<button class="q-btn" id="submit">Submit Quiz</button>
-
-					<div id="results"></div>
+					
+					<div id="t1" class="tabcontent">
+						Hello
+					</div>
+					
+					<div id="t2" class="tabcontent">
+						World!
+					</div>
+					
+					<div id="t3" class="tabcontent">
+						Test
+					</div>
 				</div>
 			</div>
 			
@@ -112,7 +119,6 @@
 		<div class="footer">Saint Louis University &copy; 2018</div>
 		
 		<script src="js/topics.js"></script>
-		<script src="quiz.js"></script>
 	</div>
 </body>
 	
