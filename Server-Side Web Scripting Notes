@@ -415,13 +415,36 @@ $x = null;
 
 A Resource type is actually not a data type. It stores the reference to functions in external resources. One good example for this is a database call.
 
+PHP GLOBAL VARIABLES - SUPERGLOBALS
+$GLOBALS - this super global variable is used to access global variables anywhere in the script
+$_SERVER - this super global variable is used to store and hold informations about header, paths and locations.
+$_REQUEST - this super global variable is used to collect data from a submission form form an HTML form.
+$_POST - this super global variable is widely used for passing variables and also used for collecting data from HTML forms with method value of "post". 
+$_GET - this super global variable is widely used for passing variables and also used for collecting data from HTML forms with method value of "get".
+$_FILES - this super global variable is used for storing information about the uploaded file. 
+$_ENV - this is an associative array of variables passed to the current script via the environment method.
+$_COOKIE - this super global variable is use to retrieve the value of the cookie in the browser.
+$_SESSION - a super global variable use to set a session.
 
-Java
+PHP SELECTION CONSTRUCT
+if
+
+if-else
+
+if else-if else
+
+Switch
+PHP ITERATION CONSTRUCT
+while
+
+for
+
+JAVA
 
 JS
 Javascript is a high level programming language built into Netscape 2.0 and later versions. It is part and parcel of HTML 
 which gives the user to alter and create dynamic content within a webpage.The requisite to properly use Javascipt is having
-suffecient knowledge and knowing how to use HTML and CSS.
+sufficient knowledge and knowing how to use HTML and CSS.
 
 How JavaScript makes Web Pages more Interactive
 Access Contents - you can select any element, attributes, ot text from an HTML web page.
