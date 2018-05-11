@@ -628,7 +628,11 @@ Promise Object
 If the state is pending, it is notyet fulfilled or rejected
 
 JSP
-JSP(JavaServer Pages) provides a quick way to alter or create dynamic web content.
+-JSP(JavaServer Pages) provides a quick way to alter or create dynamic web content. JSP provides quick and easy development for 
+web developers and web designers in a dynamic web page that has an advantage for business systems. Java Server Pages is 
+platform independent meaning, it could be on any operating system without requiring the Java Virtual Machine(JVM). JSP 
+separates the User Interface(UI) from the content and enables web designers to change the layout of the web page without 
+changing the primary dynamic content.
 
 References:
 Program Creek.(n.d).What is Servlet Container? Retrieved from https://www.programcreek.com/2013/04/what-is-servlet-container/
