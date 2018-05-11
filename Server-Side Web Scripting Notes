@@ -634,6 +634,48 @@ platform independent meaning, it could be on any operating system without requir
 separates the User Interface(UI) from the content and enables web designers to change the layout of the web page without 
 changing the primary dynamic content.
 
+Scriptet
+-Where java language statements, variable or method declarations, or expressions used for page scripting are contained.
+	<% code  %>
+-Example
+<html>
+<head><title>Hello World</title></head>
+<body>
+<%
+out.println("Scriptet");
+%>
+</body>
+</html>
+
+Declarations
+-Declaration of one or more variables and methods 
+	<% declaration %>
+-Example
+<%! int o, i, l; %> 
+<%! String m; %> 
+
+Expressions
+-Code that can be evaluated one way or another to procure a desired result is an expression.
+	<%= expression %>
+-Example
+ <%! int age = 21; %>
+ <%= age %>
+
+Comments
+-Comments can be seen as notes to the program wriiten
+	<%-- comment --%>
+-Example
+<%-- This is come nice code--%> 
+
+Directives
+-Assigns the overall structure of the servlet class.
+	<%@ attribute="number" %>
+-Three Types:
+<%@ page ... %> 	Defines page-dependent attributes.
+<%@ include ... %> 	Includes a file to be used.
+<%@ lib ... %> 	    	Declares a tag library, containing custom actions
+
+
 References:
 Program Creek.(n.d).What is Servlet Container? Retrieved from https://www.programcreek.com/2013/04/what-is-servlet-container/
 
