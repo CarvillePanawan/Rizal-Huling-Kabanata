@@ -1,0 +1,15 @@
+Match the Modules in Node.js on the function
+
+Answer    Module            Function
+3          assert            1.  Handles binary data
+5          child process     2.  handles OpenSSL functions
+6          domain            3.  Issues implementation of UDP datagram sockets
+3          dgram             4.  Handles events
+4          events            5.  Runs a child process
+7          cluster           6.  Deprecated. Handles unhandled errors
+1          buffer            7.  Splits a node process into multiple processes
+9          fs                8.  Issue a set of assertion tests
+10         dns               9.  Handles file systems
+2          crypto            10. Searching of DNS lookups and name resolution functions
+
+
