@@ -673,10 +673,14 @@ Directives
 -Three Types:
 <%@ page ... %> 	Defines page-dependent attributes.
 <%@ include ... %> 	Includes a file to be used.
-<%@ lib ... %> 	    	Declares a tag library, containing custom actions
+<%@ taglib ... %> 	Declares a tag library, containing custom actions
 
 
 References:
+http://www.java2s.com/Tutorials/Java/JSP/0020__JSP_Syntax.htm
+
+http://www.informit.com/articles/article.aspx?p=31072&seqNum=7
+
 Program Creek.(n.d).What is Servlet Container? Retrieved from https://www.programcreek.com/2013/04/what-is-servlet-container/
 
 https://docs.oracle.com/javaee/6/tutorial/doc/docinfo.html
