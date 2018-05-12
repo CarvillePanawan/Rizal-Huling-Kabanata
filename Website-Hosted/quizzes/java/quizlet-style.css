@@ -1,0 +1,93 @@
+.btn-res {
+	background-color: #3f3e3e !important;
+	color: #fff !important;
+}
+
+.question{
+  	font-size: 1.5em;
+}
+
+.answers {
+	width: 100%%;
+}
+
+.q-input {
+	width: 100% !important;
+}
+
+.answers label {
+  	display: block;
+  	margin-bottom: 10px;
+}
+
+.q-btn {
+    background-color: #2d2c2c;
+    color: #fff;
+    padding: 0.5em;
+    cursor: pointer;
+	border: none;
+	margin: 0 5px 0 5px;
+}
+
+.q-btn:hover {
+    background-color: #656464;
+}
+
+.slide{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.5s;
+	text-align: center;
+}
+
+.active-slide{
+	opacity: 1;
+	z-index: 2;
+}
+
+.quiz-container{
+	position: relative;
+	height: 200px;
+}
+
+#results {
+	padding-top: 20px;
+}
+
+.t-container {
+	background-color: #fff;
+	width: 100%;
+	padding: 5%;
+}
+
+.t-container h4 {
+	margin-bottom: 5% !important;
+	padding-bottom: 1%;
+	border-bottom: 1px solid #000;
+}
+
+.cus-btn-grp {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cus-answer-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row;
+}
+
+.glyphicon {
+    font-size: 2em;
+	text-align: center;
+}
+
+.modal h3 {
+	border: none;
+}
