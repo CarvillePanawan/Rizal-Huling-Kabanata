@@ -1,0 +1,298 @@
+<!Doctype>
+
+<html>
+	
+<head>
+	<meta charset="UTF-8">
+	<title>Webtech Finals</title>
+	<link rel="stylesheet" type="text/css" href="css/topics.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="js/selection.js" async></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<script src="js/jquery.min.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+</head>
+	
+<body>
+	<div class="container-a">
+		<div class="header">
+			<div class="header-left">
+				<img id="header-img" src="images/header.png" alt="website header">
+				<input id="search-bar" type="text" placeholder="Search">
+				<button id="search-btn"></button>
+			</div>
+			<ul class="nav-a">
+				<li><button type="button" class="top-btn" data-toggle="modal" data-target="#login-modal">Log In</button></li>
+				<li><button type="button" class="top-btn" data-toggle="modal" data-target="#signup-modal">Sign Up</button></li>
+			</ul>
+		</div>
+		<div id="login-modal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Log In</h4>
+					</div>
+					<div class="modal-body">
+						<div class="board">
+						Log In				
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="signup-modal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Sign Up</h4>
+					</div>
+					<div class="modal-body">
+						<div class="board">
+						Sign Up				
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="body">
+			
+			<div class="container">
+				<div class="jumbotron banner">
+					<h3>PHP</h3>
+					<p>PHP is a server-side programming language that runs on a web server. PHP stands for <em>PHP: Hypertext Processor.</em> PHP is mainly used for dynamic contents in the back-end side of web development.</p>
+				</div>
+			</div>
+			
+			<div class="nav-custom">
+				<ul class="nav-a">
+					<li><a class="custom-a tablinks" onclick="openTab(event, 't0')">Overview</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle cus-dropdown" data-toggle="dropdown" href="#">Topics</a>
+						<ul class="dropdown-menu cus-dropdown-menu">
+							<li><a class="tablinks" onclick="openTab(event, 't1')">PHP History</a></li>
+							<li><a class="tablinks" onclick="openTab(event, 't2')">Introduction to PHP</a></li>
+							<li><a class="tablinks" onclick="openTab(event, 't3')">Syntax</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't4')">Case Sensitivity</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't5')">Comments</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't6')">Variables</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't7')">Data Types</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't8')">Superglobals</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't9')">Selection Construct</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't10')">Iteration Constructs</a></li>
+						</ul>
+				  </li>
+				</ul>
+				<ul class="nav-a">
+					<li><a class="custom-a">Take Quiz</a></li>
+				</ul>
+			</div>
+			
+			<div class="container container-1">
+				<div class="t-container">
+					<div id="t0" class="tabcontent">
+                        <p>In this topic,...</p>
+					</div>
+					
+					<div id="t1" class="tabcontent">
+                        <h2>PHP History</h2>
+						<p>PHP originally stands for "Personal Home Page Tools". PHP was created in 1994 by Rasmus Lerdof. Later that year, he dropped the name PHP and changed it to FI, an abbreviation for Forms Interpreter. It was originally intended for forms in HTML. Though in the October of 1995, Rasmus released a rewritten code bringing back the name PHP but with the meaning "Personal Home Page Construction Kit". From this, it went through a lot of development process and these are the versions and there release date:
+                        </p><br>
+                        <table>
+                        <tr>
+                            <th>Version</th>
+                            <th>Date Released</th>
+                        </tr>
+                        <tr>
+                            <td>PHP 1.0</td>
+                            <td>June 8 1995</td>
+                        </tr>
+                        <tr>
+                            <td>PHP 2.0</td>
+                            <td>November 1 1997</td>
+                 
+                        </tr>
+                        <tr>
+                            <td>PHP 3.0</td>
+                            <td>June 6 1998</td>
+                 
+                        </tr>
+                        <tr>
+                            <td>PHP 4.0</td>
+                            <td>May 22 2000</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>PHP 4.1</td>
+                            <td>December 10 2001</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>PHP 4.2</td>
+                            <td>April 22 2002</td>
+                          
+                        </tr>
+                        <tr>
+                            <td>PHP 4.3</td>
+                            <td>December 27 2002</td>
+                          
+                        </tr>
+                        <tr>
+                            <td>PHP 4.4</td>
+                            <td>July 11 2005</td>
+                          
+                        </tr>
+                        <tr>
+                            <td>PHP 5.0</td>
+                            <td>July 13 2004</td>
+                   
+                        </tr>
+                        <tr>
+                            <td>PHP 5.1</td>
+                            <td>November 24 2005</td>
+               
+                        </tr>
+                        <tr>
+                            <td>PHP 5.2</td>
+                            <td>November 2 2006</td>
+              
+                        </tr>
+                        <tr>
+                            <td>PHP 5.3</td>
+                            <td>June 30 2009</td>
+              
+                        </tr>
+                        <tr>
+                            <td>PHP 5.4</td>
+                            <td>March 1 2012</td>
+              
+                        </tr>
+                        <tr>
+                            <td>PHP 5.5</td>
+                            <td>June 20 2013</td>
+              
+                        </tr>
+                        <tr>
+                            <td>PHP 5.6</td>
+                            <td>August 28 2014</td>
+              
+                        </tr>
+                        <tr>
+                            <td>PHP 6.x</td>
+                            <td>N/A</td>
+              
+                        </tr>
+                        
+                            <tr>
+                            <td>PHP 7.0</td>
+                            <td>December 3 2018</td>
+              
+                        </tr>
+                        <tr>
+                            <td>PHP 7.1</td>
+                            <td>December 1 2016</td>
+              
+                        </tr>
+                        <tr>
+                            <td>PHP 7.2</td>
+                            <td>November 30 2017</td>
+              
+                        </tr>
+                    </table>
+					</div>
+					
+					<div id="t2" class="tabcontent">
+						<h2>Introduction</h2>
+                        <p>In the following lessons, it is expected that you know HTML, CSS, JavaScript and setting up a web server.
+                            PHP today means "PHP: Hypertext Preprocessor" and is known as a scripting language for server-side web development. It is used mainly for making webpages dynamic and interactive. PHP is server-side programming language that runs on web servers. This means that when it is executed, it is executed in the server and nowhere else. PHP scripts must run on web servers or it will not work.</p>
+					</div>
+					
+					<div id="t3" class="tabcontent">
+						<h2>Syntax</h2>
+                        <p>PHP scripts can be placed anywhere in an HTML or you can make a separate file with .php as the file extension.
+</p><br>
+                        <p>PHP scripts start with <?php and ends with ?>.</p><br>
+                        <p>Example:</p><br>
+                        <p>
+                        
+                        </p>
+                        <p>Note: PHP statements end with a semicolon(;).</p>
+					</div>
+                    <div id="t4" class="tabcontent">
+						<h2>Case Sennsitivity</h2>
+                        <p>All PHP keywords, functions, classes, and user defined functions are NOT case-sensitive.</p><br>
+                        <p>Example:</p>
+                        <p><em></em>echo "Hello"; is the same as
+                            <em>EcHo "Hello";</em></p>
+					</div>
+                    <div id="t5" class="tabcontent">
+						<h2>Comments</h2>
+                        <p>To put single line comments, we use (//) or (#) followed by a word or a sentence.</p><br>
+                        <p>To put multi-line comments, we use /* and */.</p><br>
+                        <p>Example:</p>
+                        <p>// Single line<br>
+                            # Single line</p>
+                        <p>
+                            /*<br>
+                            Multiline<br>
+                            Multiline<br>
+                            */
+                        </p>
+                        
+					</div>
+                    <div id="t6" class="tabcontent">
+						<h2>Variables</h2>
+                        <p>There are rules to follow when finding for the perfect variable name.</p><br>
+                        <p>These rules are:</p>
+                        <p>The first character must be a dollar sign ($).</p>
+                        <p>A variable name must be at least one character in length.</p>
+                        <p>The character after the dollar sign ($) must either be a letter or an underscore (_) and following characters can be a letter, underscore or a number.</p>
+                        <p>Spaces or special characters other than _ and $ are not allowed in any part of the variable name.</p>
+                        <p>Examples of legal variable names in PHP:<br>
+ 	                       $_var<br>
+	                       $var<br>
+	                       $var_one
+                        </p>
+                        <p>Examples of illegal variable name in PHP:<br>
+	                       var<br>
+	                       $var one<br>
+	                       $var-one
+                        </p>
+					</div>
+                    <div id="t7" class="tabcontent">
+						<h2>Data Types</h2>
+					</div>
+                    <div id="t8" class="tabcontent">
+						<h2>Superglobals</h2>
+					</div>
+                    <div id="t9" class="tabcontent">
+						<h2>Selection Constructs</h2>
+					</div>
+                    <div id="t10" class="tabcontent">
+						<h2>Iteration Constructs</h2>
+					</div>
+				</div>
+			</div>
+			
+			<div class="breaker"></div>
+		</div>
+		
+		<div class="footer">Saint Louis University &copy; 2018</div>
+		
+		<script src="js/topics.js"></script>
+	</div>
+</body>
+	
+</html>

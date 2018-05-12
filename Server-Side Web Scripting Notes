@@ -28,10 +28,10 @@ Java Servlets
 3. destruction
 - The destruction is handled by the method destroy() which is invoked the website? is done using the object method. 
 
-HTTP Servlet
-- used to handle HTTP requests and generate HTTP responses
-- the service() method call is connected to a doXXX call (e.g. doGet(), doPost(), doPut(), doDelete())
-- the doXXX() methods passes 2 arguements which are HTTPServletRequest and HTTPServletResponse
+HTTPServlet
+- Used to handle HTTP requests and generate HTTP responses
+- The service() method call is connected to a doXXX call (e.g. doGet(), doPost(), doPut(), doDelete())
+- The doXXX() methods passes 2 arguments which are HTTPServletRequest and HTTPServletResponse
 
 HTTPServletRequest
 - used to access information from the request message
