@@ -28,10 +28,10 @@ Java Servlets
 3. destruction
 - The destruction is handled by the method destroy() which is invoked the website? is done using the object method. 
 
-HTTP Servlet
-- used to handle HTTP requests and generate HTTP responses
-- the service() method call is connected to a doXXX call (e.g. doGet(), doPost(), doPut(), doDelete())
-- the doXXX() methods passes 2 arguements which are HTTPServletRequest and HTTPServletResponse
+HTTPServlet
+- Used to handle HTTP requests and generate HTTP responses
+- The service() method call is connected to a doXXX call (e.g. doGet(), doPost(), doPut(), doDelete())
+- The doXXX() methods passes 2 arguments which are HTTPServletRequest and HTTPServletResponse
 
 HTTPServletRequest
 - used to access information from the request message
@@ -441,196 +441,62 @@ for
 
 JAVA
 
-JS
-Javascript is a high level programming language built into Netscape 2.0 and later versions. It is part and parcel of HTML 
-which gives the user to alter and create dynamic content within a webpage.The requisite to properly use Javascipt is having
-sufficient knowledge and knowing how to use HTML and CSS.
-
-How JavaScript makes Web Pages more Interactive
-Access Contents - you can select any element, attributes, ot text from an HTML web page.
-Modify Conntents - you can modify like adding elements, attributes and text to the page.
-
-Javascript Fundamentals
-DATATYPES
-1. number
-  - the datatype number can be a decimal integer, decimal floating point or a decimal scientific notation
-  - you can also represent numbers with base 2,8, and 16
-  - there are also special numbers which are infinity, -infinity, and NaN
-  NOTE:
-  Division with numbers will always result as a decimal floating point and beware of inexact result
-  e.g.
-  var num = 10;
-  num = 1.5;
-  num = 3.1e7;
-2. string
-  - the string datatype can be represented by a single quote ('') or a double qoute ("")
-  e.g.
-  var str = 'hi';
-  str = "hello";
-3. boolean
-  - the boolean data type has two values. The first is the falsy values which is represented by false,null,0,'', and undefined. 
-    The second is the truthy values which are the values other than the falsy values 
-    e.g.
-    var bol = false;
-    bol = null;
-    bol = true;
-4. null and undefined
-  e.g.
-  var n = null;
-  n = undefined;
-5. Object
-  - object tyoes coresponds to primitive data
-  e.g.
-  var obj = new String("string");
-  obj = new Number(100);
-  
-  FUNCTIONS
-  - functions in javascript lets you return any type of value you want. The parameters of a function can be any data type and it doesnt
-    need to be consistent
-  example of syntax:
-  function fnc (a,b){
-    if(a>b){
-      return a;
-    }else{
-      return b;
-    }
-  }
-  func(1,false);
-  func("aas",null);
-  
-  There is an object called argument in javascript which is an array that treats the parameter of a function as a data inside the array
-  example:
-  function fnc1(a,b){
-    console.log(argument[0]); //the output is whatever the value of a 
-    console.log(argument[1]); //the output is whatever the value of b
-  }
-  
-  There is a parameter called rest parameter which is represented by three dots (...). The rest parameter lets you have an
-  indefinite number of parameter or argument in a function
-  example
-  function fnc2(a...b){
-  }
-  
- The function can also be represented as expressions
- example
- var func = function (a,b){return a/b;};
- The function can also represented as an arrow function expression
- var func1 = (a,b) => {var c = a/b; return c;};
-
-ARRAYS
-- Arrays in java script are dynamic in size and it allows sparse arrays
-Methods used in arrays
-1.push method
-- Add a new item at the end of the array
-e.g
-var colors = ["red","blue","green"];
-colors.push("yellow");
-2.pop method
-- Removes an item at the end of the array
-e.g.
-colors.pop();
-3.unshift method
-- Add a new item at the beginning of the array
-e.g.
-colors.unshift("white");
-4.shift method
-- Removes an item at the beginning of the array
-e.g.
-colors.shift();
-5.sort method
-- Sorts the elemets of the array in alphabetical oreder
-e.g.
-colors.sort();
-6.reverse method
-- Reverses the elements of the array
-e.g.
-colors.reverse();
-7.forEach method
-- forEach method calls the elements of the array one at a time
-8.reduce method
-- Reduces the the value of the array to single value
-9.filter method
-- Filters the elements of the array that passes the condition
-10.map method
-- Maps a function once for each elements of the array
-
-
-EVENT HANDLING
-Event Propagation - event propagation determines in which order the elements receive the event. There are two ways of event propagation mainly:
-
-Capture Phase - with capturing, the first event to be captured and handled is the outermost elememt going to the innermost element.
-ex. <div>
-      <ul>
-        <li></li>
-      </ul>
-    </div>
-In this example, assume that a click event happened on <li>, the order of propagation would then be from <div> to <ul> to <li>. 
-Bubble Phase - with bubbling, the first event to be captured and handled is the innermost elememt going to the outermost element.
-ex. <div>
-      <ul>
-        <li></li>
-      </ul>
-    </div>
- In this example, assume that a click event happened on <li>, the order of propagation would then be from <li> to <ul> to <div>. 
- 
-Event Handler Registration 
-- using an inline event attributes
-- using addEventListener, removeEventListener, dispatchEvent
-- using attachEvent, fireEvent
-
-Event Objects Properties and Methods
-- bubble
-- eventPahse
-- target
-- current target
-- preventDefault
-- stopPropagation
-- stopImmediatePropagation
-
-JavaScripts API
-Execution of Synchronous and Asynchronous Codes
-  - JavaScript is a single-threaded programming language which means that it can only execute one statement at a time.
-    Synchronous - this means that while a statement is being executed, following line of statements can't be executed.
-    ex. console.log(" First ");
-        console.log(" Second ");
-        console.log(" Third ");
-        In this example, when the statement console.log(" First "); is executed, following statements are blocked and cannot           be executed. The output should then be:
-        First
-        Second
-        Third
-    Asynchronous - this means that while a statement is being executed, the next line of codes can be executed even though         current statement are executing. It may seem that a synchronous execution is straightforward but it can really be slow.
-    With asynchronous execution, things can get faster especially with image processing, file operation and others.
-    ex. console.log("1");
-        setTimeout( function() {
-          console.log("3");
-        }
-        console.log("2");
-        In this exmaple, we used setTimeout(), let us say that the parameters for the function is setTimeout(callback, 2000).         It has the component callback and 2000 ms, callback will let the user know if the execution is done within the time of         2 seconds. The first statement is executed then the second one which is the function setTimeout(). While it is                 executing, lines after it can be executed. After 2 seconds, callback is now triggered and the statement is now                 executed. The output should then be:
-        1
-        2
-        3
-XMLHttpRequest Object
-  - with this object, updating the parts of the webpage with reloading the whole page is possible.
-  - XMLHttpRequest Object is used to give and take data with a server in background.
-  Some properties of this objects are:
-    - status
-    - statusText
-    - responseText
-    - responceXML
-    - readyState
-    - onreadystatechange
-    
-Promise Object
-    - Promise Objects may produce a single value some toime in the future that can be either a resolve value or a rejected value. A promise can have 3 states mainly: fulfilled, pending, or rejected. Promises are eager, that means that a promise will start doing task you give it as soon as the promise constructor is invoked.
-    How it works:
-    If the state is fulfilled, onFulfilled() will be called (e.g. resolve())
-    If the state is rejected, onRejected() will be called (e.g. reject())
-If the state is pending, it is notyet fulfilled or rejected
+NODE JS
 
 JSP
-JSP(JavaServer Pages) provides a quick way to alter or create dynamic web content.
+-JSP(JavaServer Pages) provides a quick way to alter or create dynamic web content. JSP provides quick and easy development for 
+web developers and web designers in a dynamic web page that has an advantage for business systems. Java Server Pages is 
+platform independent meaning, it could be on any operating system without requiring the Java Virtual Machine(JVM). JSP 
+separates the User Interface(UI) from the content and enables web designers to change the layout of the web page without 
+changing the primary dynamic content.
+
+Scriptet
+-Where java language statements, variable or method declarations, or expressions used for page scripting are contained.
+	<% code  %>
+-Example
+<html>
+<head><title>Hello World</title></head>
+<body>
+<%
+out.println("Scriptet");
+%>
+</body>
+</html>
+
+Declarations
+-Declaration of one or more variables and methods 
+	<% declaration %>
+-Example
+<%! int o, i, l; %> 
+<%! String m; %> 
+
+Expressions
+-Code that can be evaluated one way or another to procure a desired result is an expression.
+	<%= expression %>
+-Example
+ <%! int age = 21; %>
+ <%= age %>
+
+Comments
+-Comments can be seen as notes to the program wriiten
+	<%-- comment --%>
+-Example
+<%-- This is come nice code--%> 
+
+Directives
+-Assigns the overall structure of the servlet class.
+	<%@ attribute="number" %>
+-Three Types:
+<%@ page ... %> 	Defines page-dependent attributes.
+<%@ include ... %> 	Includes a file to be used.
+<%@ taglib ... %> 	Declares a tag library, containing custom actions
+
 
 References:
+http://www.java2s.com/Tutorials/Java/JSP/0020__JSP_Syntax.htm
+
+http://www.informit.com/articles/article.aspx?p=31072&seqNum=7
+
 Program Creek.(n.d).What is Servlet Container? Retrieved from https://www.programcreek.com/2013/04/what-is-servlet-container/
 
 https://docs.oracle.com/javaee/6/tutorial/doc/docinfo.html

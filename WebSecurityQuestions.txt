@@ -20,3 +20,13 @@ Brute Force
 9.
 
 10.
+
+Owasp Identification
+1. Occur when untrusted data is sent to an interpreter as part of a command or query. Injection
+2. Application functions related to authenication and session management are often implemented incorrectly
+    allowing attackers to compromise credentials or to exploit other implementation flaws. Broken Authentication
+3. A result of insecure dafault configurations, incomplete or ad hoc configurations, open cloud storage,
+    misconfigured HTTP headers, and verbose error messages containing sensitive information. Security Misconfiguration
+4. Occur whenever an application includes untrusted data in a new web page without proper validation or escaping,
+    or updates an existing web page with user-supplied data using a browser API that can create HTML or JavaScript. Cross-Site Scripting
+5. Restrictions on what authenticated users are allowed to do are often not properly enforced. Broken Access Control

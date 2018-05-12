@@ -1,0 +1,19 @@
+1. Where java language statements, variable or method declarations, or expressions used for page scripting are contained? 
+-Scriptet
+2. JSP
+-JavaServer Pages
+3. JSP rovides a quick way to alter or create ________ web content.
+-dynamic
+4. Scriptet syntax
+- <%  %>
+5. JSP coment syntax
+- <%--  --%>
+6. Assigns the overall structure of the servlet class.
+-directive
+7. Initialization of one or more variables and methods to be used in the program.
+- Declarations
+8. <%! int age = 21; %>
+   <%= age %>
+-expressions
+9. Three types of directives?
+-page,include,tag library

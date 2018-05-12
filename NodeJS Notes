@@ -1,0 +1,124 @@
+Node.js
+
+I.	What is Node.js? 
+			
+•	An open-source server framework
+•	A cross-platform JavaScript run-time environment 
+•	Was created on top of Google Chrome V8 Javascript Engine
+•	Was written in ECMAScript
+•	Has similar syntax to JavaScript, which includes objects, functions, and methods
+•	the file name ends with .js
+
+II.	Why choose Node.js?
+
+•	Node.js uses asynchronous programming
+▪	asynchronous programming is a method of parallel programming, which enables a unit to run separately from the main application. 
+•	Node.js handles a file request by:
+      1.	sending the task to the server’s file system
+      2.	prepares the next request
+      3.	if the file system has opened and reads the file contents , the server gives back the file contents  to the client
+•	Node.js is memory efficient
+
+III.	Node.js Functions?
+•	Page contents are produced dynamically
+•	Manipulation of files on the server
+•	Data collections
+•	Data manipulation on the database
+
+IV.	Node.js Modules
+
+Module	        Function
+assert	        Issues a set of assertion tests
+buffer	        Handles binary data
+child_process	  Runs a child process
+cluster	        Splits a node process into multiple processes
+crypto	        Handles OpenSSL functions
+dgram	          Issues implementation of UDP datagram sockets
+dns	            Searching of DNS lookups and name resolution functions 
+domain	        Deprecated. Handles unhandled errors
+events	        Handles events
+fs	            Handles file systems
+http	          Makes Node.js function as an HTTP servers
+https	          Makes Node.js function as an HTTPS servers
+net	            Creates servers and clients
+os	            Issues information about the OS
+path	          Handles file paths
+punycode	      Deprecated. A character encoding scheme
+querystring	    Handles URL query strings
+readline	      Handles readable streams
+stream	        Handles streaming data
+string_decoder	Decodes buffer objects into strings
+timers	        Executes a function under a given milliseconds
+tls	            Implements TLS and SSL protocols
+tty	            Issues classes used by a text terminal
+url	            Parsing URL strings
+util	          Accesses utility functions
+v8	            exposes APIs that are V8 built into the Node.js binary
+vm	            Compilation of JavaScript code in virtual machine
+zlib	          Compresses or decompresses files
+
+V.	HTTP Module
+
+	HTTP module enables Node.js to transfer data through HTTP
+
+	HTTP module can be added by using the using the require( ) method
+
+	var http = require('http');
+
+•	Node.js as a Web Server
+
+	To create HTTP server add the createServer( ) method
+	
+	var http = require('http');
+
+	//create a server object:
+	http.createServer(function (req, res) { 
+	    res.write('Node.js!'); // write a response to the client
+	    res.end(); //end the response
+	}) .listen(8080); //the server object listens on port 8080
+
+•	HTTP Header	
+	
+	To create HTTP Header add the res.writeHead( ) method
+	
+	var http = require('http');
+
+	http.createServer(function (req, res) {
+	    res.writeHead(200, {'Content-Type': 'text/html'}); // an HTTP Header
+	    res.write('Node.js!');
+	    res.end(); 
+	}) .listen(8080); 
+
+•	Reading Query String	
+	
+	The http.createServer( ) has a req argument which represents the request from the clients.
+	
+	var http = require('http');
+
+	http.createServer(function (req, res) {
+	    res.writeHead(200, {'Content-Type': 'text/html'}); 
+	    res.write('Node.js!');
+	    res.end(); 
+	}) .listen(8080); 
+
+VI.	Node.js MySQL
+	
+
+•	Creating Connection
+
+	var mysql = require('mysql');
+
+	var con = mysql.createConnection({
+	    host: "localhost",
+	    user: "yourusername",
+	    password: "yourpassword"
+	});
+
+	con.connect(function(err) {
+	   if (err) throw err;
+	   console.log("Connected!");
+	});
+
+	
+reference
+https://nodejs.org/api/

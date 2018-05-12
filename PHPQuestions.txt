@@ -64,26 +64,59 @@
  
 
 
-This code is for sorting a given array, identify the missing parts[*n].
-<__[*1]__php
-__[2]__cars=___[*5]___("Volvo","BMW","Toyota"); //creates a list of cars.
-sort([2]cars);
+Identify the missing parts[*n].
+I.
+<?php
+__[*1]__cars=___[*4]___("Volvo","BMW","Toyota"); //creates a list of cars.
+sort(__[*1]___cars);
 
-[*2]__[*3]___ = ___[*4]___(__[*2]__cars);//get the number of cars.
+[*1]__[*2]___ = ___[*3]___(__[*1]__cars);//get the number of cars.
 for([*2]x=0;[*2]x<[*2]clength;[*2]x++)
   {
-  __[*6]__ __[*2]__cars[__[*2]__x];//print outputs
-  __[*6]__ "<br>";//print next line
+  __[*5]__ __[*1]__cars[__[*1]__x];//print outputs
+  __[*5]__ "<br>";//print next line
   }
-__[*1]__>
+?>
 Answer:
-1.___
-2.___
-3.___
-4.___
-5.___
-6.___
+1.___  $
+2.___  clength
+3.___  count
+4.___  array
+5.___  echo
 
+II.
+<?php
+$___[*1]____ = "localhost";
+$username = "username";
+$password = "password";
+$___[*5]____ = "myDB";
 
+// Create connection
+$conn = new mysqli($___[*1]____, $username, $password, $___[*5]____);
+// Check connection
+if ($conn->connect_error) {
+    ___[*2]____("Connection failed: " . $conn->connect_error);
+} 
+
+$___[*3]____ = "SELECT id, firstname, lastname FROM MyGuests";
+$result = $conn->query($___[*3]____);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        ___[*4]____ "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    }
+} else {
+    ___[*4]____ "0 results";
+}
+$conn->close();
+?>
+
+Answer:
+1.___  servername
+2.___  die
+3.___  sql
+4.___  echo
+5.___  dbname
 
 
