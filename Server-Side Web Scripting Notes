@@ -66,6 +66,14 @@ Important Methods:
 - getServletContext() – Returns ServletContext in which the session belongs.
 - isNew() -  Returns true if the client hasn't interacted with the session.
 - invalidate() - Invalidates the session along with unbinding any objets connected to the session.
+codes 
+- import the necessary libraries
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+- starting a new session
+HttpSession newSession = request.getSession(true);
 
 
 
@@ -526,6 +534,8 @@ Directives
 
 
 References:
+https://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting
+
 http://www.java2s.com/Tutorials/Java/JSP/0020__JSP_Syntax.htm
 
 http://www.informit.com/articles/article.aspx?p=31072&seqNum=7
