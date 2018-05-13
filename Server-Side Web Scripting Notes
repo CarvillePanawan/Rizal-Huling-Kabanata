@@ -31,8 +31,8 @@ Java Servlets
 HTTPServlet
 - Used to handle HTTP requests and generate HTTP responses
 - The service() method call is connected to a doXXX call (e.g. doGet(), doPost(), doPut(), doDelete())
-- The doXXX() methods passes 2 arguments which are HTTPServletRequest and HTTPServletResponse
-
+- The doXXX() methods passes 2 arguments which are HTTPServletRequest and HTTPServletResponse 
+ 
 HTTPServletRequest
 - used to access information from the request message
   (Needs to be put in a table)
@@ -75,6 +75,26 @@ import javax.servlet.http.HttpServletResponse;
 - starting a new session
 HttpSession newSession = request.getSession(true);
 
+HTTPServlet Methods
+1. doDelete(HttpServletRequest req, HttpServletResponse resp)
+
+2. doGet(HttpServletRequest req, HttpServletResponse resp)
+
+3. doHead(HttpServletRequest req, HttpServletResponse resp)
+
+4. doOptions(HttpServletRequest req, HttpServletResponse resp)
+
+5. doPost(HttpServletRequest req, HttpServletResponse resp)
+
+6. doPut(HttpServletRequest req, HttpServletResponse resp)
+
+7. doTrace(HttpServletRequest req, HttpServletResponse resp)
+
+8. getLastModified(HttpServletRequest req)
+
+9. service(HttpServletRequest req, HttpServletResponse resp)
+
+10.service(ServletRequest req, ServletResponse res)
 
 
 HttpServletResponse Methods
@@ -534,6 +554,8 @@ Directives
 
 
 References:
+https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/http/HttpServlet.html
+
 https://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting
 
 http://www.java2s.com/Tutorials/Java/JSP/0020__JSP_Syntax.htm
