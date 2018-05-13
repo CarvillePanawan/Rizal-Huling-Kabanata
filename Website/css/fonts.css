@@ -29,3 +29,30 @@ input {
 .footer {
 	font-family: "Josefin-Sans-Regular", "Century Gothic", sans-serif;
 }
+
+p {
+	font-family: "Josefin-Sans-Regular", "Century Gothic", sans-serif;
+	font-size: 1.2em;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+	font-family: "Montserrat-Regular", "Century Gothic", sans-serif;
+}
+
+.code {
+	background-color: #222 !important;
+	color: #fff !important;
+	font-family: monospace;
+	margin: 1em;
+	padding: 1em;
+}
+
+code {
+	background-color: #222 !important;
+	color: #fff !important;
+}
+
+.l1 {text-indent: 1em;}
+.l2 {text-indent: 2em;}
+.l3 {text-indent: 3em;}
