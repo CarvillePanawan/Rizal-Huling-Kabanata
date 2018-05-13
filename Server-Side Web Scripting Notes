@@ -439,8 +439,6 @@ while
 
 for
 
-JAVA
-
 NODE JS
 
 JSP
@@ -478,7 +476,7 @@ Expressions
  <%= age %>
 
 Comments
--Comments can be seen as notes to the program wriiten
+-Comments can be seen as notes to the program written
 	<%-- comment --%>
 -Example
 <%-- This is come nice code--%> 
@@ -489,7 +487,7 @@ Directives
 -Three Types:
 <%@ page ... %> 	Defines page-dependent attributes.
 <%@ include ... %> 	Includes a file to be used.
-<%@ taglib ... %> 	Declares a tag library, containing custom actions
+<%@ taglib ... %> 	Declares a tag library, containing custom actions.
 
 
 References:

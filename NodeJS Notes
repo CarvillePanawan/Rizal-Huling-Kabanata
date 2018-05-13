@@ -12,11 +12,11 @@ I.	What is Node.js?
 II.	Why choose Node.js?
 
 •	Node.js uses asynchronous programming
-▪	asynchronous programming is a method of parallel programming, which enables a unit to run separately from the main application. 
+	asynchronous programming is a method of parallel programming, which enables a unit to run separately from the main application. 
 •	Node.js handles a file request by:
-      1.	sending the task to the server’s file system
-      2.	prepares the next request
-      3.	if the file system has opened and reads the file contents , the server gives back the file contents  to the client
+      1.	Sending the task to the server’s file system
+      2.	Prepares the next request
+      3.	If the file system has opened and reads the file contents , the server gives back the file contents  to the client
 •	Node.js is memory efficient
 
 III.	Node.js Functions?
