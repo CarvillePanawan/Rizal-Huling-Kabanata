@@ -11,7 +11,6 @@
   </div>
 	
   <form method="post" action="register.php">
-  	<?php include('errors.php'); ?>
     <div class="input-group">
   	  <label>Name</label>
   	  <input type="text" name="name" value="<?php echo $name; ?>">
