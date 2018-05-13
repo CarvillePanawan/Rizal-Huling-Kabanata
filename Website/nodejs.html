@@ -82,12 +82,10 @@
 					<li class="dropdown">
 						<a class="dropdown-toggle cus-dropdown" data-toggle="dropdown" href="#">Topics</a>
 						<ul class="dropdown-menu cus-dropdown-menu">
-							<li><a class="tablinks" onclick="openTab(event, 't1')">Java Servlet</a></li>
-							<li><a class="tablinks" onclick="openTab(event, 't2')">Servlet Life Cycle</a></li>
-							<li><a class="tablinks" onclick="openTab(event, 't3')">HTTPServlet Class</a></li>
-                            <li><a class="tablinks" onclick="openTab(event, 't4')">HTTPServletRequest</a></li>
-                            <li><a class="tablinks" onclick="openTab(event, 't5')">HTTPServletResponse</a></li>
-                            <li><a class="tablinks" onclick="openTab(event, 't6')">HTTPSessionHandling</a></li>
+							<li><a class="tablinks" onclick="openTab(event, 't1')">NodeJS</a></li>
+							<li><a class="tablinks" onclick="openTab(event, 't2')">NodeJS Modules</a></li>
+							<li><a class="tablinks" onclick="openTab(event, 't3')">HTTP Modules</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't4')">NodeJS MySQL</a></li>
 						</ul>
 				  </li>
 				</ul>
@@ -103,233 +101,198 @@
 					</div>
 					
 					<div id="t1" class="tabcontent">
-                        <h2>Servlet</h2>
-						<p>  - A servelet is a Java class that is utilized to extend the capabilities of     request-response programming model servers that host 
-                        applications. Servlets can interact or respond to any type of request, Servlets are maily used for extending applications hosted 
-                        by web servers.
-                        </p><br>
-                        <h2>Java Servlets</h2>
-                        <p>- handles client requests by generating a response message
-                        </p><br>
-                        <p>- Java Servlets is hosted in a "servlet container" which is part of a web server that communicates with the servlet so that it will
-                        let Java to dynamically generate a web page from the server side. Servlet container also controls the servlet lifecycle.
-                        </p><br>
-                        <p>- Pavni Diwanji created the Servlet1 while working at Sun Microsystems, with version 1.0 finalized in June 1997.
-                        </p><br>
-                        <p>As of now, Servlet has 10 versions, from Servlet 1.0 to Servlet 4.0.</p>
-                        <table>
-                        <tr>
-                            <th>Version</th>
-                            <th>Date Released</th>
-                            <th>Ano to?</th>
-                        </tr>
-                        <tr>
-                            <td>Servlet 4.0</td>
-                            <td>Sep 2017</td>
-                            <td>Java EE 8</td>
-                        </tr>
-                        <tr>
-                            <td>Servlet 4.0</td>
-                            <td>Sep 2017</td>
-                            <td>Java EE 8</td>
-                        </tr>
-                        <tr>
-                            <td>Servlet 3.1</td>
-                            <td>May 2013</td>
-                            <td>Java EE 7</td>
-                        </tr>
-                        <tr>
-                            <td>Servlet 3.0</td>
-                            <td>December 2009</td>
-                            <td>Java EE 6, Java SE 6</td>
-                        </tr>
-                        <tr>
-                            <td>Servlet 2.5</td>
-                            <td>September 2005</td>
-                            <td>Java EE 5, Java SE 5</td>
-                        </tr>
-                        <tr>
-                            <td>Servlet 2.4</td>
-                            <td>November 2003</td>
-                            <td>J2EE 1.4, J2SE 1.3</td>
-                        </tr>
-                        <tr>
-                            <td>Servlet 2.3</td>
-                            <td>August 2001</td>
-                            <td>J2EE 1.3, J2SE 1.2</td>
-                        </tr>
-                        <tr>
-                            <td>Servlet 2.2</td>
-                            <td>August 1999</td>
-                            <td>J2EE 1.2, J2SE 1.2</td>
-                        </tr>
-                        <tr>
-                            <td>Servlet 2.1</td>
-                            <td>November 1998</td>
-                            <td>Unspecified</td>
-                        </tr>
-                        <tr>
-                            <td>Servlet 2.0</td>
-                            <td>&nbsp;</td>
-                            <td>JDK 1.1</td>
-                        </tr>
-                        <tr>
-                            <td>Servlet 1.0</td>
-                            <td>June 1997</td>
-                            <td>&nbsp;</td>
-                        </tr>	
-                    </table>
+                        <h2>NodeJS</h2>
+                        <p>- NodeJS is an open-source server framework and a cross-platform JavaScript run-time environment which was created on top of Google Chrome V8 Javascript Engine and was written in ECMAScript.</p>
+                        <p>- NodeJS hase Has similar syntax to JavaScript, which includes objects, functions, and methods with an extension name of .js</p><br>
+                        <h2>Why choose NodeJS</h2>
+                        <p>- Node.js uses asynchronous programming
+                            - asynchronous programming is a method of parallel programming, which enables a unit to run separately from the main application.</p>
+                        <p>- Node.js handles a file request by:</p>
+                        <ul>
+                            <li>sending the task to the server’s file system.</li>
+                            <li>prepares the next request</li>
+                            <li>if the file system has opened and reads the file contents , the server gives back the file contents  to the client</li>
+                        </ul>
+                        <p>- Node.js is memory efficient</p><br>
+                        <h2>NodeJS Functions</h2>
+                        <p>- Page contents are produced dynamically</p>
+                        <p>- Manipulation of files on the server</p>
+                        <p>- Data collections</p>
+                        <p>- Data manipulation on the database</p>
 					</div>
 					
 					<div id="t2" class="tabcontent">
-						<h2>Servlet Lifecycle</h2>
-                        <p><b>Initialization</b></p><br>
-                        <p>The init() method will be called upon the creation of servlet and it is only called once.</p>
-                        <p><b>Request Handling</b></p><br>
-                        <p>Request handling is handled by the method service() which is basically the main method that handles the tasks of each request
-                        it uses multi-threading to do the tasks.</p>
-                        <p><b>Destruction</b></p><br>
-                        <p>The destruction is handled by the method destroy() which is invoked the website? is done using the object method.</p>
-					</div>
-					
-					<div id="t3" class="tabcontent">
-						<h2>HTTPServlet Class</h2>
-                        <p>Used to handle HTTP requests and generate HTTP responses</p><br>
-                        <p>The service() method call is connected to a doXXX call (e.g. doGet(), doPost(), doPut(), doDelete())</p><br>
-                        <p>The doXXX() methods passes 2 arguments which are HTTPServletRequest and HTTPServletResponse</p><br>
-					</div>
-                    <div id="t4" class="tabcontent">
-						<h2>HTTPServletRequest Object</h2>
-                        <p>Used to access information from the request message</p><br>
-                        <p>Methods Summary </p>
+						<h2>NodeJS Functions</h2>
                         <table>
                             <tr>
-                                <th>Method Name</th>
-                                <th>Description</th>
+                                <th>Module</th>
+                                <th>Function</th>
                             </tr>
                             <tr>
-                                <td>getAuthType()</td>
-                                <td></td>
+                                <td>assert</td>
+                                <td>Issues a set of assertion tests</td>
                             </tr>
                             <tr>
-                                <td>getCookies()</td>
-                                <td></td>
+                                <td>buffer</td>
+                                <td>Handles binary data</td>
                             </tr>
                             <tr>
-                                <td>getDateHeader(String headerName)</td>
-                                <td></td>
+                                <td>child_process</td>
+                                <td>Runs a child process</td>
                             </tr>
                             <tr>
-                                <td>getDateHeader(String headerName)</td>
-                                <td></td>
+                                <td>cluster</td>
+                                <td>Splits a node process into multiple processes</td>
                             </tr>
                             <tr>
-                                <td>getHeaders(String headerName)</td>
-                                <td></td>
+                                <td>crypto</td>
+                                <td>Handles OpenSSL functions</td>
                             </tr>
                             <tr>
-                                <td>getIntHeader(String headerName)</td>
-                                <td></td>
+                                <td>dgram</td>
+                                <td>Issues implementation of UDP datagram sockets</td>
                             </tr>
                             <tr>
-                                <td>getMethod()</td>
-                                <td></td>
+                                <td>dns</td>
+                                <td>Searching of DNS lookups and name resolution functions </td>
                             </tr>
                             <tr>
-                                <td>PathInfo()</td>
-                                <td></td>
+                                <td>domain</td>
+                                <td>Deprecated. Handles unhandled errors</td>
                             </tr>
                             <tr>
-                                <td>getPathTranslated()
-</td>
-                                <td></td>
+                                <td>events</td>
+                                <td>Handles events</td>
                             </tr>
                             <tr>
-                                <td>getContextPath()</td>
-                                <td></td>
+                                <td>fs</td>
+                                <td>Handles file systems</td>
                             </tr>
                             <tr>
-                                <td>getQueryString</td>
-                                <td></td>
+                                <td>http</td>
+                                <td>Makes Node.js function as an HTTP servers</td>
                             </tr>
                             <tr>
-                                <td>getRemoteUser()</td>
-                                <td></td>
+                                <td>https</td>
+                                <td>Makes Node.js function as an HTTPS servers</td>
                             </tr>
                             <tr>
-                                <td>isUserInRole(String role)</td>
-                                <td></td>
+                                <td>net</td>
+                                <td>Creates servers and clients</td>
                             </tr>
                             <tr>
-                                <td>getUserPrincipal()</td>
-                                <td></td>
+                                <td>os</td>
+                                <td>Issues information about the OS</td>
                             </tr>
                             <tr>
-                                <td>getRequestedSessionId()</td>
-                                <td></td>
+                                <td>path</td>
+                                <td>Handles file paths</td>
                             </tr>
                             <tr>
-                                <td>getRequestURI()</td>
-                                <td></td>
+                                <td>punycode</td>
+                                <td>Deprecated. A character encoding scheme</td>
                             </tr>
                             <tr>
-                                <td>getRequestURL()</td>
-                                <td></td>
+                                <td>querystring</td>
+                                <td>Handles URL query strings</td>
                             </tr>
                             <tr>
-                                <td>getServletPath()</td>
-                                <td></td>
+                                <td>readline</td>
+                                <td>Handles readable streams</td>
                             </tr>
                             <tr>
-                                <td>getSession(boolean create)</td>
-                                <td></td>
+                                <td>stream</td>
+                                <td>Handles streaming data</td>
                             </tr>
                             <tr>
-                                <td>getSession()</td>
-                                <td></td>
+                                <td>string_decoder</td>
+                                <td>Decodes buffer objects into strings</td>
                             </tr>
                             <tr>
-                                <td>isRequestedSessionIdValid()</td>
-                                <td></td>
+                                <td>timers</td>
+                                <td>Executes a function under a given milliseconds</td>
                             </tr>
                             <tr>
-                                <td>isRequestedSessionIdFromCookie()</td>
-                                <td></td>
+                                <td>tls</td>
+                                <td>Implements TLS and SSL protocols</td>
                             </tr>
                             <tr>
-                                <td>isRequestedSessionIdFromCookie()</td>
-                                <td></td>
+                                <td>tty</td>
+                                <td>Issues classes used by a text terminal</td>
                             </tr>
                             <tr>
-                                <td>authenticate(HttpServletResponse response)</td>
-                                <td></td>
+                                <td>url</td>
+                                <td>Parsing URL strings</td>
                             </tr>
                             <tr>
-                                <td>login(String username, String password)</td>
-                                <td></td>
+                                <td>util</td>
+                                <td>Accesses utility functions</td>
                             </tr>
                             <tr>
-                                <td>logout()</td>
-                                <td></td>
+                                <td>v8</td>
+                                <td>exposes APIs that are V8 built into the Node.js binary</td>
                             </tr>
                             <tr>
-                                <td>getParts()</td>
-                                <td></td>
+                                <td>vm</td>
+                                <td>Compilation of JavaScript code in virtual machine</td>
                             </tr>
                             <tr>
-                                <td>getPart(String partName)</td>
-                                <td></td>
+                                <td>zlib</td>
+                                <td>Compresses or decompresses files</td>
                             </tr>
                         </table>
 					</div>
-                    <div id="t5" class="tabcontent">
-						<h2>HTTPServletResponse Object</h2>
-                        <p>Used to access information from the response message</p>
+					
+					<div id="t3" class="tabcontent">
+						<h2>HTTP Module</h2>
+                        <p>- HTTP module enables Node.js to transfer data through HTTP</p>
+                        <p>- HTTP module can be added by using the using the require( ) method</p>
+                        <p>var http = require('http');</p>
+                        <h2>Node.js as a Web Server</h2>
+                        <p>- To create HTTP server add the createServer( ) method</p>
+                        <pre>var http = require('http');
+
+//create a server object:
+http.createServer(function (req, res) { 
+    res.write('Node.js!'); // write a response to the client
+    res.end(); //end the response
+}) .listen(8080); //the server object listens on port 8080</pre>
+                        <h2>HTTP Header	</h2>
+                        <p>- To create HTTP Header add the res.writeHead( ) method</p>
+                        <pre>var http = require('http');
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'}); // an HTTP Header
+    res.write('Node.js!');
+	res.end(); 
+}) .listen(8080);</pre>
+                        <h2>Reading Query String</h2>
+                        <p>- The http.createServer( ) has a req argument which represents the request from the clients.</p>
+                        <pre>var http = require('http');
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'}); 
+	res.write('Node.js!');
+	res.end(); 
+}) .listen(8080);</pre>
 					</div>
-                    <div id="t6" class="tabcontent">
-						Test
-					</div>
-				</div>
+                    <div id="t4" class="tabcontent">
+                        <h2>Creating Connection</h2>
+                        <pre>var mysql = require('mysql');
+
+var con = mysql.createConnection({
+    host: "localhost",
+	user: "yourusername",
+	password: "yourpassword"
+});
+
+con.connect(function(err) {
+    if (err) throw err;
+	console.log("Connected!");
+});
+                        </pre>
+                    </div>
+                </div>
 			</div>
 			
 			<div class="breaker"></div>
