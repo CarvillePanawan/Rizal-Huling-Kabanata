@@ -1,0 +1,39 @@
+Web Security
+- A lot of people use the internet for a plethora of things, may it be e-commerce, communication, or for entertainment, they will
+  in one or more instances input their personnal information when utilizing such services. Web security exist to protect users of 
+  websites or even the website itself from hackers who might utilize what they got from the website for unlawful act.
+- Top Ten AApplication Security Risks for 2017 from OWASP(Open Web Application Security Project)
+  1. Injection
+    - Occurs usually for SQL when malicious SQL statements are sent to an input within an web application that is inside of an 
+      SQL query and the malicious SQL statements will be run alongside the the SQL query.
+    - To prevent injection, data should be separate from SQL queries in other words don't construct queries with user inputs.
+  2. Broken Authentication
+    - Broken authentication is due to the incorrect or lacking design and implementation of the identity and access controls. Attackers 
+      detect broken authentication with the use of automated tools that could send attacks like credential stuffing or use default 
+      administrative accounts.
+    - Create a strong implementation of authentication to prevent attacks like brute force or credential stuffing along with strong 
+      implementation of session management are some ways to prevent broken authentication. 
+  3. Sensitive Data Exposure
+    - Sensitive data exposure vulnerabilities can occur when a web application does not provide adequate protection for sensitive 
+      information from being disclosed or gained access to by attackers. 
+    - One way to prevent sensitive data exposure would be to utilize encryption for sensitive data such as paswords but one thing 
+      to look out for would be not to utilize already compromised encryption.
+  4. XML External Entities (XXE)
+    - 
+  
+  5. Broken Access Control
+  
+  6. Security Misconfiguration
+    - Security misconfiguration occurs when attackers discover access or retrieve data from the system by accessing default 
+      accounts, unprotected files and directories or misconfigured security setting for their own benefit which then gives 
+      a business impact depending on the level of protection of data in any level of an application stack which includes databases,
+      storages, platforms and codes that could be configured.
+    - Simpliest prevention mechanism wouldd to implement a web application with minimalistic features and components.
+  7. Cross-Site Scripting (XSS)
+  
+  8. Insecure Deserialization
+  
+  9. Using Components with Known Vulnerabilities
+  
+  10. Insufficient Logging&Monitoring
+  
