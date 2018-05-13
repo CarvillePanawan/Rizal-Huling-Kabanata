@@ -256,26 +256,66 @@
 						<h2>Variables</h2>
                         <p>There are rules to follow when finding for the perfect variable name.</p><br>
                         <p>These rules are:</p>
-                        <p>The first character must be a dollar sign ($).</p>
-                        <p>A variable name must be at least one character in length.</p>
-                        <p>The character after the dollar sign ($) must either be a letter or an underscore (_) and following characters can be a letter, underscore or a number.</p>
-                        <p>Spaces or special characters other than _ and $ are not allowed in any part of the variable name.</p>
+                        <p>1.&nbsp;&nbsp; The first character must be a dollar sign ($).</p>
+                        <p>2.&nbsp;&nbsp; A variable name must be at least one character in length.</p>
+                        <p>3.&nbsp;&nbsp; The character after the dollar sign ($) must either be a letter or an underscore (_) and following characters can be a letter, underscore or a number.</p>
+                        <p>4.&nbsp;&nbsp; Spaces or special characters other than _ and $ are not allowed in any part of the variable name.</p>
                         <p>Examples of legal variable names in PHP:<br>
- 	                       $_var<br>
-	                       $var<br>
-	                       $var_one
+ 	                       &nbsp;&nbsp;$_var<br>
+	                       &nbsp;&nbsp;$var<br>
+	                       &nbsp;&nbsp;$var_one
                         </p>
                         <p>Examples of illegal variable name in PHP:<br>
-	                       var<br>
-	                       $var one<br>
-	                       $var-one
+	                       &nbsp;&nbsp;var<br>
+	                       &nbsp;&nbsp;$var one<br>
+	                       &nbsp;&nbsp;$var-one
                         </p>
 					</div>
                     <div id="t7" class="tabcontent">
 						<h2>Data Types</h2>
+                        <p>PHP has 8 data types mainly String, Integer, Float, Boolean, Array, Object, NULL, and Resource.</p><br>
+                        <p>A <em>String</em> is just a sequence of characters enclosed by either the single quotes or the double quotes.</p>
+                        <p>Example:</p>
+                        <p>&nbsp;&nbsp;$string = "Hello There";</p>
+                        <p>&nbsp;&nbsp;$string_two = 'Hi there';</p>
+                        <p>An <em>Integer</em> is a data type that is non-decimal.</p>
+                        <p>Example:</p>
+                        <p>&nbsp;&nbsp;$x = 219;</p>
+                        <p>&nbsp;&nbsp;$y = 2;</p><br>
+                        <p>A <em>float</em> is a number with a decimal point or exponential form.</p><br>
+                        <p>Example:</p>
+                        <p>&nbsp;&nbsp;$z = 12.345;</p><br>
+                        <p>A <em>boolean</em> data type represents two possible values: either a TRUE or a FALSE.</p><br>
+                        <p>Example:</p>
+                        <p>&nbsp;&nbsp;$a = TRUE;</p>
+                        <p>&nbsp;&nbsp;$b = FALSE;</p><br>
+                        <p>An <em>array</em> is a special data type that can store multiple informations in one single variable.</p><br>
+                        <p>Example:</p>
+                        <p>&nbsp;&nbsp;$school = array("SCIS",1,"SABM",2);</p><br>
+                        <p>An <em>object</em> is a data type which stores data and information and how those informations can be used.</p><br>
+                        <p>Example:</p>
+                        <p>class School {<br>
+                            &nbsp;&nbsp;function School() {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;this->dept = "CS";<br>
+                            &nbsp;&nbsp;}<br>
+                            }</p><br>
+                        <p>A <em>NULL</em> value is a special data type which can only have a value NULL. A variable with a null value is a variable with non value assigned to it.</p><br>
+                        <p>Example:</p>
+                        <p>&nbsp;&nbsp;$x = 3;</p>
+                        <p>&nbsp;&nbsp;$x = null;</p><br>
+                        <p>A <em>Resource</em> type is actually not a data type. It stores the reference to functions in external resources. One good example for this is a database call.</p><br>
 					</div>
                     <div id="t8" class="tabcontent">
 						<h2>Superglobals</h2>
+                        <p>&nbsp;&nbsp;$GLOBALS - this super global variable is used to access global variables anywhere in the script.</p>
+<p>&nbsp;&nbsp;$_SERVER - this super global variable is used to store and hold informations about header, paths and locations.</p>
+<p>&nbsp;&nbsp;$_REQUEST - this super global variable is used to collect data from a submission form form an HTML form.</p>
+<p>&nbsp;&nbsp;$_POST - this super global variable is widely used for passing variables and also used for collecting data from HTML forms with method value of "post". </p>
+<p>&nbsp;&nbsp;$_GET - this super global variable is widely used for passing variables and also used for collecting data from HTML forms with method value of "get".</p>
+<p>&nbsp;&nbsp;$_FILES - this super global variable is used for storing information about the uploaded file. </p>
+<p>&nbsp;&nbsp;$_ENV - this is an associative array of variables passed to the current script via the environment method.</p>
+<p>&nbsp;&nbsp;$_COOKIE - this super global variable is use to retrieve the value of the cookie in the browser.</p>
+<p>&nbsp;&nbsp;$_SESSION - a super global variable use to set a session.</p>
 					</div>
                     <div id="t9" class="tabcontent">
 						<h2>Selection Constructs</h2>

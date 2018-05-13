@@ -373,7 +373,7 @@ There are rules to follow when finding for the perfect variable name. These rule
 	$var-one
 
 Data Types
-PHP has 8 data types mainly String, Integer, Float, Boolean, Array, Object, NULL, and Resource
+PHP has 8 data types mainly String, Integer, Float, Boolean, Array, Object, NULL, and Resource.
 A String is just a sequence of characters enclosed by either the single quotes or the double quotes.
 Example:
 $string = "Hello There";
