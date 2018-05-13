@@ -17,13 +17,10 @@
  - Servlet 4.0
 13. State the 3 stages of a Servlet lifecycle.
 - initialization, request handling, destruction
-14. Servlet is a Java ___________.
-- class
-15. The programming model server suited for Servlets.
- - request-response programming model
- /**//
-16.  A part of a web server that communicates with the servlet so that it will let Java to dynamically generate a web page from the server side.
-- servlet container
+      Object                Event                                        Listener Interface And Event Class
+14. Web context       Initialization and destruction               javax.servlet._____________ and _____________ (ServletContextListener,ServletContextEvent)
+15. Web context       Attribute added, removed, or replaced        javax.servlet._____________ and _____________ (ServletContextAttributeListener,ServletContextAttributeEvent)
+16. Request           Attribute added, removed, or replaced        javax.servlet.____________ and ______________ (ServletRequestAttributeListener, ServletRequestAttributeEvent)
 17.  Can be called multiple times depending on the number of requests of the user.
 - service()
 18.  Called only once and is called upon creation.
@@ -33,17 +30,5 @@
 20. State 3 methods related to doXXX() method.
 - doGet(), doPost(), doPut(), doDelete()
 
-(Fill the missing words in the table)
-Servlet Lifecycle Events
-
-    Object                Event                                        Listener Interface And Event Class
-21. Web context       Initialization and destruction               javax.servlet._____________ and _____________ (ServletContextListener,ServletContextEvent)
-22. Web context       Attribute added, removed, or replaced        javax.servlet._____________ and _____________ (ServletContextAttributeListener,ServletContextAttributeEvent)
-23. Session           Creation, invalidation, activation,          javax.servlet._______________  , java.servlet.____________ and java.servlet.___________(http.HttpSessionListener, http.HttpSessionActivationListener, HTttpSessionEvent)
-                      passivation, and timeout
-24. Session           Attribute added, removed, or replaced        javax.servlet._______________ and java.servlet._____________ (http.HttpSessionAttributeListener, HttpSessionBindingEvent)
-25. Request           A servlet request has started being          javax.servlet.____________ and _____________ (ServletRequestListener,ServletRequestEvent)
-                      processed by the web components
-26. Request           Attribute added, removed, or replaced        javax.servlet.____________ and ______________ (ServletRequestAttributeListener, ServletRequestAttributeEvent)
 
 
