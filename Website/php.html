@@ -78,7 +78,6 @@
 			
 			<div class="nav-custom">
 				<ul class="nav-a">
-					<li><a class="custom-a tablinks" onclick="openTab(event, 't0')">Overview</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle cus-dropdown" data-toggle="dropdown" href="#">Topics</a>
 						<ul class="dropdown-menu cus-dropdown-menu">
@@ -102,15 +101,13 @@
 			
 			<div class="container container-1">
 				<div class="t-container">
-					<div id="t0" class="tabcontent">
-                        <p>In this topic,...</p>
-					</div>
 					
 					<div id="t1" class="tabcontent">
-                        <h2>PHP History</h2>
+                        <h3>PHP History</h3>
 						<p>PHP originally stands for "Personal Home Page Tools". PHP was created in 1994 by Rasmus Lerdof. Later that year, he dropped the name PHP and changed it to FI, an abbreviation for Forms Interpreter. It was originally intended for forms in HTML. Though in the October of 1995, Rasmus released a rewritten code bringing back the name PHP but with the meaning "Personal Home Page Construction Kit". From this, it went through a lot of development process and these are the versions and there release date:
-                        </p><br>
-                        <table>
+                        </p>
+						&nbsp;
+                        <table class="table table-striped">
                         <tr>
                             <th>Version</th>
                             <th>Date Released</th>
@@ -214,114 +211,280 @@
 					</div>
 					
 					<div id="t2" class="tabcontent">
-						<h2>Introduction</h2>
-                        <p>In the following lessons, it is expected that you know HTML, CSS, JavaScript and setting up a web server.
-                            PHP today means "PHP: Hypertext Preprocessor" and is known as a scripting language for server-side web development. It is used mainly for making webpages dynamic and interactive. PHP is server-side programming language that runs on web servers. This means that when it is executed, it is executed in the server and nowhere else. PHP scripts must run on web servers or it will not work.</p>
+						<h3>Introduction</h3>
+                        <p>In the following lessons, it is expected that you know HTML, CSS, JavaScript and setting up a web server.PHP today means "PHP: Hypertext Preprocessor" and is known as a scripting language for server-side web development. It is used mainly for making webpages dynamic and interactive. PHP is server-side programming language that runs on web servers. This means that when it is executed, it is executed in the server and nowhere else. PHP scripts must run on web servers or it will not work.</p>
 					</div>
 					
 					<div id="t3" class="tabcontent">
-						<h2>Syntax</h2>
-                        <p>PHP scripts can be placed anywhere in an HTML or you can make a separate file with .php as the file extension.
-</p><br>
-                        <p>PHP scripts start with <?php and ends with ?>.</p><br>
-                        <p>Example:</p><br>
-                        <p>
-                        
-                        </p>
-                        <p>Note: PHP statements end with a semicolon(;).</p>
+						<h3>Syntax</h3>
+                        <p>PHP scripts can be placed anywhere in an HTML or you can make a separate file with .php as the file extension.</p>
+						&nbsp;
+                        <p>PHP scripts start with <code>&lt;?php</code>  and ends with <code>?&gt;</code>.</p>
+						&nbsp;
+                        <p>Example:</p>
+						&nbsp;
+                        <div class="code">
+							<div>&lt;?php</div>
+							<div class="l1">$var = "Hello World!";</div>
+							<div class="l1">echo $var</div>
+							<div>?&gt;</div>
+						</div>
+						
+                        <p>Note: PHP statements end with a semicolon(<code>;</code>).</p>
 					</div>
+					
                     <div id="t4" class="tabcontent">
-						<h2>Case Sennsitivity</h2>
-                        <p>All PHP keywords, functions, classes, and user defined functions are NOT case-sensitive.</p><br>
+						<h3>Case Sennsitivity</h3>
+                        <p>All PHP keywords, functions, classes, and user defined functions are NOT case-sensitive.</p>&nbsp;
                         <p>Example:</p>
-                        <p><em></em>echo "Hello"; is the same as
-                            <em>EcHo "Hello";</em></p>
+                        <p><code>echo "Hello";</code> is the same as <code>EcHo "Hello";</code></p>
 					</div>
+					
                     <div id="t5" class="tabcontent">
-						<h2>Comments</h2>
-                        <p>To put single line comments, we use (//) or (#) followed by a word or a sentence.</p><br>
-                        <p>To put multi-line comments, we use /* and */.</p><br>
+						<h3>Comments</h3>
+                        <p>To put single line comments, we use <code>//</code> or <code>#</code> followed by a word or a sentence.</p>
+						&nbsp;
+                        <p>To put multi-line comments, we use <code>/*</code> and <code>*/</code>.</p>
+						&nbsp;
                         <p>Example:</p>
-                        <p>// Single line<br>
-                            # Single line</p>
-                        <p>
-                            /*<br>
-                            Multiline<br>
-                            Multiline<br>
-                            */
-                        </p>
+						<div class="code">
+							<div>// This is a single line comment.</div>
+							<div># This is another way to write a single line comment.</div>
+							<div>/*</div>
+							<div class="l1">This is a multiline comment</div>
+							<div class="l1">Hello</div>
+							<div>*/</div>
+						</div>
                         
 					</div>
+					
                     <div id="t6" class="tabcontent">
-						<h2>Variables</h2>
+						<h3>Variables</h3>
                         <p>There are rules to follow when finding for the perfect variable name.</p><br>
                         <p>These rules are:</p>
-                        <p>1.&nbsp;&nbsp; The first character must be a dollar sign ($).</p>
+                        <p>1.&nbsp;&nbsp; The first character must be a dollar sign <code>$</code>.</p>
                         <p>2.&nbsp;&nbsp; A variable name must be at least one character in length.</p>
-                        <p>3.&nbsp;&nbsp; The character after the dollar sign ($) must either be a letter or an underscore (_) and following characters can be a letter, underscore or a number.</p>
-                        <p>4.&nbsp;&nbsp; Spaces or special characters other than _ and $ are not allowed in any part of the variable name.</p>
-                        <p>Examples of legal variable names in PHP:<br>
- 	                       &nbsp;&nbsp;$_var<br>
-	                       &nbsp;&nbsp;$var<br>
-	                       &nbsp;&nbsp;$var_one
+                        <p>3.&nbsp;&nbsp; The character after the dollar sign <code>$</code> must either be a letter or an underscore <code>_</code> and following characters can be a letter, underscore or a number.</p>
+                        <p>4.&nbsp;&nbsp; Spaces or special characters other than <code>_</code> and <code>$</code> are not allowed in any part of the variable name.</p>
+						&nbsp;
+                        <p>Examples of legal variable names in PHP: </p>
+						<div class="code">
+							<div>$_var</div>
+							<div>$var</div>
+							<div>$var_one</div>
+						</div>
+						&nbsp;
+                        <p>Examples of illegal variable name in PHP:
                         </p>
-                        <p>Examples of illegal variable name in PHP:<br>
-	                       &nbsp;&nbsp;var<br>
-	                       &nbsp;&nbsp;$var one<br>
-	                       &nbsp;&nbsp;$var-one
-                        </p>
+						<div class="code">
+							<div>var</div>
+							<div>$var one</div>
+							<div>$var-one</div>
+						</div>
 					</div>
+					
                     <div id="t7" class="tabcontent">
-						<h2>Data Types</h2>
+						<h3>Data Types</h3>
                         <p>PHP has 8 data types mainly String, Integer, Float, Boolean, Array, Object, NULL, and Resource.</p><br>
-                        <p>A <em>String</em> is just a sequence of characters enclosed by either the single quotes or the double quotes.</p>
+                        <p>A <code>String</code> is just a sequence of characters enclosed by either the single quotes or the double quotes.</p>
                         <p>Example:</p>
-                        <p>&nbsp;&nbsp;$string = "Hello There";</p>
-                        <p>&nbsp;&nbsp;$string_two = 'Hi there';</p>
-                        <p>An <em>Integer</em> is a data type that is non-decimal.</p>
+						<div class="code">
+							<div>$string = "Hello There";</div>
+							<div>$string_two = 'Hi there';</div>
+						</div>
+						&nbsp;
+						
+                        <p>An <code>Integer</code> is a data type that is non-decimal.</p>
                         <p>Example:</p>
-                        <p>&nbsp;&nbsp;$x = 219;</p>
-                        <p>&nbsp;&nbsp;$y = 2;</p><br>
-                        <p>A <em>float</em> is a number with a decimal point or exponential form.</p><br>
+						<div class="code">
+							<div>$x = 219;</div>
+							<div>$y = 2;</div>
+						</div>
+						&nbsp;
+						
+                        <p>A <code>float</code> is a number with a decimal point or exponential form.</p><br>
                         <p>Example:</p>
-                        <p>&nbsp;&nbsp;$z = 12.345;</p><br>
-                        <p>A <em>boolean</em> data type represents two possible values: either a TRUE or a FALSE.</p><br>
+						<div class="code">
+							<div>$z = 12.345;</div>
+						</div>
+						&nbsp;
+						
+                        <p>A <code>boolean</code> data type represents two possible values: either a TRUE or a FALSE.</p><br>
                         <p>Example:</p>
-                        <p>&nbsp;&nbsp;$a = TRUE;</p>
-                        <p>&nbsp;&nbsp;$b = FALSE;</p><br>
-                        <p>An <em>array</em> is a special data type that can store multiple informations in one single variable.</p><br>
+						<div class="code">
+							<div>$a = TRUE;</div>
+							<div>$b = FALSE;</div>
+						</div>
+						&nbsp;
+						
+                        <p>An <code>array</code> is a special data type that can store multiple informations in one single variable.</p><br>
                         <p>Example:</p>
-                        <p>&nbsp;&nbsp;$school = array("SCIS",1,"SABM",2);</p><br>
-                        <p>An <em>object</em> is a data type which stores data and information and how those informations can be used.</p><br>
+						<div class="code">
+							<div>$school = array("SCIS",1,"SABM",2);</div>
+						</div>
+						&nbsp;
+						
+                        <p>An <code>object</code> is a data type which stores data and information and how those informations can be used.</p><br>
                         <p>Example:</p>
-                        <p>class School {<br>
-                            &nbsp;&nbsp;function School() {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;this->dept = "CS";<br>
-                            &nbsp;&nbsp;}<br>
-                            }</p><br>
-                        <p>A <em>NULL</em> value is a special data type which can only have a value NULL. A variable with a null value is a variable with non value assigned to it.</p><br>
+						<div class="code">
+							<div>class School {</div>
+							<div class="l1">function School() {</div>
+							<div class="l2">this->dept = "CS";</div>
+							<div class="l1">}</div>
+							<div>}</div>
+						</div>
+						&nbsp;
+						
+                        <p>A <code>NULL</code> value is a special data type which can only have a value NULL. A variable with a null value is a variable with non value assigned to it.</p><br>
                         <p>Example:</p>
-                        <p>&nbsp;&nbsp;$x = 3;</p>
-                        <p>&nbsp;&nbsp;$x = null;</p><br>
-                        <p>A <em>Resource</em> type is actually not a data type. It stores the reference to functions in external resources. One good example for this is a database call.</p><br>
+						<div class="code">
+							<div>$x = 3;</div>
+							<div>$x = null;</div>
+						</div>
+						&nbsp;
+						
+                        <p>A <code>Resource</code> type is actually not a data type. It stores the reference to functions in external resources. One good example for this is a database call.</p><br>
 					</div>
+					
                     <div id="t8" class="tabcontent">
-						<h2>Superglobals</h2>
-                        <p>&nbsp;&nbsp;$GLOBALS - this super global variable is used to access global variables anywhere in the script.</p>
-<p>&nbsp;&nbsp;$_SERVER - this super global variable is used to store and hold informations about header, paths and locations.</p>
-<p>&nbsp;&nbsp;$_REQUEST - this super global variable is used to collect data from a submission form form an HTML form.</p>
-<p>&nbsp;&nbsp;$_POST - this super global variable is widely used for passing variables and also used for collecting data from HTML forms with method value of "post". </p>
-<p>&nbsp;&nbsp;$_GET - this super global variable is widely used for passing variables and also used for collecting data from HTML forms with method value of "get".</p>
-<p>&nbsp;&nbsp;$_FILES - this super global variable is used for storing information about the uploaded file. </p>
-<p>&nbsp;&nbsp;$_ENV - this is an associative array of variables passed to the current script via the environment method.</p>
-<p>&nbsp;&nbsp;$_COOKIE - this super global variable is use to retrieve the value of the cookie in the browser.</p>
-<p>&nbsp;&nbsp;$_SESSION - a super global variable use to set a session.</p>
+						<h3>Superglobals</h3>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Superglobal</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>$GLOBALS</code></td>
+								<td>this super global variable is used to access global variables anywhere in the script.</td>
+							</tr>
+							<tr>
+								<td><code>$_SERVER </code></td>
+								<td>this super global variable is used to store and hold informations about header, paths and locations.</td>
+							</tr>
+							<tr>
+								<td><code>$_REQUEST</code></td>
+								<td>this super global variable is used to collect data from a submission form form an HTML form.</td>
+							</tr>
+							<tr>
+								<td><code>$_POST</code></td>
+								<td>this super global variable is widely used for passing variables and also used for collecting data from HTML forms with method value of "post".</td>
+							</tr>
+							<tr>
+								<td><code>$_GET</code></td>
+								<td>this super global variable is widely used for passing variables and also used for collecting data from HTML forms with method value of "get".</td>
+							</tr>
+							<tr>
+								<td><code>$_FILES</code></td>
+								<td>this super global variable is used for storing information about the uploaded file.</td>
+							</tr>
+							<tr>
+								<td><code>$_ENV</code></td>
+								<td>this is an associative array of variables passed to the current script via the environment method.</td>
+							</tr>
+							<tr>
+								<td><code>$_COOKIE</code></td>
+								<td>this super global variable is use to retrieve the value of the cookie in the browser.</td>
+							</tr>
+							<tr>
+								<td><code>$_SESSION</code></td>
+								<td>a super global variable use to set a session.</td>
+							</tr>
+						</tbody>
+					</table>
 					</div>
+					
                     <div id="t9" class="tabcontent">
-						<h2>Selection Constructs</h2>
+						<h3>Selection Constructs</h3>
+						<p>Selection in PHP can be done in multiple ways using the following statements: <code>if</code>, <code>else</code>, <code>elseif</code> / <code>else if</code> and <code>switch</code></p>
+						&nbsp;
+						<h4><code>if</code> statement</h4>
+						<div class="code">
+							<div>if ($var == 0) {</div>
+							<div class="l1">echo "Hello World!";</div>
+							<div>}</div>
+						</div>
+						
+						&nbsp;
+						<h4><code>else</code> statement</h4>
+						<div class="code">
+							<div>if ($var == 0) {</div>
+							<div class="l1">echo "Hello World!";</div>
+							<div>} else {</div>
+							<div class="l1">echo "Code Demo.";</div>
+							<div>}</div>
+						</div>
+						
+						&nbsp;
+						<h4><code>elseif</code> / <code>else if</code> statement</h4>
+						<div class="code">
+							<div>if ($var == 0) {</div>
+							<div class="l1">echo "Hello World!";</div>
+							<div>} elseif ($var == 1){</div>
+							<div class="l1">echo "Code Demo.";</div>
+							<div>}</div>
+						</div>
+						
+						&nbsp;
+						<h4><code>switch</code> statement</h4>
+						<div class="code">
+							<div>$var = 3</div>
+							<div>swithc($var) {</div>
+							<div class="l1">case 0:</div>
+							<div class="l2">echo "Case 0";</div>
+							<div class="l2">break;</div>
+							<div class="l1">case 3:</div>
+							<div class="l2">echo "Case 3";</div>
+							<div class="l2">break;</div>
+							<div class="l1">case 1:</div>
+							<div class="l2">echo "Case 1";</div>
+							<div class="l2">break;</div>
+							<div>}</div>
+						</div>
 					</div>
+					
                     <div id="t10" class="tabcontent">
-						<h2>Iteration Constructs</h2>
+						<h3>Iteration Constructs</h3>
+						<p>Iteration in PHP can be done in multipl ways using the followin statements: <code>while</code>, <code>do-while</code>, <code>for</code>, and <code>foreach</code></p>
+						
+						&nbsp;
+						<h4><code>while</code></h4>
+						<div class="code">
+							<div>$counter = 0</div>
+							<div>while($counter &lt; 13 {</div>
+							<div class="l1"> echo "Hello World ".$counter;</div>
+							<div class="l1"> $counter++;</div>
+							<div>}</div>
+						</div>
+						
+						&nbsp;
+						<h4><code>do-while</code></h4>
+						<div class="code">
+							<div>$counter = 0</div>
+							<div>do {</div>
+							<div class="l1"> echo "Hello World ".$counter;</div>
+							<div class="l1"> $counter++;</div>
+							<div>} while($counter &lt; 13)</div>
+						</div>
+						
+						&nbsp;
+						<h4><code>for</code></h4>
+						<div class="code">
+							<div>for($i = 0; $i &lt; 13; $i++) {</div>
+							<div class="l1">echo "Hello World ".$i;</div>
+							<div>}</div>
+						</div>
+						
+						&nbsp;
+						<h4><code>foreach</code></h4>
+						<div class="code">
+							<div>$arr = array("SCIS", "SABM", "SAMSCIS");</div>
+							<div>foreach($arr as &amp;$value) {</div>
+							<div class="l1"> echo $value;</div>
+							<div>}</div>
+						</div>
 					</div>
 				</div>
 			</div>

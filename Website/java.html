@@ -78,7 +78,6 @@
 			
 			<div class="nav-custom">
 				<ul class="nav-a">
-					<li><a class="custom-a tablinks" onclick="openTab(event, 't0')">Overview</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle cus-dropdown" data-toggle="dropdown" href="#">Topics</a>
 						<ul class="dropdown-menu cus-dropdown-menu">
@@ -99,31 +98,32 @@
 			
 			<div class="container container-1">
 				<div class="t-container">
-					<div id="t0" class="tabcontent">
-                        <p>In this topic, Java Servlets</p>
-					</div>
 					
-					<div id="t1" class="tabcontent">
-                        <h2>Servlet</h2>
+					<div id="t1" class="tabcontent">	
+                        <h3>Servlet</h3>
 						<p>  - A servelet is a Java class that is utilized to extend the capabilities of     request-response programming model servers that host 
                         applications. Servlets can interact or respond to any type of request, Servlets are maily used for extending applications hosted 
                         by web servers.
-                        </p><br>
-                        <h2>Java Servlets</h2>
-                        <p>- handles client requests by generating a response message
-                        </p><br>
+                        </p>&nbsp;
+                        <h3>Java Servlets</h3>
+                        <p>- Handles client requests by generating a response message
+                        </p>
                         <p>- Java Servlets is hosted in a "servlet container" which is part of a web server that communicates with the servlet so that it will
                         let Java to dynamically generate a web page from the server side. Servlet container also controls the servlet lifecycle.
-                        </p><br>
+                        </p>
                         <p>- Pavni Diwanji created the Servlet1 while working at Sun Microsystems, with version 1.0 finalized in June 1997.
-                        </p><br>
-                        <p>As of now, Servlet has 10 versions, from Servlet 1.0 to Servlet 4.0.</p>
-                        <table>
-                        <tr>
-                            <th>Version</th>
-                            <th>Date Released</th>
-                            <th>Ano to?</th>
-                        </tr>
+                        </p>
+						&nbsp;
+                        <table class="table table-striped">
+						<caption>As of now, Servlet has 10 versions, from Servlet 1.0 to Servlet 4.0.</caption>
+						<thead>
+							<tr>
+								<th>Version</th>
+								<th>Date Released</th>
+								<th>Java Version</th>
+                        	</tr>
+						</thead>
+						<tbody>
                         <tr>
                             <td>Servlet 4.0</td>
                             <td>Sep 2017</td>
@@ -179,155 +179,495 @@
                             <td>June 1997</td>
                             <td>&nbsp;</td>
                         </tr>	
+						</tbody>
                     </table>
 					</div>
 					
 					<div id="t2" class="tabcontent">
-						<h2>Servlet Lifecycle</h2>
-                        <p><b>Initialization</b></p><br>
+						<h3>Servlet Lifecycle</h3>
+                        <h5><b>Initialization</b></h5>
                         <p>The init() method will be called upon the creation of servlet and it is only called once.</p>
-                        <p><b>Request Handling</b></p><br>
-                        <p>Request handling is handled by the method service() which is basically the main method that handles the tasks of each request
-                        it uses multi-threading to do the tasks.</p>
-                        <p><b>Destruction</b></p><br>
+						&nbsp;
+                        <h5><b>Request Handling</b></h5>
+                        <p>Request handling is handled by the method service() which is basically the main method that handles the tasks of each request it uses multi-threading to do the tasks.</p>
+						&nbsp;
+                        <h5><b>Destruction</b></h5>
                         <p>The destruction is handled by the method destroy() which is invoked the website? is done using the object method.</p>
 					</div>
 					
 					<div id="t3" class="tabcontent">
-						<h2>HTTPServlet Class</h2>
-                        <p>Used to handle HTTP requests and generate HTTP responses</p><br>
-                        <p>The service() method call is connected to a doXXX call (e.g. doGet(), doPost(), doPut(), doDelete())</p><br>
-                        <p>The doXXX() methods passes 2 arguments which are HTTPServletRequest and HTTPServletResponse</p><br>
+						<h3>HTTPServlet Class</h3>
+                        <p>Used to handle HTTP requests and generate HTTP responses</p>&nbsp;
+                        <p>The service() method call is connected to a doXXX call (e.g. doGet(), doPost(), doPut(), doDelete())</p>&nbsp;
+                        <p>The doXXX() methods passes 2 arguments which are HTTPServletRequest and HTTPServletResponse</p>&nbsp;
 					</div>
+					
                     <div id="t4" class="tabcontent">
-						<h2>HTTPServletRequest Object</h2>
-                        <p>Used to access information from the request message</p><br>
-                        <h2>Methods Summary </h2>
-                        <table>
-                            <tr>
-                                <th>Method Name</th>
-                                <th>Description</th>
-                            </tr>
-                            <tr>
-                                <td>getAuthType()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getCookies()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getDateHeader(String headerName)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getDateHeader(String headerName)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getHeaders(String headerName)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getIntHeader(String headerName)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getMethod()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>PathInfo()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getPathTranslated()
-</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getContextPath()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getQueryString</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getRemoteUser()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>isUserInRole(String role)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getUserPrincipal()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getRequestedSessionId()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getRequestURI()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getRequestURL()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getServletPath()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getSession(boolean create)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getSession()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>isRequestedSessionIdValid()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>isRequestedSessionIdFromCookie()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>isRequestedSessionIdFromCookie()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>authenticate(HttpServletResponse response)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>login(String username, String password)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>logout()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getParts()</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>getPart(String partName)</td>
-                                <td></td>
-                            </tr>
-                        </table>
-					</div>
+<h3>HTTPServletRequest Object</h3>
+<p>Used to access information from the request message</p>
+&nbsp;
+
+<h4>Methods Summary</h4>
+<table class="table table-striped">
+	<tr>
+		<th>Method Name</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>getAuthType()</td>
+		<td>
+			<ul>
+				<li>Gets the authentication scheme</li>
+				<li>Returns: one of static members (BASIC_AUTH, FORM_AUTH, CLIENT_CERT_AUTH, DIGEST_AUTH)</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getCookies()</td>
+		<td>
+			<ul>
+				<li>Gets the array of cookies</li>
+				<li>Returns : 
+					<ul>
+						<li>array - cookies whithin this request. Null if there is no cookies</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getDateHeader(String headerName)</td>
+		<td>
+			<ul>
+				<li>Gets the date value of the specified request header</li>
+				<li>Parameters: 
+					<ul>
+						<li>headerName - name of the header</li>
+					</ul>
+				</li>
+				<li>Returns:
+					<ul>
+						<li>long - value of date in the header</li>
+					</ul>
+				</li>
+				<li>Throws:
+					<ul>
+						<li>IllegalArgumentException - if the value of the header can not be converted to date value</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getHeader(String headerName)</td>
+		<td>
+			<ul>
+				<li>Gets the string value of the specified header name</li>
+				<li>Parameters:
+					<ul>
+						<li>headerName - name of the header</li>
+					</ul>
+				</li>
+				<li>Returns:
+					<ul>
+						<li>String - value of the header request. </li>
+						<li>null - if the request does not contain the header name</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getHeaders(String headerName)</td>
+		<td>
+			<ul>
+				<li>Gets all the value of the specified header name</li>
+				<li>Parameters:
+					<ul>
+						<li>headerName - name of the header</li>
+					</ul>
+				</li>
+				<li>Returns:
+					<ul>
+						<li>Enumeration - value of the header request. </li>
+						<li>empty enumeration - if the request does not contain the header name.</li>
+						<li>null - if the header information can not be allowed to access by the container</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getIntHeader(String headerName)</td>
+		<td>
+			<ul>
+				<li>gets the integer value of the specified header name</li>
+				<li>Parameters:
+					<ul>
+						<li>headerName - name of the header</li>
+					</ul>
+				</li>
+				<li>Returns:
+					<ul>
+						<li>integer - value that represents the request header value.</li>
+						<li>-1 - if the if the request does not contain the header name</li>
+					</ul>
+				</li>
+				<li>Throws:
+					<ul>
+						<li>NumberFormatException - if the value of the header can not be converted to integer</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getMethod()</td>
+		<td>
+			<ul>
+				<li>Gets the http method name of this request</li>
+				<li>Returns:
+					<ul>
+						<li>String - the method name of the request made</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>PathInfo()</td>
+		<td>
+			<ul>
+				<li>Gets the extra path information contained in the URL</li>
+				<li>Returns:
+					<ul>
+						<li>String - the extra path information decoded by the web container after the servlet path and before the request url of the query string</li>
+						<li>null - if there is no extra path information</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getPathTranslated()</td>
+		<td>
+			<ul>
+				<li>Gets the real path contained in the URL</li>
+				<li>Returns:
+					<ul>
+						<li>String - the real path</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getContextPath()</td>
+		<td>
+			<ul>
+				<li>Gets portion of the URL that is requested that specifies the request context</li>
+				<li>Returns:
+					<ul>
+						<li>String - portion of the URL that is requested that specifies the request context</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getQueryString</td>
+		<td>
+			<ul>
+				<li>Gets the query string contained in the URL</li>
+				<li>Returns:
+					<ul>
+						<li>String - the query string</li>
+						<li>null - if the url does not have a query string</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getRemoteUser()</td>
+		<td>
+			<ul>
+				<li>Gets the user login that is producing this request</li>
+				<li>Returns:
+					<ul>
+						<li>String - the user login that is producing this request</li>
+						<li>null - if the login of the user is unknown</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>isUserInRole(String role)</td>
+		<td>
+			<ul>
+				<li>Returns a boolean value if the user producing this request has bee authenticated</li>
+				<li>Parameters:
+					<ul>
+						<li>role - role name</li>
+					</ul>
+				</li>
+				<li>Returns:
+					<ul>
+						<li>true - when the user that is producing this request has been authenticated</li>
+						<li>false - when the user that is producing this request is unauthenticated</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getUserPrincipal()</td>
+		<td>
+			<ul>
+				<li>Gets the Principal object containing the user's name</li>
+				<li>Returns:
+					<ul>
+						<li>Principal - user name that is producing this request</li>
+						<li>null - if the user name is unauthenticated</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getRequestedSessionId()</td>
+		<td>
+			<ul>
+				<li>Gets the requested session id</li>
+				<li>Returns:
+					<ul>
+						<li>String - session ID</li>
+						<li>null - if the session is not specified in the request</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getRequestURI()</td>
+		<td>
+			<ul>
+				<li>Gets the part of the url from the protocol name</li>
+				<li>Returns:
+					<ul>
+						<li>Stirng - part of the url from the protocol name</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getRequestURL()</td>
+		<td>
+			<ul>
+				<li>Reconstructs the url made by the client to make the request</li>
+				<li>Returns:
+					<ul>
+						<li>StringBuffer - reconstructed url</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getServletPath()</td>
+		<td>
+			<ul>
+				<li>Gets the part of the url that is used to call a servlet</li>
+				<li>Returns:
+					<ul>
+						<li>String - decoded servlet name or servlet path that is being called that is specified in the request URL </li>
+						<li>null - if patern "/*" is used when the servlet processed the request</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getSession(boolean create)</td>
+		<td>
+			<li>Gets the current http session related to this request</li>
+			<li>Returns:
+				<ul>
+					<li>HttpSession related with this request </li>
+				</ul>
+			</li>
+		</td>
+	</tr>
+	<tr>
+		<td>getSession(boolean create)</td>
+		<td>
+			<ul>
+				<li>Gets the http session related to the request</li>
+				<li>Parameters:
+					<ul>
+						<li>create(true) - to make a new session for this request</li>
+						<li>create(false) - no current session</li>
+					</ul>
+				</li>
+				<li>Returns:
+					<ul>
+						<li>HttpSession related with this request </li>
+						<li>null - no valid session in the request and create is false</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>isRequestedSessionIdValid()</td>
+		<td>
+			<ul>
+				<li>Examine if the session id is still valid</li>
+				<li>Returns:
+					<ul>
+						<li>true - the id is valid for the current session context</li>
+						<li>false - the id is not valid for the current session context</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>isRequestedSessionIdFromCookie()</td>
+		<td>
+			<ul>
+				<li>Examine if the session id arrived as a cookie</li>
+				<li>Returns:
+					<ul>
+						<li>true - the id of the session arrived as a cookie</li>
+						<li>false - the id of the session didnt arrived as a cookie</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>isRequestedSessionIdFromURL()</td>
+		<td>
+			<ul>
+				<li>Examine if the session id arrived as a part of the url</li>
+				<li>Returns:
+					<ul>
+						<li>true - if the id of the session arrived as a part of a url</li>
+						<li>false - if the id of the session didnt arrived as a part of a url</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>authenticate(HttpServletResponse response)</td>
+		<td>
+			<ul>
+				<li>Used to authenticate the user that made this request</li>
+				<li>Parameters:
+					<ul>
+						<li>response -the HttpServletResponse related with this HttpServletResponse </li>
+					</ul>
+				</li>
+				<li>Returns:
+					<ul>
+						<li>true - if the the values needed has been established</li>
+						<li>false - if the values needed is incomplete</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>login(String username, String password)</td>
+		<td>
+			<ul>
+				<li>Checks the username and password</li>
+				<li>Parameters:
+					<ul>
+						<li>username - identifier of the user when logged in</li>
+						<li>password - the password of the user when logged in</li>
+					</ul>
+				</li>
+				<li>Throws
+					<ul>
+						<li>ServletException - if the login function does no support username and password authentication or if the username and password provided fails</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>logout()</td>
+		<td>
+			<ul>
+				<li>the getUserPrincipal, getRemoteUser, and getAuthType called on the request is set to null.</li>
+				<li>Throws:
+					<ul>
+						<li>ServletException - if the logout fails</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getParts()</td>
+		<td>
+			<ul>
+				<li>Gets all the part components of the request made</li>
+				<li>Returns:
+					<ul>
+						<li>Collection - part components of the request made</li>
+					</ul>
+				</li>
+				<li>Throws:
+					<ul>
+						<li>IOException  - if exceptions for input or output occurs</li>
+						<li>ServletException - if the request is not the same type as multipart/form-data</li>
+						<li>llegalStateException  - if the body of the request is larger than maxRequestSize</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>getPart(String partName)</td>
+		<td>
+			<ul>
+				<li>Gets the name of the Part requested</li>
+				<li>Parameter:
+					<ul>
+						<li>partName- name of the Part requested</li>
+					</ul>
+				</li>
+				<li>Returns:
+					<ul>
+						<li>Part with given name</li>
+						<li>null - if the request made is not type multipart/form-data but the requested Part is not contained</li>
+					</ul>
+				</li>
+				<li>Throws:
+					<ul>
+						<li>IOException  - if exceptions for input or output occurs </li>
+						<li>ServletException - if the request is not the same type as multipart/form-data</li>
+						<li>llegalStateException  - if the body of the request is larger than maxRequestSize</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+</table>
+</div>
+					
                     <div id="t5" class="tabcontent">
-						<h2>HTTPServletResponse Object</h2>
+						<h3>HTTPServletResponse Object</h3>
                         <p>Used to access information from the response message</p>
-                        <h2>Methods Summary </h2>
-                        <table>
+						&nbsp;
+                        <h4>Methods Summary </h4>
+                        <table class="table table-striped">
                             <tr>
                                 <th>Method Name</th>
                                 <th>Description</th>
@@ -414,6 +754,7 @@
                             </tr>
                         </table>
 					</div>
+					
                     <div id="t6" class="tabcontent">
 						<h2>HTTPSessionHandling</h2>
 					</div>

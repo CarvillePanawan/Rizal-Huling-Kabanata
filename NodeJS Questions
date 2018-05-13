@@ -1,7 +1,7 @@
 Match the Modules in Node.js on the function
 
 Answer    Module            Function
-3          assert            1.  Handles binary data
+8          assert            1.  Handles binary data
 5          child process     2.  handles OpenSSL functions
 6          domain            3.  Issues implementation of UDP datagram sockets
 3          dgram             4.  Handles events

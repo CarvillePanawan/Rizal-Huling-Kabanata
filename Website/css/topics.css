@@ -63,6 +63,7 @@ span {
 .tabcontent {
     display: none;
 	animation: fadeEffect 0.5s;
+	padding: 5%;
 }
 @keyframes fadeEffect {
     from {opacity: 0;}

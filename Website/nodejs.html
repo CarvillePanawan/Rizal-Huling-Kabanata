@@ -78,15 +78,21 @@
 			
 			<div class="nav-custom">
 				<ul class="nav-a">
-					<li><a class="custom-a tablinks" onclick="openTab(event, 't0')">Overview</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle cus-dropdown" data-toggle="dropdown" href="#">Topics</a>
 						<ul class="dropdown-menu cus-dropdown-menu">
+<<<<<<< HEAD
 							<li><a class="tablinks" onclick="openTab(event, 't1')">Introduction to Node.js</a></li>
 							<li><a class="tablinks" onclick="openTab(event, 't2')">Node.js Functions</a></li>
 							<li><a class="tablinks" onclick="openTab(event, 't3')">Node.js Modules</a></li>
                             <li><a class="tablinks" onclick="openTab(event, 't4')">HTTP Modules</a></li>
                             <li><a class="tablinks" onclick="openTab(event, 't5')">Node.js &amp; MySQL</a></li>
+=======
+							<li><a class="tablinks" onclick="openTab(event, 't1')">NodeJS</a></li>
+							<li><a class="tablinks" onclick="openTab(event, 't2')">NodeJS Modules</a></li>
+							<li><a class="tablinks" onclick="openTab(event, 't3')">HTTP Modules</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't4')">NodeJS MySQL</a></li>
+>>>>>>> 4e1e69e79fc4c2da32487dbd351381e9cc469a52
 						</ul>
 				  </li>
 				</ul>
@@ -97,6 +103,7 @@
 			
 			<div class="container container-1">
 				<div class="t-container">
+<<<<<<< HEAD
 					<div id="t0" class="tabcontent">
                         <p>In this topic..</p>
 					</div>
@@ -129,6 +136,32 @@
 					
 					<div id="t3" class="tabcontent">
 						<h2>Node.js Modules</h2>
+=======
+					
+					<div id="t1" class="tabcontent">
+                        <h2>NodeJS</h2>
+                        <p>- NodeJS is an open-source server framework and a cross-platform JavaScript run-time environment which was created on top of Google Chrome V8 Javascript Engine and was written in ECMAScript.</p>
+                        <p>- NodeJS hase Has similar syntax to JavaScript, which includes objects, functions, and methods with an extension name of .js</p><br>
+                        <h2>Why choose NodeJS</h2>
+                        <p>- Node.js uses asynchronous programming
+                            - asynchronous programming is a method of parallel programming, which enables a unit to run separately from the main application.</p>
+                        <p>- Node.js handles a file request by:</p>
+                        <ul>
+                            <li>sending the task to the server’s file system.</li>
+                            <li>prepares the next request</li>
+                            <li>if the file system has opened and reads the file contents , the server gives back the file contents  to the client</li>
+                        </ul>
+                        <p>- Node.js is memory efficient</p><br>
+                        <h2>NodeJS Functions</h2>
+                        <p>- Page contents are produced dynamically</p>
+                        <p>- Manipulation of files on the server</p>
+                        <p>- Data collections</p>
+                        <p>- Data manipulation on the database</p>
+					</div>
+					
+					<div id="t2" class="tabcontent">
+						<h2>NodeJS Functions</h2>
+>>>>>>> 4e1e69e79fc4c2da32487dbd351381e9cc469a52
                         <table>
                             <tr>
                                 <th>Module</th>
@@ -160,7 +193,11 @@
                             </tr>
                             <tr>
                                 <td>dns</td>
+<<<<<<< HEAD
                                 <td>Searching of DNS lookups and name resolution functions</td>
+=======
+                                <td>Searching of DNS lookups and name resolution functions </td>
+>>>>>>> 4e1e69e79fc4c2da32487dbd351381e9cc469a52
                             </tr>
                             <tr>
                                 <td>domain</td>
@@ -176,7 +213,11 @@
                             </tr>
                             <tr>
                                 <td>http</td>
+<<<<<<< HEAD
                                 <td>Makes Node.js function as an HTTP Servers</td>
+=======
+                                <td>Makes Node.js function as an HTTP servers</td>
+>>>>>>> 4e1e69e79fc4c2da32487dbd351381e9cc469a52
                             </tr>
                             <tr>
                                 <td>https</td>
@@ -236,7 +277,11 @@
                             </tr>
                             <tr>
                                 <td>v8</td>
+<<<<<<< HEAD
                                 <td>Exposes APIs that are V8 built into the Node.js binary</td>
+=======
+                                <td>exposes APIs that are V8 built into the Node.js binary</td>
+>>>>>>> 4e1e69e79fc4c2da32487dbd351381e9cc469a52
                             </tr>
                             <tr>
                                 <td>vm</td>
@@ -248,6 +293,7 @@
                             </tr>
                         </table>
 					</div>
+<<<<<<< HEAD
                     <div id="t4" class="tabcontent">
 						<h2>HTTP Modules</h2>
                         <p><b>&nbsp;&nbsp;HTTP module enables Node.js to transfer data through HTTP</b></p>
@@ -284,8 +330,59 @@
 	                           &nbsp;&nbsp;&nbsp;&nbsp;console.log("Connected!");<br>
 	                        &nbsp;&nbsp;});
                         </p>
+=======
+					
+					<div id="t3" class="tabcontent">
+						<h2>HTTP Module</h2>
+                        <p>- HTTP module enables Node.js to transfer data through HTTP</p>
+                        <p>- HTTP module can be added by using the using the require( ) method</p>
+                        <p>var http = require('http');</p>
+                        <h2>Node.js as a Web Server</h2>
+                        <p>- To create HTTP server add the createServer( ) method</p>
+                        <pre>var http = require('http');
+
+//create a server object:
+http.createServer(function (req, res) { 
+    res.write('Node.js!'); // write a response to the client
+    res.end(); //end the response
+}) .listen(8080); //the server object listens on port 8080</pre>
+                        <h2>HTTP Header	</h2>
+                        <p>- To create HTTP Header add the res.writeHead( ) method</p>
+                        <pre>var http = require('http');
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'}); // an HTTP Header
+    res.write('Node.js!');
+	res.end(); 
+}) .listen(8080);</pre>
+                        <h2>Reading Query String</h2>
+                        <p>- The http.createServer( ) has a req argument which represents the request from the clients.</p>
+                        <pre>var http = require('http');
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'}); 
+	res.write('Node.js!');
+	res.end(); 
+}) .listen(8080);</pre>
+>>>>>>> 4e1e69e79fc4c2da32487dbd351381e9cc469a52
 					</div>
-				</div>
+                    <div id="t4" class="tabcontent">
+                        <h2>Creating Connection</h2>
+                        <pre>var mysql = require('mysql');
+
+var con = mysql.createConnection({
+    host: "localhost",
+	user: "yourusername",
+	password: "yourpassword"
+});
+
+con.connect(function(err) {
+    if (err) throw err;
+	console.log("Connected!");
+});
+                        </pre>
+                    </div>
+                </div>
 			</div>
 			
 			<div class="breaker"></div>
