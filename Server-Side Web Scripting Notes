@@ -50,14 +50,23 @@ HTTPServletResponse
 * The web container also facilitates the conversion from HTTP response to HTTPServletResponse or from HTTP request to HTTPServletRequest.
 
 HTTPSessionHandling
-- Cookie-Based
-  - Non-Persistent Cookie
-  - "The shit"-Sir Montes
+- HTTP protocol and Web Servers are stateless which is why a seesion is implemented for more persistent data, a session is refers
+	to the time limited intercommunication betwen two systems, session are statrful allowing them at least ratain data or 
+	information.
+- Java is cookie-based, cookie refers to data sent by the web server to the user's web browser as way of remembering statefull 
+	information.
+- Non-Persistent Cookie are cookies stored in the devices memory and are destroyed once the web browser is closed.
+- HttpSession provides a way to identify and store information pertaining to a user.
+Important Methods:
+- getSession() – Request for the specifies session obejct, if no session object is returned, it creates a session and returns it.
+- getSession(boolean value) - Returns session object otherwise returns null.
+- getId() – Returns a unique string identifier assigned to the session.
+- getAttribute() - Returns the object specified in this session else returns null if no object is found. 
+- getCreationTime() - Returns the time of creation of the session.
+- getServletContext() – Returns ServletContext in which the session belongs.
+- isNew() -  Returns true if the client hasn't interacted with the session.
+- invalidate() - Invalidates the session along with unbinding any objets connected to the session.
 
-HTTPSessionObject
-- getsession
-- getattribute
-- 
 
 
 HttpServletResponse Methods
