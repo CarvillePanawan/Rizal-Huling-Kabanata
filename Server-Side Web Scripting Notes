@@ -77,25 +77,25 @@ HttpSession newSession = request.getSession(true);
 
 HTTPServlet Methods
 1. doDelete(HttpServletRequest req, HttpServletResponse resp)
-
+-  Allows a servlet to handle a DELETE request
 2. doGet(HttpServletRequest req, HttpServletResponse resp)
-
+- Allows a servlet to handle a GET request
 3. doHead(HttpServletRequest req, HttpServletResponse resp)
-
+- Allows a servlet to handle a HEAD request
 4. doOptions(HttpServletRequest req, HttpServletResponse resp)
-
+- Allows a servlet to handle a DELETE request
 5. doPost(HttpServletRequest req, HttpServletResponse resp)
-
+- Allows a servlet to handle a POST request
 6. doPut(HttpServletRequest req, HttpServletResponse resp)
-
+- Allows a servlet to handle a PUT request
 7. doTrace(HttpServletRequest req, HttpServletResponse resp)
-
+- Allows a servlet to handle a TRAE request
 8. getLastModified(HttpServletRequest req)
-
+- Returns the time the HttpServletRequest object was last modified
 9. service(HttpServletRequest req, HttpServletResponse resp)
-
+- Receives standard HTTP requests from the public service method and dispatches them to the do methods defined in this class.
 10.service(ServletRequest req, ServletResponse res)
-
+- Dispatches client requests to the protected service method.
 
 HttpServletResponse Methods
 1. addCookie (Cookie cookie) - attach the cookie to the response 
@@ -500,8 +500,6 @@ while
 
 for
 
-JAVA
-
 NODE JS
 
 JSP
@@ -539,7 +537,7 @@ Expressions
  <%= age %>
 
 Comments
--Comments can be seen as notes to the program wriiten
+-Comments can be seen as notes to the program written
 	<%-- comment --%>
 -Example
 <%-- This is come nice code--%> 
@@ -550,7 +548,7 @@ Directives
 -Three Types:
 <%@ page ... %> 	Defines page-dependent attributes.
 <%@ include ... %> 	Includes a file to be used.
-<%@ taglib ... %> 	Declares a tag library, containing custom actions
+<%@ taglib ... %> 	Declares a tag library, containing custom actions.
 
 
 References:
