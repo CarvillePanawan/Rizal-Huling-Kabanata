@@ -27,7 +27,7 @@ the web application, a malicious script is delivered to the users web browser th
 10.XXE
 -XML External Entities
 
-11. -  20. List 10 Application Security Risks for 2017 by OWASP in order
+11. -  20. List 10 Application Security Risks for 2017 by OWASP IN ORDER.
 
 
 
