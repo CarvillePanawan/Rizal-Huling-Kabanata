@@ -20,7 +20,7 @@
             <div class="header">
                 <div class="header-left">
                     <a href="../index.html">
-                    <img id="header-img" src="../images/header.png" alt="website header">
+                    <img id="header-img" src="../../images/header.png" alt="website header">
                     </a>
                     <input id="search-bar" type="text" placeholder="Search">
                     <button id="search-btn"></button>
@@ -40,8 +40,8 @@
             <div class="body">
                 <div class="container">
                     <div class="jumbotron banner">
-                        <h3>PHP</h3>
-                        <p>PHP is a server-side programming language that runs on a web server. PHP stands for <em>PHP: Hypertext Processor.</em> PHP is mainly used for dynamic contents in the back-end side of web development.</p>
+                        <h3>Java</h3>
+                        <p>Javascript is a client-side programming language that used to make web pages interactive within the browser. Javascript allows you to access and modify contents of a web page while being viewed.</p>
                     </div>
                 </div>
                 <div class="nav-custom">

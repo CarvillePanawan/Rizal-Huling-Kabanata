@@ -7,7 +7,6 @@
         <link rel="stylesheet" type="text/css" href="../css/fonts.css">
         <link rel="stylesheet" type="text/css" href="../css/skeleton.css">
         <link rel="stylesheet" type="text/css" href="../css/index.css">
-        <link rel="stylesheet" type="text/css" href="../css/quiz.css">
         <link rel="stylesheet" href="quizlet-style.css">
         <script src="quizlet-script.js" async></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,7 +40,7 @@
                 <div class="container">
                     <div class="jumbotron banner">
                         <h3>Java</h3>
-                        <p>Java is general-purpose programming language that is class-based, object-oriented, and is used to create computer applications.</p>
+                        <p>Javascript is a client-side programming language that used to make web pages interactive within the browser. Javascript allows you to access and modify contents of a web page while being viewed.</p>
                     </div>
                 </div>
                 <div class="nav-custom">
@@ -63,7 +62,7 @@
                                         <div class='col-md-4 text-center'>Score</div>
                                         <div class='col-md-4 text-center'>Date</div>
                                     </div>
-                                    <?php include "leaderboard.php"; ?>
+                                    <?php include "query-jboard.php"; ?>
                                 </div>
                             </div>
                             <div class="modal-footer">

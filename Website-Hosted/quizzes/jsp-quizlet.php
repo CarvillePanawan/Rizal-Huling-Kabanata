@@ -20,7 +20,7 @@
             <div class="header">
                 <div class="header-left">
                     <a href="../index.html">
-                    <img id="header-img" src="../images/header.png" alt="website header">
+                    <img id="header-img" src="../../images/header.png" alt="website header">
                     </a>
                     <input id="search-bar" type="text" placeholder="Search">
                     <button id="search-btn"></button>

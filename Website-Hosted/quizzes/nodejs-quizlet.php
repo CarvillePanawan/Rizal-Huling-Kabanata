@@ -20,7 +20,7 @@
             <div class="header">
                 <div class="header-left">
                     <a href="../index.html">
-                    <img id="header-img" src="../images/header.png" alt="website header">
+                    <img id="header-img" src="../../images/header.png" alt="website header">
                     </a>
                     <input id="search-bar" type="text" placeholder="Search">
                     <button id="search-btn"></button>
@@ -40,8 +40,8 @@
             <div class="body">
                 <div class="container">
                     <div class="jumbotron banner">
-                        <h3>Node.js</h3>
-                        <p>Dito</p>
+                        <h3>Java</h3>
+                        <p>Javascript is a client-side programming language that used to make web pages interactive within the browser. Javascript allows you to access and modify contents of a web page while being viewed.</p>
                     </div>
                 </div>
                 <div class="nav-custom">

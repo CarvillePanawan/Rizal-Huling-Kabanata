@@ -16,6 +16,10 @@
 	opacity: 0.9;
 }
 
+.header-img {
+	height: 10px !important;
+}
+
 #header-img:hover {
 	cursor: pointer;
 	opacity: 1;

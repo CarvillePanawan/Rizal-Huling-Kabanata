@@ -17,6 +17,15 @@
 		if($questions[$i] == $answers[$i]) {$correctAnswers++;}
 	}
 
+	$date = date('Y-m-d H:i:s');
+	$sql_score = ("insert into java_leaderboard(javalead_name, javalead_scorre, javalead_date) VALUES ('Test', ".
+				 $correctAnswers.", CAST('". $date ."' AS DATE))") or die(mysql_error());
+	if(mysqli_query($con_db, $sql_score)){
+		echo "Records inserted successfully.";
+	} else{
+		echo "ERROR: Could not able to execute $sql_score. " . mysqli_error($con_db);
+	}
+	
 echo
 	'
 <!Doctype HTML>
@@ -35,7 +44,7 @@ echo
 		<div class="container container-q" style="padding: 10%;">
 			<div class="jumbotron">
 				<h1 class="display-4">Congratulations!</h1>
-				<p class="lead">You scored '.$correctAnswers.' out of '.($index+1).'.</p>
+				<p class="lead">You scored '.$correctAnswers.' out of '.$index.'.</p>
 				<hr class="my-4">
 				<p>View the leaderborad here.</p>
 				<p class="lead">
@@ -49,11 +58,16 @@ echo
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Log In</h4>
+							<h4 class="modal-title">Leaderboard</h4>
 						</div>
 						<div class="modal-body">
 							<div class="board">
-							Log In				
+							<div class="row lb_row">
+								<div class="col-md-4 text-center">Name</div>
+								<div class="col-md-4 text-center">Score</div>
+								<div class="col-md-4 text-center">Date</div>
+							</div>
+							<?php include query-jboard.php; ?>			
 							</div>
 						</div>
 						<div class="modal-footer">

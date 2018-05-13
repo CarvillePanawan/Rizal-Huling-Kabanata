@@ -40,7 +40,7 @@ echo
 				<p>View the leaderborad here.</p>
 				<p class="lead">
 					<button class="btn btn-res" href="#" role="button" data-toggle="modal" data-target="#score-modal">Leaderboard</button>
-					<a href="../php.html"><button class="btn btn-res" role="button">Go back</button></a>
+					<a href="../java.html"><button class="btn btn-res" role="button">Go back</button></a>
 				</p>
 			</div>
 			
