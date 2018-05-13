@@ -1,5 +1,5 @@
 <?php
-$db = mysqli_connect('localhost','root','root','webtechlec');
+$db = mysqli_connect('localhost','root','','webtech');
 if(!$db){
     die("error");
 }else {
