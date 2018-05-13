@@ -7,13 +7,9 @@
         <link rel="stylesheet" type="text/css" href="../css/fonts.css">
         <link rel="stylesheet" type="text/css" href="../css/skeleton.css">
         <link rel="stylesheet" type="text/css" href="../css/index.css">
-        <link rel="stylesheet" type="text/css" href="../css/quiz.css">
         <link rel="stylesheet" href="quizlet-style.css">
-        <script src="quizlet-script.js" async></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container-a">
@@ -63,7 +59,7 @@
                                         <div class='col-md-4 text-center'>Score</div>
                                         <div class='col-md-4 text-center'>Date</div>
                                     </div>
-                                    <?php include "leaderboard.php"; ?>
+                                    <?php include "leaderboard/query-jsboard.php"; ?>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -76,7 +72,7 @@
                     <div class="t-container">
                         <div class="quiz-container">
                             <div id="quiz">
-                                <form action="jsq-res.php" method="post">
+                                <form action="results/jsq-res.php" method="post">
                                     <div class="slide active-slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
 	<div class="question">1. Where are java statements, variable, method declarations, or expressions used for page scripting are contained?</div>
@@ -208,7 +204,10 @@
                 <div class="breaker"></div>
             </div>
             <div class="footer">Saint Louis University &copy; 2018</div>
-            <script src="quiz-data.js"></script>
         </div>
+		
+		<script src="quizlet-script.js" async></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
     </body>
 </html>

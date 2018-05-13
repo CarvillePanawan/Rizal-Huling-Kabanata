@@ -2,9 +2,7 @@
 	$con_db = new mysqli("localhost", "root", "", "webtech");
 
 	$sql = "select javalead_id, javalead_name, javalead_scorre, javalead_date from java_leaderboard order by javalead_scorre desc";
-	$res = $con_db->query($sql)
-
-	echo "<table border='1'>";
+	$res = $con_db->query($sql);
 
 	if($res->num_rows > 0) {
 		while($row = $res->fetch_assoc()) {
@@ -15,8 +13,5 @@
 			echo	"</div>";
 		}
 	}
-
-	echo "</table>";
-
 	$con_db->close();
 ?>

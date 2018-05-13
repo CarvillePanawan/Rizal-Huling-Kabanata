@@ -8,11 +8,8 @@
         <link rel="stylesheet" type="text/css" href="../css/skeleton.css">
         <link rel="stylesheet" type="text/css" href="../css/index.css">
         <link rel="stylesheet" href="quizlet-style.css">
-        <script src="quizlet-script.js" async></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container-a">
@@ -39,8 +36,7 @@
             <div class="body">
                 <div class="container">
                     <div class="jumbotron banner">
-                        <h3>Java</h3>
-                        <p>Javascript is a client-side programming language that used to make web pages interactive within the browser. Javascript allows you to access and modify contents of a web page while being viewed.</p>
+                        <img class="nav-img" src="../images/java-servlet-logo.png">
                     </div>
                 </div>
                 <div class="nav-custom">
@@ -62,7 +58,7 @@
                                         <div class='col-md-4 text-center'>Score</div>
                                         <div class='col-md-4 text-center'>Date</div>
                                     </div>
-                                    <?php include "query-jboard.php"; ?>
+									<?php include "leaderboard/query-jboard.php"; ?>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -75,7 +71,7 @@
                     <div class="t-container">
                         <div class="quiz-container">
                             <div id="quiz">
-                                <form action="jq-res.php" method="post">
+                                 <form action="results/jq-res.php" method="post">
                                     <div class="slide active-slide">
                                         <span class="glyphicon glyphicon-question-sign"></span> &nbsp;
                                         <div class="question">1.Returns an Enumeration containing the names of the attributes available to this request.</div>
@@ -350,7 +346,10 @@
                 <div class="breaker"></div>
             </div>
             <div class="footer">Saint Louis University &copy; 2018</div>
-            <script src="quiz-data.js"></script>
         </div>
+		
+		<script src="quizlet-script.js" async></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
     </body>
 </html>
