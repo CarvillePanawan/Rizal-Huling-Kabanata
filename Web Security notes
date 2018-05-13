@@ -19,10 +19,13 @@ Web Security
     - One way to prevent sensitive data exposure would be to utilize encryption for sensitive data such as paswords but one thing 
       to look out for would be not to utilize already compromised encryption.
   4. XML External Entities (XXE)
-    - 
-  
+    - XML External Entities occrt wherein an attacker can utilize Denial of Service and find access to files 
+      and services, by exploiting an easily accesible, seldom used feature in XML parsers(to access and manipulate XML).
+    - One method of prevention from XML External Entities would be disable unecessary features from the XML parser configurations. 
   5. Broken Access Control
-  
+    - Broken access control refers to unauthorized access to a system functionality and resources has created exploitable 
+      weaknesses that could expose your web application to malicious attackers.
+    - Prevention of broken access control stems from application of correct control rules within a web application.
   6. Security Misconfiguration
     - Security misconfiguration occurs when attackers discover access or retrieve data from the system by accessing default 
       accounts, unprotected files and directories or misconfigured security setting for their own benefit which then gives 
@@ -30,10 +33,27 @@ Web Security
       storages, platforms and codes that could be configured.
     - Simpliest prevention mechanism wouldd to implement a web application with minimalistic features and components.
   7. Cross-Site Scripting (XSS)
-  
+    - Cross-Site Scripting (XSS) occurs when attackers utilize a web application that is vulnerable, once a user visits or uses 
+      the web application, a malicious script is delivered to the users web browser thus compromising it.
+    - Prevention for Cross-Site Scripting simply boils down to never inputting of untrusted data into the HTML input unless its 
+      HTML encoded at the very least secure.
   8. Insecure Deserialization
-  
+    - Insecure Deserialization occurs when malicious code is injected and executed within the application server through insecure
+      deserialization resulting to access and control of the web application.
+    - One way of preventing insecure deserialization is to not accept serialized objects from unknown or untrusted sources.
   9. Using Components with Known Vulnerabilities
+    - As the name suggests, using components with known vulnerabilities, sofware modules such as libraries, can result in 
+      attackers gaining access private information or control of the web application.
+    - One way of preventing usage of components with known vulnerabilites is to searching the net for components if there are know
+      vulnerabilities from it since there are a lot of websites that offer information on compromised and safe components.
   
   10. Insufficient Logging&Monitoring
+    - Insufficient logging and monitoring occurs when secui=rity events aren't tracked properly and events aren't also monitored.
+      This can result in in worse outcome from attackers or malicious acripts and softwares.
+    - Prevention of insufficient logging and monitoring requires that inputs and interations with web application are properly logged
+      and monitored.
+      
+https://www.owasp.org/index.php/Top_10-2017_Top_10
+    
+    
   
