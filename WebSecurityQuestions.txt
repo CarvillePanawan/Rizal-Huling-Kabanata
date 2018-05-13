@@ -1,32 +1,33 @@
 IDENTIFICATION
 
-1.
-Blacklist
+1. Occurs usually for SQL when malicious SQL statements are sent to an input within an web application that is inside of an 
+SQL query and the malicious SQL statements will be run alongside the the SQL query.
+-injection
+2. OWASP
+-Open Web Application Security Project
+3. XSS
+-Cross-Site Scripting
+4. Unauthorized access to a system functionality and resources has created exploitable 
+weaknesses that could expose your web application to malicious attackers.
+-Broken Access Control
+5. Incorrect or lacking design and implementation of the identity and access controls.
+- Broken Authentication
+6. When a web application does not provide adequate protection for sensitive 
+information from being disclosed or gained access to by attackers.
+- Sensitive Data Exposure
+7. An attacker can utilize Denial of Service and find access to files 
+and services, by exploiting an easily accesible, seldom used feature in XML parsers(to access and manipulate XML).
+-XML External Entities
+8.When attackers discover access or retrieve data from the system by accessing default 
+accounts, unprotected files and directories or misconfigured security setting for their own benefit
+- Security Misconfiguration
+9.Attackers utilize a web application that is vulnerable, once a user visits or uses 
+the web application, a malicious script is delivered to the users web browser thus compromising it.
+- Cross-Site Scripting
+10.XXE
+-XML External Entities
 
-2.
-Spam
-3.
-Data Exfiltration
-4.
-Phishing
-5.
-Brute Force
-6.
+11. -  20. List 10 Application Security Risks for 2017 by OWASP in order
 
-7.
 
-8.
 
-9.
-
-10.
-
-Owasp Identification
-1. Occur when untrusted data is sent to an interpreter as part of a command or query. Injection
-2. Application functions related to authenication and session management are often implemented incorrectly
-    allowing attackers to compromise credentials or to exploit other implementation flaws. Broken Authentication
-3. A result of insecure dafault configurations, incomplete or ad hoc configurations, open cloud storage,
-    misconfigured HTTP headers, and verbose error messages containing sensitive information. Security Misconfiguration
-4. Occur whenever an application includes untrusted data in a new web page without proper validation or escaping,
-    or updates an existing web page with user-supplied data using a browser API that can create HTML or JavaScript. Cross-Site Scripting
-5. Restrictions on what authenticated users are allowed to do are often not properly enforced. Broken Access Control
