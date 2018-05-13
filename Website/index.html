@@ -37,7 +37,15 @@
 					</div>
 					<div class="modal-body">
 						<div class="board">
-						Log In				
+                            <form method="post" action="./php/login.php">
+                                <label>Username</label><br>
+                                <input type="text" name="username" required>
+                                <br>
+                                <label>Password</label><br>
+                                <input type=password name="password" required>
+                                <br>
+                                <input type="submit" value="Login">
+                            </form>
 						</div>
 					</div>
 					<div class="modal-footer">
@@ -55,7 +63,19 @@
 					</div>
 					<div class="modal-body">
 						<div class="board">
-						Sign Up				
+                            <form method="post" action = "./php/register.php">
+                                <label>Name</label>
+                                <br>
+                                <input type="text" name="name" required>
+                                <br>
+                                <label>Username</label><br>
+                                <input type="text" name="username" required>
+                                <br>
+                                <label>Password</label><br>
+                                <input type=password name="password" required>
+                                <br>
+                                <input type="submit" value="register">
+                            </form>
 						</div>
 					</div>
 					<div class="modal-footer">
