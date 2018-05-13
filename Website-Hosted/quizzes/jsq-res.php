@@ -5,7 +5,7 @@
 	$correctAnswers = 0;
 
 	$con_db = new mysqli("localhost", "root", "", "webtech");
-	$sql = "select answers from java_answers";
+	$sql = "select answers from jsp_answers";
 	$res = $con_db->query($sql);
 
 	while($row = $res->fetch_assoc()) {
@@ -35,12 +35,12 @@ echo
 		<div class="container container-q" style="padding: 10%;">
 			<div class="jumbotron">
 				<h1 class="display-4">Congratulations!</h1>
-				<p class="lead">You scored '.$correctAnswers.' out of '.$index.'.</p>
+				<p class="lead">You scored '.$correctAnswers.' out of '.($index+1).'.</p>
 				<hr class="my-4">
 				<p>View the leaderborad here.</p>
 				<p class="lead">
 					<button class="btn btn-res" href="#" role="button" data-toggle="modal" data-target="#score-modal">Leaderboard</button>
-					<a href="../java.html"><button class="btn btn-res" role="button">Go back</button></a>
+					<a href="../jsp.html"><button class="btn btn-res" role="button">Go back</button></a>
 				</p>
 			</div>
 			
