@@ -11,7 +11,7 @@ $password = hash('sha1', $password);
 $user_check_query = "SELECT * FROM accounts WHERE username='$username' OR name='$name' LIMIT 1";
 $result = mysqli_query($db, $user_check_query);
 $user = mysqli_fetch_assoc($result);
-if ($user) { // if user exists
+if ($user) {
     if ($user['username'] === $username) {
       echo "<script>
       alert('Username already exists');
@@ -30,7 +30,7 @@ if ($user) { // if user exists
         echo "
             <script>
                 alert('Thank you for registering.');
-                window.location.replace('/website/');
+                window.history.back();
             </script>";
     }
 }

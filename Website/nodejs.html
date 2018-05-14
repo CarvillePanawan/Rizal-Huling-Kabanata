@@ -114,6 +114,7 @@
 							<li><a class="tablinks" onclick="openTab(event, 't2')">NodeJS Modules</a></li>
 							<li><a class="tablinks" onclick="openTab(event, 't3')">HTTP Modules</a></li>
                             <li><a class="tablinks" onclick="openTab(event, 't4')">NodeJS MySQL</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't5')">Code demo</a></li>
 						</ul>
 				  </li>
 				</ul>
@@ -316,6 +317,107 @@ con.connect(function(err) {
 	console.log("Connected!");
 });
                         </pre>
+                    </div>
+                    <div id="t5" class="tabcontent">
+                        <h3>Code demo</h3>
+                        <p>Demonstration of registration with php and mysql as its database </p>
+                        &nbsp;
+                        <h4>dabase.sql</h4>
+<pre>
+DROP TABLE IF EXISTS `accounts`;
+CREATE TABLE `accounts` (
+  `account_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`account_id`),
+  UNIQUE KEY `name_UNIQUE` (`name`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+</pre>
+                        <h4>index.html</h4>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+	&lt;title> Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;form method="post" action="'register'"&gt;
+        &lt;p&gt;Name&lt;/p&gt;
+        &lt;input type="text" name="name" required&gt;
+        &lt;p&gt;Username&lt;/p&gt;
+        &lt;input type="text" name="username" required&gt;
+        &lt;p&gt;Password&lt;/p&gt;
+        &lt;input type="text" name="password" required&gt;
+        &lt;br&gt;
+        &lt;button type="submit" name="register">Register&gt;/button&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                        <h4>package.json</h4>
+<pre>
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "nodejs demo",
+  "main": "register.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "sha1": "^1.1.1"
+  }
+}
+</pre>
+                        <h4>register.js</h4>
+<pre>
+var express = require('express'),
+    bodyParser = require('body-parser'),
+    mysql = require('mysql'),
+    sha1 = require('sha1');
+var app = express();
+var urlencodedParser = bodyParser.urlencoded({ extended: true });
+
+var connection = mysql.createConnection({
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: '',
+    database: 'database'
+    
+});
+var server = app.listen(8082, function () {
+    'use strict';
+    var host = server.address().address,
+        port = server.address().port;
+    console.log("Example app listening at %s:%s Port", host, port);
+});
+app.post('/register', urlencodedParser, function (req, res) {
+    'use strict';
+    var name = "'" + req.body.name + "',",
+        username = "'" + req.body.username + "',",
+        password = "'" + sha1(req.body.password) + "'";
+    
+    connection.connect(function (err) {
+        var sql = "INSERT INTO `webtech`.`accounts` (`name`, `username`, `password`) VALUES (" + name + username + password + ")";
+        connection.query(sql, function (err, result) {
+            if (err) {
+                throw err;
+            }
+            console.log(username + name + password);
+        });     
+    });
+});
+</pre>
                     </div>
                 </div>
 			</div>

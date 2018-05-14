@@ -52,7 +52,7 @@ if(!isset($_SESSION['login_user']))
             <div class="body">
                 <div class="container">
                     <div class="jumbotron banner">
-                        <img class="nav-img" src="../images/nodejs-logo.png">
+                        <img class="nav-img" src="../images/web-security-logo.png">
                     </div>
                 </div>
                 <div class="nav-custom">
@@ -74,7 +74,7 @@ if(!isset($_SESSION['login_user']))
                                         <div class='col-md-4 text-center'>Score</div>
                                         <div class='col-md-4 text-center'>Date</div>
                                     </div>
-                                    <?php include "../leaderboard/query-njboard.php"; ?>
+                                    <?php include "leaderboard/query-wsboard.php"; ?>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -87,10 +87,10 @@ if(!isset($_SESSION['login_user']))
                     <div class="t-container">
                         <div class="quiz-container">
                             <div id="quiz">
-                                <form action="results/nq-res.php" method="post">
+                                <form action="results/ws-res.php" method="post">
                                     <div class="slide active-slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">1. Handles binary data</div>
+	<div class="question">1. Occurs usually for SQL when malicious SQL statements are sent to an input within an web application that is inside of an SQL query and the malicious SQL statements will be run alongside the the SQL query.</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer1" class="q-label">
@@ -103,7 +103,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">2. Handles OpenSSL functions</div>
+	<div class="question">2. What does OWASP stand for?</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer2" class="q-label">
@@ -116,7 +116,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">3. Issues implementation of UDP datagram sockets</div>
+	<div class="question">3. What does XSS stand for?</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer3" class="q-label">
@@ -129,7 +129,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">4. Handles events</div>
+	<div class="question">4. Unauthorized access to a system functionality and resources has created exploitable weaknesses that could expose your web application to malicious attackers.</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer4" class="q-label">
@@ -142,7 +142,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">5. Runs a child process</div>
+	<div class="question">5. Incorrect or lacking design and implementation of the identity and access controls.</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer5" class="q-label">
@@ -155,7 +155,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">6. Deprecated. Handles unhandled errors</div>
+	<div class="question">6. When a web application does not provide adequate protection for sensitive information from being disclosed or gained access to by attackers.</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer6" class="q-label">
@@ -168,7 +168,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">7. Splits a node process into multiple processes</div>
+	<div class="question">7. An attacker can utilize Denial of Service and find access to files and services, by exploiting an easily accesible, seldom used feature in XML parsers(to access and manipulate XML).</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer7" class="q-label">
@@ -181,7 +181,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">8. Issue a set of assertion tests</div>
+	<div class="question">8. When attackers discover access or retrieve data from the system by accessing default accounts, unprotected files and directories or misconfigured security setting for their own benefit</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer8" class="q-label">
@@ -194,7 +194,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">9. Handles file systems</div>
+	<div class="question">9. Attackers utilize a web application that is vulnerable, once a user visits or uses the web application, a malicious script is delivered to the users web browser thus compromising it.</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer9" class="q-label">
@@ -207,7 +207,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">10. Searching of DNS lookups and name resolution functions</div>
+	<div class="question">9. What does XXE stand for?</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer10" class="q-label">

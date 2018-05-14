@@ -1,4 +1,17 @@
-<!Doctype>
+<!Doctype HTML>
+
+<?php
+session_start();
+
+if(!isset($_SESSION['login_user']))
+{
+	echo"<script>alert('You must be logged in to view and answer the quiz.');
+    window.history.back();
+    </script>";
+    exit();
+}
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -7,41 +20,37 @@
         <link rel="stylesheet" type="text/css" href="../css/fonts.css">
         <link rel="stylesheet" type="text/css" href="../css/skeleton.css">
         <link rel="stylesheet" type="text/css" href="../css/index.css">
-        <link rel="stylesheet" type="text/css" href="../css/quiz.css">
         <link rel="stylesheet" href="quizlet-style.css">
-        <script src="quizlet-script.js" async></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container-a">
             <div class="header">
                 <div class="header-left">
-                    <a href="../index.html">
-                    <img id="header-img" src="../../images/header.png" alt="website header">
-                    </a>
+                    <img id="header-img" src="../images/header.png" alt="website header">
                     <input id="search-bar" type="text" placeholder="Search">
                     <button id="search-btn"></button>
                 </div>
                 <ul class="nav-a">
-                    <li class="dropdown">
-                        <span class="dropdown-toggle" data-toggle="dropdown" href="#">User
-                        <span class="caret"></span></span>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <h6 class="dropdown-header">Logged in as:</h6>
-                            <div class="dropdown-divider"></div>
-                            <li><a href="">Logout</a></li>
-                        </ul>
-                    </li>
+                <?php
+					$username = $_SESSION['login_user'];
+					echo '
+						<li class="dropdown">
+							<span class="dropdown-toggle" data-toggle="dropdown" href="#">'.$username.'&nbsp;<span class="caret"></span></span>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<div class="dropdown-divider"></div>
+								<li><a href="../php/logout.php">Logout</a></li>
+							</ul>
+						</li>
+						';
+				?>
                 </ul>
             </div>
             <div class="body">
                 <div class="container">
                     <div class="jumbotron banner">
-                        <h3>Java</h3>
-                        <p>Javascript is a client-side programming language that used to make web pages interactive within the browser. Javascript allows you to access and modify contents of a web page while being viewed.</p>
+                        <img class="nav-img" src="../images/java-servlet-logo.png">
                     </div>
                 </div>
                 <div class="nav-custom">
@@ -63,7 +72,7 @@
                                         <div class='col-md-4 text-center'>Score</div>
                                         <div class='col-md-4 text-center'>Date</div>
                                     </div>
-                                    <?php include "leaderboard.php"; ?>
+									<?php include "leaderboard/query-jboard.php"; ?>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -76,7 +85,7 @@
                     <div class="t-container">
                         <div class="quiz-container">
                             <div id="quiz">
-                                <form action="jq-res.php" method="post">
+                                 <form action="results/jq-res.php" method="post">
                                     <div class="slide active-slide">
                                         <span class="glyphicon glyphicon-question-sign"></span> &nbsp;
                                         <div class="question">1.Returns an Enumeration containing the names of the attributes available to this request.</div>
@@ -351,7 +360,10 @@
                 <div class="breaker"></div>
             </div>
             <div class="footer">Saint Louis University &copy; 2018</div>
-            <script src="quiz-data.js"></script>
         </div>
+		
+		<script src="quizlet-script.js" async></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
     </body>
 </html>

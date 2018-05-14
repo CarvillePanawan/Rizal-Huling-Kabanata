@@ -120,6 +120,7 @@
                             <li><a class="tablinks" onclick="openTab(event, 't8')">Superglobals</a></li>
                             <li><a class="tablinks" onclick="openTab(event, 't9')">Selection Construct</a></li>
                             <li><a class="tablinks" onclick="openTab(event, 't10')">Iteration Constructs</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't11')">Code demo</a></li>
 						</ul>
 				  </li>
 				</ul>
@@ -474,46 +475,89 @@
 						</div>
 					</div>
 					
-                    <div id="t10" class="tabcontent">
-						<h3>Iteration Constructs</h3>
-						<p>Iteration in PHP can be done in multipl ways using the followin statements: <code>while</code>, <code>do-while</code>, <code>for</code>, and <code>foreach</code></p>
+                    <div id="t11" class="tabcontent">
+						<h3>Code demo</h3>
+                        <p>Demonstration of registration with php and mysql as its database</p>
 						
 						&nbsp;
-						<h4><code>while</code></h4>
-						<div class="code">
-							<div>$counter = 0</div>
-							<div>while($counter &lt; 13 {</div>
-							<div class="l1"> echo "Hello World ".$counter;</div>
-							<div class="l1"> $counter++;</div>
-							<div>}</div>
-						</div>
-						
-						&nbsp;
-						<h4><code>do-while</code></h4>
-						<div class="code">
-							<div>$counter = 0</div>
-							<div>do {</div>
-							<div class="l1"> echo "Hello World ".$counter;</div>
-							<div class="l1"> $counter++;</div>
-							<div>} while($counter &lt; 13)</div>
-						</div>
-						
-						&nbsp;
-						<h4><code>for</code></h4>
-						<div class="code">
-							<div>for($i = 0; $i &lt; 13; $i++) {</div>
-							<div class="l1">echo "Hello World ".$i;</div>
-							<div>}</div>
-						</div>
-						
-						&nbsp;
-						<h4><code>foreach</code></h4>
-						<div class="code">
-							<div>$arr = array("SCIS", "SABM", "SAMSCIS");</div>
-							<div>foreach($arr as &amp;$value) {</div>
-							<div class="l1"> echo $value;</div>
-							<div>}</div>
-						</div>
+                        <h4>database.sql</h4>
+<pre>
+DROP TABLE IF EXISTS `accounts`;
+CREATE TABLE `accounts` (
+  `account_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`account_id`),
+  UNIQUE KEY `name_UNIQUE` (`name`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+</pre>
+                        <h4>index.html</h4>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+	&lt;title> Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;form method="post" action="register.php"&gt;
+        &lt;p&gt;Name&lt;/p&gt;
+        &lt;input type="text" name="name" required&gt;
+        &lt;p&gt;Username&lt;/p&gt;
+        &lt;input type="text" name="username" required&gt;
+        &lt;p&gt;Password&lt;/p&gt;
+        &lt;input type="text" name="password" required&gt;
+        &lt;br&gt;
+        &lt;button type="submit" name="register">Register&gt;/button&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>  
+                   <h4>register.php</h4>
+<pre>
+&lt;?php
+include('server.php');
+$db = mysqli_connect('localhost', 'root', '', 'database');
+
+$name = mysqli_real_escape_string($db, $_POST['name']);
+$username = mysqli_real_escape_string($db, $_POST['username']);
+$password = mysqli_real_escape_string($db, $_POST['password']);
+
+$password = hash('sha1', $password);
+
+$user_check_query = "SELECT * FROM accounts WHERE username='$username' OR name='$name' LIMIT 1";
+$result = mysqli_query($db, $user_check_query);
+$user = mysqli_fetch_assoc($result);
+if ($user) {
+    if ($user['username'] === $username) {
+      echo "&lt;script&gt;
+      alert('Username already exists');
+      window.history.back();
+      &lt;/script&gt;";
+    }
+    if ($user['name'] === $name) {
+      echo "&lt;script&gt;
+          alert('Name already exists');
+          window.history.back();
+          &lt;/script&gt;";
+    }
+}else{
+    $query = "INSERT INTO `accounts` (`name`, `username`, `password`) VALUES ('$name','$username','$password');";
+    if ($db->query($query) === true) {
+        echo "
+            &lt;script&gt;
+                alert('Thank you for registering.');
+                window.history.back();
+            &lt;/script&gt;";
+    }
+}
+?&gt;
+</pre>
+
 					</div>
 				</div>
 			</div>
