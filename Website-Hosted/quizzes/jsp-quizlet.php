@@ -5,7 +5,9 @@ session_start();
 
 if(!isset($_SESSION['login_user']))
 {
-	echo"<script>alert('You must be logged in to view and answer the quiz.');</script>";
+	echo"<script>alert('You must be logged in to view and answer the quiz.');
+		window.history.back();
+		</script>";
     exit();
 }
 ?>
