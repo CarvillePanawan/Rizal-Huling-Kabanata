@@ -21,8 +21,6 @@
 				<a href="index.html">
 				<img id="header-img" src="images/header.png" alt="website header">
 				</a>
-				<input id="search-bar" type="text" placeholder="Search">
-				<button id="search-btn"></button>
 			</div>
 			<ul class="nav-a">
                 <?php

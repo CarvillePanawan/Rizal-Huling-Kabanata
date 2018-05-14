@@ -27,8 +27,6 @@ if(!isset($_SESSION['login_user']))
             <div class="header">
                 <div class="header-left">
                     <img id="header-img" src="../images/header.png" alt="website header">
-                    <input id="search-bar" type="text" placeholder="Search">
-                    <button id="search-btn"></button>
                 </div>
                 <ul class="nav-a">
                 <?php
