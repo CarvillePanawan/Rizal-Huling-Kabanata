@@ -1,5 +1,3 @@
-<!Doctype HTML>
-
 <?php
 session_start();
 
