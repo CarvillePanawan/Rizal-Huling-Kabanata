@@ -1,4 +1,4 @@
-<!Doctype>
+
 <html>
     <head>
 	<meta charset="UTF-8">
@@ -18,9 +18,9 @@
         <div class="container-a">
 		<div class="header">
 			<div class="header-left">
-				<a href="index.html">
+	
 				<img id="header-img" src="images/header.png" alt="website header">
-				</a>
+			
 			</div>
 			<ul class="nav-a">
                 <?php
