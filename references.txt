@@ -1,0 +1,33 @@
+Apache.(n.d.). Class HttpServlet. Retrieved from https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/http/HttpServlet.html
+
+Apache.(n.d.). Interface ServletRequest. Retrieved from https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletRequest.html
+
+Apache.(n.d.). Interface ServletResponse. Retrieved from https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletResponse.html
+
+Holzner,S.(2013, February 21). Getting Started with JSP. Retrieved from http://www.informit.com/articles/article.aspx?p=31072&seqNum=7
+
+Java2s.(n.d.).JSP Tutorial - JSP Syntax. Retrieved from http://www.java2s.com/Tutorials/Java/JSP/0020__JSP_Syntax.htm
+
+Martz, E.(n.d.). What is Javascript?. Retrieved from https://www.umass.edu/microbio/chime/chimehow/whatisjs.htm
+
+Mills, C.(2016, June 23). What is JavaScript?. Retrieved from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript
+
+Nodejs.(n.d).Node.js v10.1.0 Documentation. Retrieved from https://nodejs.org/api/
+
+Oracle. (n.d.). JavaServer Pages Technology. Retrieved from http://www.oracle.com/technetwork/java/javaee/jsp/index.html
+
+Oracle.(2011, February 10). Interface HttpServletRequest. Retrieved from https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html
+
+Oracle.(2011, February 10). Interface HttpServletResponse. Retrieved from https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html
+
+Oracle.(2013, January). The Java EE 6 Tutorial. Retrieved from https://docs.oracle.com/javaee/6/tutorial/doc/docinfo.html
+
+OWASP. (2018, March 27). Top 10-2017 Top 10. Retrieved from https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project#Translation_Efforts_2
+
+Pankaj.(2018,April 4). Session Management in Java – HttpServlet, Cookies, URL Rewriting. Retrieved from https://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting
+
+Program Creek.(n.d).What is Servlet Container? Retrieved from https://www.programcreek.com/2013/04/what-is-servlet-container/
+
+
+
+
