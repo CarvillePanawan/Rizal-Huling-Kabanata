@@ -1,4 +1,15 @@
-<!Doctype>
+<!Doctype HTML>
+
+<?php
+session_start();
+
+if(!isset($_SESSION['login_user']))
+{
+	echo"<script>alert('You must be logged in to view and answer the quiz.');</script>";
+    exit();
+}
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -16,28 +27,30 @@
             <div class="header">
                 <div class="header-left">
                     <a href="../index.html">
-                    <img id="header-img" src="../../images/header.png" alt="website header">
+                    <img id="header-img" src="../images/header.png" alt="website header">
                     </a>
                     <input id="search-bar" type="text" placeholder="Search">
                     <button id="search-btn"></button>
                 </div>
                 <ul class="nav-a">
-                    <li class="dropdown">
-                        <span class="dropdown-toggle" data-toggle="dropdown" href="#">User
-                        <span class="caret"></span></span>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <h6 class="dropdown-header">Logged in as:</h6>
-                            <div class="dropdown-divider"></div>
-                            <li><a href="">Logout</a></li>
-                        </ul>
-                    </li>
+                <?php
+					$username = $_SESSION['login_user'];
+					echo '
+						<li class="dropdown">
+							<span class="dropdown-toggle" data-toggle="dropdown" href="#">'.$username.'&nbsp;<span class="caret"></span></span>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<div class="dropdown-divider"></div>
+								<li><a href="../php/logout.php">Logout</a></li>
+							</ul>
+						</li>
+						';
+				?>
                 </ul>
             </div>
             <div class="body">
                 <div class="container">
                     <div class="jumbotron banner">
-                        <h3>Java</h3>
-                        <p>Javascript is a client-side programming language that used to make web pages interactive within the browser. Javascript allows you to access and modify contents of a web page while being viewed.</p>
+                        <img class="nav-img" src="../images/nodejs-logo.png">
                     </div>
                 </div>
                 <div class="nav-custom">
@@ -59,7 +72,7 @@
                                         <div class='col-md-4 text-center'>Score</div>
                                         <div class='col-md-4 text-center'>Date</div>
                                     </div>
-                                    <?php include "leaderboard/query-njboard.php"; ?>
+                                    <?php include "../leaderboard/query-njboard.php"; ?>
                                 </div>
                             </div>
                             <div class="modal-footer">

@@ -29,10 +29,19 @@
                     if(!isset($_SESSION['login_user'])){
                         echo "<li><button type='button' class='top-btn' data-toggle='modal' data-target='#login-modal'>Log In</button></li>
                         <li><button type='button' class='top-btn' data-toggle='modal' data-target='#signup-modal'>Sign Up</button></li>";
-                    }else{
+                    } else {
                         $username = $_SESSION['login_user'];
-                       echo "<li><button type='button' class='top-btn' data-toggle='modal'>$username</button></li>
-                       <li><button type='button' class='top-btn' data-toggle='modal' href='./php/logout.php'>Sign out</button></li>";
+                       echo '
+							<li class="dropdown">
+								<span class="dropdown-toggle" data-toggle="dropdown" href="#">User
+								<span class="caret"></span></span>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<h6 class="dropdown-header">Logged in as:</h6>
+									<div class="dropdown-divider"></div>
+									<li><a href="">Logout</a></li>
+								</ul>
+							</li>
+							';
                     }
 				?>
 			</ul>

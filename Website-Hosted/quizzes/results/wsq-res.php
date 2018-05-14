@@ -7,29 +7,24 @@
 	$correctAnswers = 0;
 
 	$con_db = new mysqli("localhost", "root", "", "webtech");
-	$sql = "select answers from java_answers";
-	$res = $con_db->query($sql);
+	$sql = "select websec_answers from websec_answers";
+	$res = $con_db->query($sql) or die ($con_db->error);
 
 	while($row = $res->fetch_assoc()) {
-		$answers[$index++] = $row["answers"];
+		$answers[$index++] = $row["websec_answers"];
 	}
 
 	for($i = 0; $i < $index; $i++) {
-		$questions[$i] = isset($_POST["answer" . ($i+1)]) ? $_POST["answer" . ($i+1)] : "Wrong";
+		$questions[$i] = isset($_POST["websec_answers" . ($i+1)]) ? $_POST["websec_answers" . ($i+1)] : "Wrong";
 		if($questions[$i] == $answers[$i]) {$correctAnswers++;}
 	}
-	
+
 	$username = $_SESSION['login_user'];
 
 	if($correctAnswers > 0 ){
 		$date = date('Y-m-d H:i:s');
-		$sql_score = ('insert into java_leaderboard(javalead_name, javalead_scorre, javalead_date) 
-					  VALUES ("'. $username .'", '. $correctAnswers .', CAST("'. $date .'" AS DATE))') or die(mysql_error());
-		if ($con_db->query($sql_score) === TRUE) {
-			echo "New record created successfully";
-		} else {
-			echo "Error: " . $sql_score . "<br>" . $con_db->error;
-		}
+		$sql_score = ("insert into websec_leaderboard(webseclead_name, webseclead_scorre, webseclead_date) 
+					 VALUES ('".$username."', ".$correctAnswers.", CAST('". $date ."' AS DATE))") or die(mysql_error());
 	}
 	
 echo
@@ -50,10 +45,10 @@ echo
 		<div class="container container-q" style="padding: 10%;">
 			<div class="jumbotron">
 				<h1 class="display-4">Congratulations!</h1>
-				<p class="lead">You scored '.$correctAnswers.' out of '.$index.'.</p>
+				<p class="lead">You scored '.$correctAnswers.' out of '.($index-1).'.</p>
 				<hr class="my-4">
 				<p class="lead">
-					<a href="../../java.php"><button class="btn btn-res" role="button">Go back</button></a>
+					<a href="../../websecurity.php"><button class="btn btn-res" role="button">Go back</button></a>
 				</p>
 			</div>
 		</div>

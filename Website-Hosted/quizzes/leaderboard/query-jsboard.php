@@ -1,7 +1,7 @@
 <?php
 	$con_db = new mysqli("localhost", "root", "", "webtech");
 
-	$sql = "select jsplead_id, jsplead_name, jsplead_scorre, jsplead_date from jsp_leaderboard order by jsplead_score desc";
+	$sql = "select jsplead_id, jsplead_name, jsplead_score, date from jsp_leaderboard order by jsplead_score desc";
 	$res = $con_db->query($sql);
 
 	if($res->num_rows > 0) {

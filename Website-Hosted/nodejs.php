@@ -21,13 +21,29 @@
 	<div class="container-a">
 		<div class="header">
 			<div class="header-left">
-				<a href="index.html"><img id="header-img" src="images/header.png" alt="website header"></a>
+				<a href="index.php"><img id="header-img" src="images/header.png" alt="website header"></a>
 				<input id="search-bar" type="text" placeholder="Search">
 				<button id="search-btn"></button>
 			</div>
 			<ul class="nav-a">
-				<li><button type="button" class="top-btn" data-toggle="modal" data-target="#login-modal">Log In</button></li>
-				<li><button type="button" class="top-btn" data-toggle="modal" data-target="#signup-modal">Sign Up</button></li>
+                <?php
+                    include('php/login.php');
+                    if(!isset($_SESSION['login_user'])){
+                        echo "<li><button type='button' class='top-btn' data-toggle='modal' data-target='#login-modal'>Log In</button></li>
+                        <li><button type='button' class='top-btn' data-toggle='modal' data-target='#signup-modal'>Sign Up</button></li>";
+                    } else {
+                        $username = $_SESSION['login_user'];
+                       echo '
+							<li class="dropdown">
+								<span class="dropdown-toggle" data-toggle="dropdown" href="#">'.$username.'&nbsp;<span class="caret"></span></span>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<div class="dropdown-divider"></div>
+									<li class="logout"><a href="php/logout.php">Logout</a></li>
+								</ul>
+							</li>
+							';
+                    }
+				?>
 			</ul>
 		</div>
 		<div id="login-modal" class="modal fade" role="dialog">
@@ -39,11 +55,18 @@
 					</div>
 					<div class="modal-body">
 						<div class="board">
-						Log In				
+                            <form method="post" action="php/login.php">
+								<label>Username</label>
+								<input class="login-field" type="text" name="username" required>
+								<label>Password</label>
+								<input class="login-field" type=password name="password" required>
+								<input type="submit" value="Login" id="submit-form" style="display: none;"/>
+                            </form>
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<label class="btn btn-success" for="submit-form" tabindex="0" class="q-btn" id="submit">Login</label>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 					</div>
 				</div>
 			</div>
@@ -57,11 +80,20 @@
 					</div>
 					<div class="modal-body">
 						<div class="board">
-						Sign Up				
+                            <form method="post" action = "php/register.php">
+                                <label>Name</label>
+                                <input class="login-field" type="text" name="name" required>
+                                <label>Username</label><br>
+                                <input class="login-field" type="text" name="username" required>
+                                <label>Password</label><br>
+                                <input class="login-field" type=password name="password" required>
+								<input type="submit" value="register" id="submit-form-a" style="display: none;"/>
+                            </form>			
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<label class="btn btn-success" for="submit-form-a" tabindex="0" class="q-btn" id="submit">Register</label>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -71,8 +103,7 @@
 			
 			<div class="container">
 				<div class="jumbotron banner">
-					<h3>Node.js</h3>
-					<p>Dito</p>
+					<img class="nav-img" src="images/nodejs-logo.png">
 				</div>
 			</div>
 			

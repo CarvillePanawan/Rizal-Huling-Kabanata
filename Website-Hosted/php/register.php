@@ -1,38 +1,37 @@
-<?php include('server.php') ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Registration</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <div class="header">
-  	<h2>Register</h2>
-  </div>
-	
-  <form method="post" action="register.php">
-    <div class="input-group">
-  	  <label>Name</label>
-  	  <input type="text" name="name" value="<?php echo $name; ?>">
-  	</div>
-  	<div class="input-group">
-  	  <label>Username</label>
-  	  <input type="text" name="username" value="<?php echo $username; ?>">
-  	</div>
-  	<div class="input-group">
-  	  <label>Password</label>
-  	  <input type="password" name="password_1">
-  	</div>
-  	<div class="input-group">
-  	  <label>Confirm password</label>
-  	  <input type="password" name="password_2">
-  	</div>
-  	<div class="input-group">
-  	  <button type="submit" class="btn" name="reg_user">Register</button>
-  	</div>
-  	<p>
-  		Already a member? <a href="login.php">Sign in</a>
-  	</p>
-  </form>
-</body>
-</html>
+<?php
+include('server.php');
+$db = mysqli_connect('localhost', 'root', '', 'webtech');
+
+$name = mysqli_real_escape_string($db, $_POST['name']);
+$username = mysqli_real_escape_string($db, $_POST['username']);
+$password = mysqli_real_escape_string($db, $_POST['password']);
+
+$password = hash('sha1', $password);
+
+$user_check_query = "SELECT * FROM accounts WHERE username='$username' OR name='$name' LIMIT 1";
+$result = mysqli_query($db, $user_check_query);
+$user = mysqli_fetch_assoc($result);
+if ($user) {
+    if ($user['username'] === $username) {
+      echo "<script>
+      alert('Username already exists');
+      window.history.back();
+      </script>";
+    }
+    if ($user['name'] === $name) {
+      echo "<script>
+          alert('Name already exists');
+          window.history.back();
+          </script>";
+    }
+}else{
+    $query = "INSERT INTO `accounts` (`name`, `username`, `password`) VALUES ('$name','$username','$password');";
+    if ($db->query($query) === true) {
+        echo "
+            <script>
+                alert('Thank you for registering.');
+                window.location.replace('/website/');
+            </script>";
+    }
+}
+

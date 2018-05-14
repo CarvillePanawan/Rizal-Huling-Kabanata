@@ -1,7 +1,7 @@
 <?php
 	$con_db = new mysqli("localhost", "root", "", "webtech");
 
-	$sql = "select phplead_id, phplead_name, phplead_scorre, phplead_date from php_leaderboard order by phplead_score desc";
+	$sql = "select phplead_id, phplead_name, phplead_score, phplead_date from php_leaderboard order by phplead_score desc";
 	$res = $con_db->query($sql);
 
 	if($res->num_rows > 0) {

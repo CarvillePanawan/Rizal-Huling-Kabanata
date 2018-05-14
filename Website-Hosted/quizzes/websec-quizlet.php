@@ -50,7 +50,7 @@ if(!isset($_SESSION['login_user']))
             <div class="body">
                 <div class="container">
                     <div class="jumbotron banner">
-                        <img class="nav-img" src="../images/php-logo.png">
+                        <img class="nav-img" src="../images/web-security-logo.png">
                     </div>
                 </div>
                 <div class="nav-custom">
@@ -72,7 +72,7 @@ if(!isset($_SESSION['login_user']))
                                         <div class='col-md-4 text-center'>Score</div>
                                         <div class='col-md-4 text-center'>Date</div>
                                     </div>
-                                    <?php include "leaderboard/query-pboard.php"; ?>
+                                    <?php include "leaderboard/query-wsboard.php"; ?>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -85,10 +85,10 @@ if(!isset($_SESSION['login_user']))
                     <div class="t-container">
                         <div class="quiz-container">
                             <div id="quiz">
-                                <form action="results/pq-res.php" method="post">
+                                <form action="results/ws-res.php" method="post">
                                     <div class="slide active-slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">1. Who is the creator of PHP?</div>
+	<div class="question">1. Occurs usually for SQL when malicious SQL statements are sent to an input within an web application that is inside of an SQL query and the malicious SQL statements will be run alongside the the SQL query.</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer1" class="q-label">
@@ -101,7 +101,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">2. What does PHP originally stand for?</div>
+	<div class="question">2. What does OWASP stand for?</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer2" class="q-label">
@@ -114,7 +114,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">3. Is PHP a client-side programming language or server-side programming language? </div>
+	<div class="question">3. What does XSS stand for?</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer3" class="q-label">
@@ -127,7 +127,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">4. Where do PHP script run?</div>
+	<div class="question">4. Unauthorized access to a system functionality and resources has created exploitable weaknesses that could expose your web application to malicious attackers.</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer4" class="q-label">
@@ -140,7 +140,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">5. These are special variables that is built into PHP and available throughout an entire script. </div>
+	<div class="question">5. Incorrect or lacking design and implementation of the identity and access controls.</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer5" class="q-label">
@@ -153,7 +153,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">6. It is a container that you can store data in.</div>
+	<div class="question">6. When a web application does not provide adequate protection for sensitive information from being disclosed or gained access to by attackers.</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer6" class="q-label">
@@ -166,7 +166,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">7. This involves sticking more than one string together to form a new string.</div>
+	<div class="question">7. An attacker can utilize Denial of Service and find access to files and services, by exploiting an easily accesible, seldom used feature in XML parsers(to access and manipulate XML).</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer7" class="q-label">
@@ -179,7 +179,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">8. It is use to identify users and web browsers which is done by the web server.</div>
+	<div class="question">8. When attackers discover access or retrieve data from the system by accessing default accounts, unprotected files and directories or misconfigured security setting for their own benefit</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer8" class="q-label">
@@ -192,7 +192,7 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">9. It is an application for delivering web pages that serves as the server-side of web applications.</div>
+	<div class="question">9. Attackers utilize a web application that is vulnerable, once a user visits or uses the web application, a malicious script is delivered to the users web browser thus compromising it.</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer9" class="q-label">
@@ -205,143 +205,13 @@ if(!isset($_SESSION['login_user']))
 </div>
 <div class="slide">
 	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">10. A type of PHP data storage that allow you to store in multiple pieces of information.</div>
+	<div class="question">9. What does XXE stand for?</div>
 	<div class="answers">
 		<div class="cus-answer-container">
 			<label for="answer10" class="q-label">
 				&nbsp; 
 				<h5>Answer: </h5>
 				<input name="answer10" id="answer10" class="q-input" type="text">
-			</label>
-		</div>
-	</div>
-</div>
-<div class="slide">
-	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">11. All PHP scripts outputs HTML code.(True/Falls)</div>
-	<div class="answers">
-		<div class="cus-answer-container">
-			<label for="answer11" class="q-label">
-				&nbsp; 
-				<h5>Answer: </h5>
-				<input name="answer11" id="answer11" class="q-input" type="text">
-			</label>
-		</div>
-	</div>
-</div>
-<div class="slide">
-	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">12. You don't need a web server to run PHP scripts.(True/Falls)</div>
-	<div class="answers">
-		<div class="cus-answer-container">
-			<label for="answer12" class="q-label">
-				&nbsp; 
-				<h5>Answer: </h5>
-				<input name="answer12" id="answer12" class="q-input" type="text">
-			</label>
-		</div>
-	</div>
-</div>
-<div class="slide">
-	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">13. It is legal to put both PHP and HTML code in the same file.(True/Falls)</div>
-	<div class="answers">
-		<div class="cus-answer-container">
-			<label for="answer13" class="q-label">
-				&nbsp; 
-				<h5>Answer: </h5>
-				<input name="answer13" id="answer13" class="q-input" type="text">
-			</label>
-		</div>
-	</div>
-</div>
-<div class="slide">
-	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">14. The $_POST is considered to be a superglobal.(True/Falls)</div>
-	<div class="answers">
-		<div class="cus-answer-container">
-			<label for="answer14" class="q-label">
-				&nbsp; 
-				<h5>Answer: </h5>
-				<input name="answer14" id="answer14" class="q-input" type="text">
-			</label>
-		</div>
-	</div>
-</div>
-<div class="slide">
-	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">15. PHP variables can store any kinds of data.(True/Falls)</div>
-	<div class="answers">
-		<div class="cus-answer-container">
-			<label for="answer15" class="q-label">
-				&nbsp; 
-				<h5>Answer: </h5>
-				<input name="answer15" id="answer15" class="q-input" type="text">
-			</label>
-		</div>
-	</div>
-</div>
-<div class="slide">
-	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">16. Escape Characters in PHP starts with (/).(True/Falls)</div>
-	<div class="answers">
-		<div class="cus-answer-container">
-			<label for="answer16" class="q-label">
-				&nbsp; 
-				<h5>Answer: </h5>
-				<input name="answer16" id="answer16" class="q-input" type="text">
-			</label>
-		</div>
-	</div>
-</div>
-<div class="slide">
-	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">17. To start a session in PHP, use the statement session_start();.(True/Falls)</div>
-	<div class="answers">
-		<div class="cus-answer-container">
-			<label for="answer17" class="q-label">
-				&nbsp; 
-				<h5>Answer: </h5>
-				<input name="answer17" id="answer17" class="q-input" type="text">
-			</label>
-		</div>
-	</div>
-</div>
-<div class="slide">
-	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">18. echo is a PHP command that outputs content as pure text only.(True/Falls)</div>
-	<div class="answers">
-		<div class="cus-answer-container">
-			<label for="answer18" class="q-label">
-				&nbsp; 
-				<h5>Answer: </h5>
-				<input name="answer18" id="answer18" class="q-input" type="text">
-			</label>
-		</div>
-	</div>
-</div>
-<div class="slide">
-	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">19. You can use &lt;? instead of &lt;?php.(True/Falls)</div>
-	<div class="answers">
-		<div class="cus-answer-container">
-			<label for="answer19" class="q-label">
-				&nbsp; 
-				<h5>Answer: </h5>
-				<input name="answer19" id="answer19" class="q-input" type="text">
-			</label>
-		</div>
-	</div>
-</div>
-<div class="slide">
-	<span class="glyphicon glyphicon-question-sign"></span> &nbsp;
-	<div class="question">20. There are 7 primitive data types in PHP.(True/Falls)</div>
-	<div class="answers">
-		<div class="cus-answer-container">
-			<label for="answer20" class="q-label">
-				&nbsp; 
-				<h5>Answer: </h5>
-				<input name="answer20" id="answer20" class="q-input" type="text">
 			</label>
 		</div>
 	</div>
