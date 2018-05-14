@@ -120,6 +120,7 @@
                             <li><a class="tablinks" onclick="openTab(event, 't4')">HTTPServletRequest</a></li>
                             <li><a class="tablinks" onclick="openTab(event, 't5')">HTTPServletResponse</a></li>
                             <li><a class="tablinks" onclick="openTab(event, 't6')">HTTPSessionHandling</a></li>
+                            <li><a class="tablinks" onclick="openTab(event, 't7')">Registration Code for Java</a></li>
 						</ul>
 				  </li>
 				</ul>
@@ -1035,6 +1036,40 @@
 						<p>javax.servlet.http.HttpServletRequest;</p>
 						<p>javax.servlet.http.HttpServletResponse;</p>
 					</div>
+                    <div id="t7" class="tabcontent">
+                            <p>&nbsp;response.setContentType("text/html");  </p>      
+	<p>&nbsp;String username = request.getParameter("username");</p>
+        <p>&nbsp;String password = request.getParameter("password");</p>
+        <p>&nbsp;String name = request.getParameter("name");</p>
+	<p>&nbsp;sha1(password);</p>
+        <p>&nbsp;String contact = request.getParameter("contact");</p>
+        <p>&nbsp;try (PrintWriter out = response.getWriter()) {</p>
+            <p>&nbsp;&nbsp;ConnectDB db = new ConnectDB();</p>
+            <p>&nbsp;&nbsp;Connection conn = db.getConn();</p>
+	    <p>&nbsp;&nbsp;String stmt2 = "SELECT * from accounts where username='"+username+"' and name='"+name+"';";</p>
+            <p>&nbsp;&nbsp;PreparedStatement p1 = conn.prepareStatement(stmt1);</p>
+            <p>&nbsp;&nbsp;ResultSet rs1 = p1.executeUpdate(stmt1);</p>
+            <p>&nbsp;&nbsp;while(rs.next()){</p>
+                <p>&nbsp;&nbsp;&nbsp;if(rs.getString("username").equals(username)){</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;out.println("&amp;script>");</p>
+      			<p>&nbsp;&nbsp;&nbsp;&nbsp;out.println("alert('Username already exists');");</p>
+     			<p>&nbsp;&nbsp;&nbsp;&nbsp;out.println("window.history.back();");</p>
+      			<p>&nbsp;&nbsp;&nbsp;&nbsp;out.println("&amp;/script>");</p>
+		<p>&nbsp;&nbsp;&nbsp;}</p>
+		<p>&nbsp;&nbsp;&nbsp;if(rs.getString("name").equals(password)){</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;out.println("&amp;script>");</p>
+      			<p>&nbsp;&nbsp;&nbsp;&nbsp;out.println("alert('Name already exists');");</p>
+     			<p>&nbsp;&nbsp;&nbsp;&nbsp;out.println("window.history.back();");</p>
+      			<p>&nbsp;&nbsp;&nbsp;&nbsp;out.println("&amp;/script>");</p>
+		<p>&nbsp;&nbsp;&nbsp;}</p>
+            <p>&nbsp;&nbsp;}</p>
+	<p>&nbsp;String stmt2 = "INSERT INTO accounts(username, password, name) VALUES 				('"+username+"','"+password"','"+name+"');";</p>
+	<p>&nbsp;PreparedStatement p2 = conn.prepareStatement(stmt2);</p>
+        <p>&nbsp;p2.executeUpdate(stmt2);</p>
+	<p>&nbsp;out.println("&amp;script>");</p>
+	<p>&nbsp;out.println("alert('Thank you for registering.');");</p>
+	<p>&nbsp;out.println("&amp;/script>");</p>
+                    </div>
 				</div>
 			</div>
 			
