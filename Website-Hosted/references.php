@@ -160,36 +160,27 @@
 			
 			<div class="nav-custom">
 				<ul class="nav-a">
-					<li><a href="references.php" style="color: #fff;">References</a></li>
 				</ul>
 			</div>
 			
 			<div class="container container-1">
-			<div class="row equal">
-				<div class="col-md-4 custom-col nav-img-con" id="col-1row1">
-					<a href="java.php"><img class="nav-img" src="images/java-servlet-logo.png"></a>
+				<div class="container ref">
+									<p>Apache.(n.d.). Class HttpServlet. Retrieved from https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/http/HttpServlet.html</p>
+				<p>Apache.(n.d.). Interface ServletRequest. Retrieved from https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletRequest.html</p>
+				<p>Apache.(n.d.). Interface ServletResponse. Retrieved from https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/ServletResponse.html</p>
+				<p>Holzner,S.(2013, February 21). Getting Started with JSP. Retrieved from http://www.informit.com/articles/article.aspx?p=31072&amp;seqNum=7</p>
+				<p>Java2s.(n.d.).JSP Tutorial - JSP Syntax. Retrieved from http://www.java2s.com/Tutorials/Java/JSP/0020__JSP_Syntax.htm</p>
+				<p>Martz, E.(n.d.). What is Javascript?. Retrieved from https://www.umass.edu/microbio/chime/chimehow/whatisjs.htm</p>
+				<p>Mills, C.(2016, June 23). What is JavaScript?. Retrieved from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</p>
+				<p>Nodejs.(n.d).Node.js v10.1.0 Documentation. Retrieved from https://nodejs.org/api/</p>
+				<p>Oracle. (n.d.). JavaServer Pages Technology. Retrieved from http://www.oracle.com/technetwork/java/javaee/jsp/index.html</p>
+				<p>Oracle.(2011, February 10). Interface HttpServletRequest. Retrieved from https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html</p>
+				<p>Oracle.(2011, February 10). Interface HttpServletResponse. Retrieved from https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html</p>
+				<p>Oracle.(2013, January). The Java EE 6 Tutorial. Retrieved from https://docs.oracle.com/javaee/6/tutorial/doc/docinfo.html</p>
+				<p>OWASP. (2018, March 27). Top 10-2017 Top 10. Retrieved from https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project#Translation_Efforts_2</p>
+				<p>Pankaj.(2018,April 4). Session Management in Java HttpServlet, Cookies, URL Rewriting. Retrieved from https://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting</p>
+				<p>Program Creek.(n.d).What is Servlet Container? Retrieved from https://www.programcreek.com/2013/04/what-is-servlet-container/</p>
 				</div>
-				<div class="col-md-4 custom-col nav-img-con nav-dis" id="col-2row1"></div> 
-				<div class="col-md-4 custom-col nav-img-con" id="col-2row1">
-					<a href="php.php"><img class="nav-img" src="images/php-logo.png"></a>
-				</div>       
-			</div>
-			<div class="row equal">
-				<div class="col-md-3 custom-col nav-img-con nav-dis" id="col-1row2"></div>
-				<div class="col-md-6 custom-col nav-img-con" id="col-2row2">
-					<a href="websecurity.php"><img class="nav-img" src="images/web-security-logo.png"></a>
-				</div>    
-				<div class="col-md-3 custom-col nav-img-con nav-dis" id="col-3row2"></div>  
-			</div>
-			<div class="row equal">
-				<div class="col-md-4 custom-col nav-img-con" id="col-1row3">
-					<a href="nodejs.php"><img class="nav-img" src="images/nodejs-logo.png"></a>
-				</div>
-				<div class="col-md-4 custom-col nav-img-con nav-dis" id="col-1row3"></div>
-				<div class="col-md-4 custom-col nav-img-con" id="col-2row3">
-					<a href="jsp.php"><img class="nav-img" src="images/jsp-logo.png"></a>
-				</div>  
-			</div>
 			</div>
 			
 			<div class="breaker"></div>
